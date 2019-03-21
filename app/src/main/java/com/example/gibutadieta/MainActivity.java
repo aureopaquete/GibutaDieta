@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void star(View view) {
+    public void start(View view) {
 
         Toast.makeText(this, "Avançar", Toast.LENGTH_SHORT).show();
 
