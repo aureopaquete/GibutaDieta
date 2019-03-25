@@ -20,8 +20,8 @@ public class Preencher extends AppCompatActivity {
 
     }
 
-    public void Cancelar(View view) {
-        finish();
+    public void Cancelar(View view) { // Botão Cancelar
+        finish();                     // função Cancelar
     }
 
     public void Guardar(View view) {
