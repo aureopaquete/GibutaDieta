@@ -10,9 +10,27 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".preencher"
+            android:label="@string/title_activity_preencher"
+            android:parentActivityName=".content_menus"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gibutadieta.content_menus" />
+        </activity>
+        <activity
+            android:name=".Adicionar"
+            android:label="@string/title_activity_adicionar"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gibutadieta.MainActivity" />
+        </activity>
+        <activity
             android:name=".content_menus"
             android:label="@string/title_activity_content_menus"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
