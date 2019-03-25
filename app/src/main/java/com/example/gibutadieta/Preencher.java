@@ -19,4 +19,7 @@ public class Preencher extends AppCompatActivity {
 
     }
 
+    public void Cancelar(View view) {
+        finish();
+    }
 }

@@ -17,10 +17,8 @@ public class Adicionar extends AppCompatActivity {
 
     }
     public void adicionar(View view) {
-
         Intent intent = new Intent(this, Preencher.class);
         startActivity(intent);
-
     }
 
 
