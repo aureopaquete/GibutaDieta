@@ -21,4 +21,16 @@ public class content_menus extends AppCompatActivity {
 
     }
 
+    public void Agua(View view) {
+    }
+
+    public void Proteinas(View view) {
+
+    }
+
+    public void Carbo(View view) {
+    }
+
+    public void Legumes(View view) {
+    }
 }

@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".preencher"
+            android:name=".Preencher"
             android:label="@string/title_activity_preencher"
             android:parentActivityName=".content_menus"
             android:theme="@style/AppTheme.NoActionBar">

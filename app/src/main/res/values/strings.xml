@@ -5,7 +5,7 @@
     <string name="legumes">Legumes</string>
     <string name="carboidratos">Carboidratos</string>
     <string name="proteinas">Proteinas</string>
-    <string name="gua">Água</string>
+    <string name="agua">Agua</string>
     <string name="textview2">TextView</string>
     <string name="textview3">TextView</string>
     <string name="textview4">TextView</string>
@@ -13,13 +13,15 @@
     <string name="gibuta_dieta">Gibuta Dieta</string>
     <string name="star">Star</string>
     <string name="start">start</string>
-    <string name="copoagua">copo</string>
-    <string name="Gibuta">GIBUTA DIETA</string>
+       <string name="Gibuta">GIBUTA DIETA</string>
     <string name="title_activity_adicionar">Adicionar</string>
     <string name="adicionar">Adicionar</string>
     <string name="comida">Comida</string>
     <string name="title_activity_preencher">preencher</string>
     <string name="textoHint">hint</string>
-    <string name="textohint">Textohint</string>
+    <string name="quantidade">Quantidade</string>
     <string name="tipoAlimento">TipoAlimento</string>
+    <string name="guardar">Guardar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="agua2">Água</string>
 </resources>

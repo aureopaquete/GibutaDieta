@@ -46,12 +46,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Agua(View view) {
-
         Intent intent = new Intent(this,Adicionar.class);
         startActivity(intent);
-
     }
 
+    public void Proteinas(View view) {
+        Intent intent = new Intent(this,Adicionar.class);
+        startActivity(intent);
+    }
 
+    public void Carbo(View view) {
+        Intent intent = new Intent(this,Adicionar.class);
+        startActivity(intent);
+    }
+
+    public void Legumes(View view) {
+        Intent intent = new Intent(this,Adicionar.class);
+        startActivity(intent);
+    }
 
 }
