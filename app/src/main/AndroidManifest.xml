@@ -19,15 +19,6 @@
                 android:value="com.example.gibutadieta.content_menus" />
         </activity>
         <activity
-            android:name=".Adicionar"
-            android:label="@string/title_activity_adicionar"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.gibutadieta.MainActivity" />
-        </activity>
-        <activity
             android:name=".content_menus"
             android:label="@string/title_activity_content_menus"
             android:theme="@style/AppTheme.NoActionBar" />

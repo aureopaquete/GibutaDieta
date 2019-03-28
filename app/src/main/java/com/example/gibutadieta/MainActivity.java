@@ -46,22 +46,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Agua(View view) {
-        Intent intent = new Intent(this,Adicionar.class);
+        Intent intent = new Intent(this, Preencher.class);
+        Toast.makeText(this, "Adicionar Água", Toast.LENGTH_SHORT).show();
         startActivity(intent);
     }
 
     public void Proteinas(View view) {
-        Intent intent = new Intent(this,Adicionar.class);
+        Intent intent = new Intent(this, Preencher.class);
+        Toast.makeText(this, "Adicionar Proteinas", Toast.LENGTH_SHORT).show();
         startActivity(intent);
     }
 
     public void Carbo(View view) {
-        Intent intent = new Intent(this,Adicionar.class);
+        Intent intent = new Intent(this, Preencher.class);
+        Toast.makeText(this, "Adicionar Carboidratos", Toast.LENGTH_SHORT).show();
         startActivity(intent);
     }
 
     public void Legumes(View view) {
-        Intent intent = new Intent(this,Adicionar.class);
+        Intent intent = new Intent(this, Preencher.class);
+        Toast.makeText(this, "Adicionar Legumes", Toast.LENGTH_SHORT).show();
         startActivity(intent);
     }
 
