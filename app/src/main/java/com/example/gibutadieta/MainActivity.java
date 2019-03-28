@@ -69,4 +69,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void Sair(View view) {
+        finish();
+    }
+
 }

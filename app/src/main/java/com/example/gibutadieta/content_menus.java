@@ -33,4 +33,7 @@ public class content_menus extends AppCompatActivity {
 
     public void Legumes(View view) {
     }
+
+    public void Sair(View view) {
+    }
 }
