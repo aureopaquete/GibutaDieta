@@ -19,7 +19,7 @@
         android:layout_marginEnd="118dp"
         android:layout_marginRight="118dp"
         android:layout_marginBottom="555dp"
-        android:contentDescription="@string/eliminar"
+        android:contentDescription="@string/simples"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,13 +28,13 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="132dp"
-        android:layout_height="42dp"
+        android:layout_width="146dp"
+        android:layout_height="29dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="248dp"
         android:layout_marginBottom="28dp"
-        android:text="@string/eliminar"
+        android:text="@string/dados_eliminar"
         android:textColor="@android:color/background_light"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/textInputLayout3"
@@ -57,7 +57,7 @@
         <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/eliminar_dados"
+            android:hint="@string/introduza_o_valor"
             android:inputType="number"
             android:textColor="@android:color/background_light" />
     </android.support.design.widget.TextInputLayout>
@@ -71,7 +71,7 @@
         android:layout_marginTop="160dp"
         android:layout_marginBottom="115dp"
         android:onClick="Eliminar2"
-        android:text="@string/eliminar"
+        android:text="@string/apagar"
         android:textColor="@android:color/holo_red_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -86,7 +86,7 @@
         android:layout_marginRight="50dp"
         android:layout_marginBottom="115dp"
         android:onClick="Cancelar3"
-        android:text="@string/cancelar"
+        android:text="@string/voltar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />

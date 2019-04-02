@@ -26,24 +26,20 @@
     <string name="tipo_de_alimento">Tipo de Alimento</string>
     <string name="fechar">Fechar</string>
     <string name="proteinas">Proteinas</string>
-    <string name="sobre">Sobre</string>
-    <string name="textviewProte">TextViewProte</string>
-    <string name="textViewAgu">TextViewAgu</string>
-    <string name="textviewCarbo">TextViewCarbo</string>
-    <string name="textviewLegu">TextViewLegu</string>
-    <string name="editar">Editar</string>
-    <string name="eliminar">Eliminar</string>
-    <string name="title_activity_editar">Editar</string>
-    <string name="title_activity_eliminar">Eliminar</string>
-    <string name="editor_os_valores">Editor os valores</string>
-    <string name="editar">Editar</string>
-    <string name="guardar">Guardar</string>
-    <string name="cancelar">Cancelar</string>
-    <string name="eliminar_dados">Eliminar dados</string>
-    <string name="eliminar">Eliminar</string>
-    <string name="eliminar">Eliminar</string>
-    <string name="fundo">Fundo</string>
-    <string name="eliminar">Eliminar</string>
-    <string name="cancelar">Cancelar</string>
+    <string name="salvar" translatable="false">Salvar</string>
+    <string name="apagar" translatable="false">Apagar</string>
+    <string name="title_activity_editar" translatable="false">Editar</string>
+    <string name="title_activity_eliminar" translatable="false">Eliminar</string>
+    <string name="dados_eliminar" translatable="false">Dados á Eliminar</string>
+    <string name="simples" translatable="false">simples</string>
+    <string name="voltar" translatable="false">Voltar</string>
+    <string name="introduza_o_valor" translatable="false">Introduza o Valor</string>
+    <string name="retroceder" translatable="false">Retroceder</string>
+    <string name="introduzir_valor_mudar" translatable="false">Introduzir valor á mudar</string>
+    <string name="valor_alterar" translatable="false">Valor á Alterar</string>
+    <string name="editar" translatable="false">Editar</string>
+    <string name="eliminar" translatable="false">Eliminar</string>
+
+
 
 </resources>

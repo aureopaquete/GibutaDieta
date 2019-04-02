@@ -74,5 +74,14 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
+    public void Eliminar(View view) {
+        Intent intent = new Intent(this, Eliminar.class);
+        startActivity(intent);
+    }
+
+    public void Editar(View view) {
+        Intent intent = new Intent(this, Editar.class);
+        startActivity(intent);
+    }
 
 }
