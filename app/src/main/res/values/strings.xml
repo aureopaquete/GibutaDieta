@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">GibutaDieta</string>
-    <string name="action_settings">Definições</string>
+    <string name="action_settings">Settings</string>
     <string name="title_activity_content_menus">Menus</string>
-    <string name="legumes">Legumes</string>
-    <string name="carboidratos">Carboidratos</string>
-    <string name="agua">Agua</string>
+    <string name="legumes">Vegetables</string>
+    <string name="carboidratos">carbohydrates</string>
+    <string name="agua">Water</string>
     <string name="textview2" translatable="false">TextView</string>
     <string name="textview3" translatable="false">TextView</string>
     <string name="textview4" translatable="false">TextView</string>
@@ -20,28 +20,28 @@
     <string name="textoHint" translatable="false">hint</string>
     <string name="quantidade" translatable="false">Quantidade</string>
     <string name="tipoAlimento" translatable="false">TipoAlimento</string>
-    <string name="guardar">Guardar</string>
-    <string name="cancelar">Cancelar</string>
-    <string name="agua2">Água</string>
-    <string name="tipo_de_alimento">Tipo de Alimento</string>
-    <string name="fechar">Fechar</string>
-    <string name="proteinas">Proteinas</string>
-    <string name="salvar" translatable="false">Salvar</string>
-    <string name="apagar" translatable="false">Apagar</string>
+    <string name="guardar">Save</string>
+    <string name="cancelar">Cancel</string>
+    <string name="agua2">Water</string>
+    <string name="tipo_de_alimento">" Types of Consumption"</string>
+    <string name="fechar">Close</string>
+    <string name="proteinas">Proteins</string>
+    <string name="salvar">Save</string>
+    <string name="apagar">Delete</string>
     <string name="title_activity_editar" translatable="false">Editar</string>
     <string name="title_activity_eliminar" translatable="false">Eliminar</string>
-    <string name="dados_eliminar" translatable="false">Dados á Eliminar</string>
+    <string name="dados_eliminar">"Data to Delete "</string>
     <string name="simples" translatable="false">simples</string>
-    <string name="voltar" translatable="false">Voltar</string>
-    <string name="introduza_o_valor" translatable="false">Introduza o Valor</string>
-    <string name="retroceder" translatable="false">Retroceder</string>
-    <string name="introduzir_valor_mudar" translatable="false">Introduzir valor á mudar</string>
-    <string name="valor_alterar" translatable="false">Valor á Alterar</string>
-    <string name="editar" translatable="false">Editar</string>
-    <string name="eliminar" translatable="false">Eliminar</string>
-    <string name="coisaf">coisaF</string>
-    <string name="tipo_de_consumo">Tipo de Consumo</string>
-    <string name="doofcomida">doofcomida</string>
+    <string name="voltar">"Come back "</string>
+    <string name="introduza_o_valor">"Enter Value "</string>
+    <string name="retroceder">"Go back "</string>
+    <string name="introduzir_valor_mudar">" Enter value to change"</string>
+    <string name="valor_alterar">" Value to Change"</string>
+    <string name="editar">Edit</string>
+    <string name="eliminar">Eliminate</string>
+    <string name="coisaf" translatable="false">coisaF</string>
+    <string name="tipo_de_consumo">"Type of Consumption "</string>
+    <string name="doofcomida" translatable="false">doofcomida</string>
 
 
 </resources>
