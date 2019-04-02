@@ -4,7 +4,6 @@
     <string name="title_activity_content_menus">Menus</string>
     <string name="legumes">Legumes</string>
     <string name="carboidratos">Carboidratos</string>
-    <string name="proteinas">Proteinas</string>
     <string name="agua">Agua</string>
     <string name="textview2" translatable="false">TextView</string>
     <string name="textview3" translatable="false">TextView</string>
@@ -13,7 +12,7 @@
     <string name="gibuta_dieta" translatable="false">Gibuta Dieta</string>
     <string name="star" translatable="false">Star</string>
     <string name="start" translatable="false">start</string>
-       <string name="Gibuta" translatable="false">GIBUTA DIETA</string>
+    <string name="Gibuta" translatable="false">GIBUTA DIETA</string>
     <string name="title_activity_adicionar" translatable="false">Adicionar</string>
     <string name="adicionar" translatable="false">Adicionar</string>
     <string name="comida" translatable="false">Comida</string>
@@ -26,4 +25,25 @@
     <string name="agua2">Água</string>
     <string name="tipo_de_alimento">Tipo de Alimento</string>
     <string name="fechar">Fechar</string>
+    <string name="proteinas">Proteinas</string>
+    <string name="sobre">Sobre</string>
+    <string name="textviewProte">TextViewProte</string>
+    <string name="textViewAgu">TextViewAgu</string>
+    <string name="textviewCarbo">TextViewCarbo</string>
+    <string name="textviewLegu">TextViewLegu</string>
+    <string name="editar">Editar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="title_activity_editar">Editar</string>
+    <string name="title_activity_eliminar">Eliminar</string>
+    <string name="editor_os_valores">Editor os valores</string>
+    <string name="editar">Editar</string>
+    <string name="guardar">Guardar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="eliminar_dados">Eliminar dados</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="fundo">Fundo</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="cancelar">Cancelar</string>
+
 </resources>
