@@ -6,6 +6,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Toast;
 
 public class Editar extends AppCompatActivity {
 
@@ -19,9 +20,14 @@ public class Editar extends AppCompatActivity {
 
     }
 
-    public void Guardar2(View view) {
+
+
+    public void Retroceder(View view) {
+        finish();
     }
 
-    public void Cancelar2(View view) {
+    public void Salvar(View view) {
+        Toast.makeText(this, "Guardado com Sucesso", Toast.LENGTH_SHORT).show();
+        finish();
     }
 }

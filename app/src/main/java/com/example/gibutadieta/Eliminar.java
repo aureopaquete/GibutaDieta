@@ -6,6 +6,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Toast;
 
 public class Eliminar extends AppCompatActivity {
 
@@ -18,9 +19,12 @@ public class Eliminar extends AppCompatActivity {
 
     }
 
-    public void Eliminar2(View view) {
+    public void Cancelar3(View view) {
+        finish();
     }
 
-    public void Cancelar3(View view) {
+    public void Apagar(View view) {
+        Toast.makeText(this, "Apagado com Sucesso", Toast.LENGTH_SHORT).show();
+        finish();
     }
 }
