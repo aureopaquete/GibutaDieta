@@ -55,6 +55,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <android.support.design.widget.TextInputEditText
+            android:id="@+id/TextoApagar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/introduza_o_valor"

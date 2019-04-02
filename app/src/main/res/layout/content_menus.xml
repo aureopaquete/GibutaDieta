@@ -15,7 +15,7 @@
         android:layout_height="40dp"
         android:layout_marginStart="35dp"
         android:layout_marginLeft="35dp"
-        android:layout_marginTop="125dp"
+        android:layout_marginTop="344dp"
         android:background="@android:color/holo_blue_bright"
         android:onClick="Agua"
         android:text="@string/agua2"
@@ -28,7 +28,7 @@
         android:id="@+id/buttonProte"
         android:layout_width="138dp"
         android:layout_height="42dp"
-        android:layout_marginTop="125dp"
+        android:layout_marginTop="344dp"
         android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
         android:background="@android:color/holo_red_light"
@@ -45,20 +45,18 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginLeft="35dp"
-        android:layout_marginTop="40dp"
         android:background="@android:color/holo_orange_dark"
         android:onClick="Carbo"
         android:text="@string/carboidratos"
         android:textColor="@android:color/white"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewAgu" />
+        app:layout_constraintBottom_toTopOf="@+id/textViewCarbo"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/buttonLegu"
         android:layout_width="138dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
         android:background="@android:color/holo_green_dark"
@@ -66,8 +64,8 @@
         android:text="@string/legumes"
         android:textColor="@android:color/white"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewProte" />
+        app:layout_constraintBottom_toTopOf="@+id/textViewLegu"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/logotipo"
@@ -92,11 +90,9 @@
         android:id="@+id/button"
         android:layout_width="79dp"
         android:layout_height="39dp"
-        android:layout_marginStart="301dp"
-        android:layout_marginLeft="301dp"
         android:layout_marginTop="608dp"
-        android:layout_marginEnd="@dimen/padrao"
-        android:layout_marginRight="@dimen/padrao"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
         android:layout_marginBottom="28dp"
         android:background="@android:color/darker_gray"
         android:onClick="Sair"
@@ -104,56 +100,54 @@
         android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textViewAgu"
         android:layout_width="137dp"
-        android:layout_height="38dp"
+        android:layout_height="20dp"
         android:layout_marginStart="35dp"
         android:layout_marginLeft="35dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginBottom="32dp"
         android:textAllCaps="false"
         android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCarbo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonAgua"
         tools:text="Consumir até 2L" />
 
     <TextView
         android:id="@+id/textViewProte"
         android:layout_width="138dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="15dp"
+        android:layout_height="21dp"
         android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
+        android:layout_marginBottom="32dp"
         android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLegu"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonProte"
         tools:text="Consumir até 150g" />
 
     <TextView
         android:id="@+id/textViewCarbo"
         android:layout_width="142dp"
-        android:layout_height="37dp"
+        android:layout_height="19dp"
         android:layout_marginStart="35dp"
         android:layout_marginLeft="35dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginBottom="46dp"
+        app:layout_constraintBottom_toTopOf="@+id/button6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonCarbo"
         tools:text="Consumir até 230g" />
 
     <TextView
         android:id="@+id/textViewLegu"
         android:layout_width="138dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="15dp"
+        android:layout_height="19dp"
         android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
+        android:layout_marginBottom="46dp"
+        app:layout_constraintBottom_toTopOf="@+id/button7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonLegu"
         tools:text="Consumir até 800g" />
 
     <Button
@@ -162,32 +156,39 @@
         android:layout_height="25dp"
         android:layout_marginStart="35dp"
         android:layout_marginLeft="35dp"
-        android:layout_marginTop="148dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginRight="64dp"
-        android:layout_marginBottom="77dp"
+        android:layout_marginBottom="32dp"
         android:background="@android:color/holo_orange_dark"
         android:onClick="Editar"
         android:text="@string/editar"
         app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toStartOf="@+id/button7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewCarbo"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button7"
         android:layout_width="136dp"
         android:layout_height="25dp"
-        android:layout_marginTop="146dp"
         android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
-        android:layout_marginBottom="77dp"
+        android:layout_marginBottom="32dp"
         android:background="@android:color/holo_red_dark"
         android:onClick="Eliminar"
         android:text="@string/eliminar"
         app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="379dp"
+        android:layout_height="322dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:contentDescription="@string/doofcomida"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewLegu" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/saude" />
 
 </android.support.constraint.ConstraintLayout>

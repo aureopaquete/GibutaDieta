@@ -6,6 +6,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class Eliminar extends AppCompatActivity {
@@ -24,6 +25,16 @@ public class Eliminar extends AppCompatActivity {
     }
 
     public void Apagar(View view) {
+
+        EditText TextApagar = (EditText) findViewById(R.id.TextoApagar);
+        String mensagem = TextApagar.getText().toString();
+
+
+        if (mensagem.trim().length() == 0) {
+            TextApagar.setError("Campo Obrigatório");
+            TextApagar.requestFocus();
+            return;
+        }
         Toast.makeText(this, "Apagado com Sucesso", Toast.LENGTH_SHORT).show();
         finish();
     }

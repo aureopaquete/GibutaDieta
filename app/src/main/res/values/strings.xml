@@ -40,6 +40,8 @@
     <string name="editar" translatable="false">Editar</string>
     <string name="eliminar" translatable="false">Eliminar</string>
     <string name="coisaf">coisaF</string>
+    <string name="tipo_de_consumo">Tipo de Consumo</string>
+    <string name="doofcomida">doofcomida</string>
 
 
 </resources>
