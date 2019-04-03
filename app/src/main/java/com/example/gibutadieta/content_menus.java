@@ -38,10 +38,13 @@ public class content_menus extends AppCompatActivity {
     public void Sair(View view) {
     }
 
-
     public void Eliminar(View view) {
     }
 
     public void Editar(View view) {
     }
+
+
+
 }
+

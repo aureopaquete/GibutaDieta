@@ -37,6 +37,7 @@ public class Preencher extends AppCompatActivity {
             editorTexto.requestFocus();
             return;
         }
+        Intent intent = new Intent(this,MainActivity.class);
 
         Toast.makeText(this, "Guardado com sucesso", Toast.LENGTH_SHORT).show();
         finish();
