@@ -23,4 +23,11 @@
     <string name="salvar">Salvar</string>
     <string name="apagar">Apagar</string>
     <string name="tipo_de_consumo">Tipo de Consumo</string>
+    <string name="conclu_do">Concluído</string>
+    <string name="dados">Dados</string>
+    <string name="bot_o_editar">Botão Editar</string>
+    <string name="bot_o_eliminar">Botão Eliminar</string>
+    <string name="bot_o_adicionar">Botão Adicionar</string>
+    <string name="tipo_de_consumo_editar">Tipo de Consumo á Editar</string>
+    <string name="tipo_de_consumo_apagar">Tipo de Consumo á Apagar</string>
 </resources>

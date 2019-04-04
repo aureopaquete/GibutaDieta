@@ -42,23 +42,23 @@
     <string name="coisaf" translatable="false">coisaF</string>
     <string name="tipo_de_consumo">"Type of Consumption "</string>
     <string name="doofcomida" translatable="false">doofcomida</string>
-    <string name="title_activity_lista">Lista</string>
-    <string name="textview">TextView</string>
-    <string name="ver">Ver</string>
-    <string name="title_activity_inclusao">Inclusao</string>
-    <string name="bot_o_adicionar">Botão Adicionar</string>
-    <string name="botaodeletar">botaodeletar</string>
-    <string name="botaoeditar">botaoeditar</string>
-    <string name="botaoadicionar">botaoadicionar</string>
-    <string name="bot_o_eliminar">Botão Eliminar</string>
-    <string name="bot_o_editar">Botão Editar</string>
-    <string name="dados">Dados</string>
-    <string name="title_activity_ver_dados">VerDados</string>
-    <string name="_2_l">2 L</string>
-    <string name="_150_g">150 g</string>
-    <string name="_800_g">800 g</string>
-    <string name="_230_g">230 g</string>
-    <string name="conclu_do">Concluído</string>
-    <string name="tipo_de_consumo_editar">Tipo de Consumo á Editar</string>
-    <string name="tipo_de_consumo_apagar">Tipo de Consumo á Apagar</string>
+    <string name="title_activity_lista" translatable="false">Lista</string>
+    <string name="textview" translatable="false">TextView</string>
+    <string name="ver" translatable="false">Ver</string>
+    <string name="title_activity_inclusao" translatable="false">Inclusao</string>
+    <string name="bot_o_adicionar">"Add Button "</string>
+    <string name="botaodeletar" translatable="false">botaodeletar</string>
+    <string name="botaoeditar" translatable="false">botaoeditar</string>
+    <string name="botaoadicionar" translatable="false">botaoadicionar</string>
+    <string name="bot_o_eliminar">"Delete button "</string>
+    <string name="bot_o_editar">"Edit button "</string>
+    <string name="dados">"Data "</string>
+    <string name="title_activity_ver_dados" translatable="false">VerDados</string>
+    <string name="_2_l" translatable="false">2 L</string>
+    <string name="_150_g" translatable="false">150 g</string>
+    <string name="_800_g" translatable="false">800 g</string>
+    <string name="_230_g" translatable="false">230 g</string>
+    <string name="conclu_do">Completed</string>
+    <string name="tipo_de_consumo_editar">"Type of Consumption to Edit "</string>
+    <string name="tipo_de_consumo_apagar">"Type of Consumption to Erase "</string>
 </resources>
