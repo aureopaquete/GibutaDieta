@@ -42,6 +42,16 @@
     <string name="coisaf" translatable="false">coisaF</string>
     <string name="tipo_de_consumo">"Type of Consumption "</string>
     <string name="doofcomida" translatable="false">doofcomida</string>
-
-
+    <string name="title_activity_lista">Lista</string>
+    <string name="textview">TextView</string>
+    <string name="ver">Ver</string>
+    <string name="title_activity_inclusao">Inclusao</string>
+    <string name="bot_o_adicionar">Botão Adicionar</string>
+    <string name="botaodeletar">botaodeletar</string>
+    <string name="botaoeditar">botaoeditar</string>
+    <string name="botaoadicionar">botaoadicionar</string>
+    <string name="bot_o_eliminar">Botão Eliminar</string>
+    <string name="bot_o_editar">Botão Editar</string>
+    <string name="dados">Dados</string>
+    <string name="title_activity_ver_dados">VerDados</string>
 </resources>

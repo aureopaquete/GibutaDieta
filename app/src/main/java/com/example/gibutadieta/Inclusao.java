@@ -7,44 +7,32 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
 
-public class content_menus extends AppCompatActivity {
+public class Inclusao extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_content_menus);
+        setContentView(R.layout.activity_inclusao);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
 
     }
 
-    public void Agua(View view) {
+    public void botaoadicionar(View view) {
+        Intent intent = new Intent(this, Preencher.class);
+        startActivity(intent);
     }
 
-    public void Proteinas(View view) {
+    public void botaoEditar(View view) {
+        Intent intent = new Intent(this, Editar.class);
+        startActivity(intent);
     }
 
-    public void Carbo(View view) {
+    public void botaoDeletar(View view) {
+        Intent intent = new Intent(this, Eliminar.class);
+        startActivity(intent);
     }
-
-    public void Legumes(View view) {
-    }
-
-    public void Sair(View view) {
-    }
-
-    public void Eliminar(View view) {
-    }
-
-    public void Editar(View view) {
-    }
-
-
 }
-
