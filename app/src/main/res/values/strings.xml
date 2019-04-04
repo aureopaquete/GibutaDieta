@@ -54,4 +54,8 @@
     <string name="bot_o_editar">Botão Editar</string>
     <string name="dados">Dados</string>
     <string name="title_activity_ver_dados">VerDados</string>
+    <string name="_2_l">2 L</string>
+    <string name="_150_g">150 g</string>
+    <string name="_800_g">800 g</string>
+    <string name="_230_g">230 g</string>
 </resources>
