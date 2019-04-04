@@ -1,11 +1,15 @@
 package com.example.gibutadieta;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
+
+import java.util.Date;
 
 public class VerDados extends AppCompatActivity {
 
@@ -15,9 +19,20 @@ public class VerDados extends AppCompatActivity {
         setContentView(R.layout.activity_ver_dados);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        mostrarTexto();
     }
 
     public void conluido(View view) {
         finish();
     }
+
+    private void mostrarTexto() {
+        Intent intent = getIntent();
+
+        String mensagem = intent.getStringExtra(DefinicaoApp.TEXTO);
+        TextView textViewAguaGeral = (TextView) findViewById(R.id.textViewAguaGeral);
+        textViewAguaGeral.setText(mensagem);
+    }
 }
+

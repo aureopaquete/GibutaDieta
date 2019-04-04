@@ -38,7 +38,7 @@ public class Editar extends AppCompatActivity {
             return;
         }
 
-        Toast.makeText(this, "Guardado com Sucesso", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Editado com Sucesso", Toast.LENGTH_SHORT).show();
         finish();
     }
 }
