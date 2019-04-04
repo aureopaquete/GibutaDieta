@@ -41,6 +41,9 @@ public class Preencher extends AppCompatActivity {
 
         Intent intent = new Intent(this, VerDados.class);
         intent.putExtra(DefinicaoApp.TEXTO, mensagem);
+        intent.putExtra(DefinicaoApp.TEXTOLEGU, mensagem);
+        intent.putExtra(DefinicaoApp.TEXTOPROTE, mensagem);
+        intent.putExtra(DefinicaoApp.TEXTOCARBO, mensagem);
         startActivity(intent);
 
 

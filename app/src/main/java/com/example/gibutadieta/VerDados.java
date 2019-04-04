@@ -41,7 +41,7 @@ public class VerDados extends AppCompatActivity {
     private void mostrarTextoProte() {
         Intent intent = getIntent();
 
-        String mensagem = intent.getStringExtra(DefinicaoApp.TEXTO);
+        String mensagem = intent.getStringExtra(DefinicaoApp.TEXTOPROTE);
         TextView textViewAguaGeral = (TextView) findViewById(R.id.textViewProteGeral);
         textViewAguaGeral.setText(mensagem);
     }
@@ -49,7 +49,7 @@ public class VerDados extends AppCompatActivity {
     private void mostrarTextoLegu() {
         Intent intent = getIntent();
 
-        String mensagem = intent.getStringExtra(DefinicaoApp.TEXTO);
+        String mensagem = intent.getStringExtra(DefinicaoApp.TEXTOLEGU);
         TextView textViewAguaGeral = (TextView) findViewById(R.id.textViewLeguGeral);
         textViewAguaGeral.setText(mensagem);
     }
@@ -57,7 +57,7 @@ public class VerDados extends AppCompatActivity {
     private void mostrarTextoCarbo() {
         Intent intent = getIntent();
 
-        String mensagem = intent.getStringExtra(DefinicaoApp.TEXTO);
+        String mensagem = intent.getStringExtra(DefinicaoApp.TEXTOCARBO);
         TextView textViewAguaGeral = (TextView) findViewById(R.id.textViewCarboGeral);
         textViewAguaGeral.setText(mensagem);
     }
