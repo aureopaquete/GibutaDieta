@@ -17,4 +17,7 @@ public class VerDados extends AppCompatActivity {
         setSupportActionBar(toolbar);
     }
 
+    public void conluido(View view) {
+        finish();
+    }
 }

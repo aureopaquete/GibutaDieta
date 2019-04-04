@@ -74,5 +74,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Dados(View view) {
+        Intent intent = new Intent(this, VerDados.class);
+        startActivity(intent);
     }
 }

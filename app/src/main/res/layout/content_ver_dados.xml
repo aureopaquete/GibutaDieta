@@ -85,10 +85,8 @@
         android:layout_marginStart="60dp"
         android:layout_marginLeft="60dp"
         android:layout_marginTop="70dp"
-        android:layout_marginBottom="264dp"
         android:background="@android:color/background_light"
         android:textColor="@android:color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewLeguGeral" />
 
@@ -96,7 +94,7 @@
         android:id="@+id/textView14"
         android:layout_width="44dp"
         android:layout_height="37dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="60dp"
         android:layout_marginRight="60dp"
         android:background="@android:color/background_light"
@@ -117,4 +115,24 @@
         android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="249dp"
+        android:layout_marginLeft="249dp"
+        android:layout_marginTop="132dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="73dp"
+        android:background="@android:color/holo_orange_dark"
+        android:onClick="conluido"
+        android:text="@string/conclu_do"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintVertical_bias="1.0" />
 </android.support.constraint.ConstraintLayout>
