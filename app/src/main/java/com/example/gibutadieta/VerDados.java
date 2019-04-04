@@ -20,18 +20,45 @@ public class VerDados extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        mostrarTexto();
+        mostrarTextoAgua();
+        mostrarTextoProte();
+        mostrarTextoLegu();
+        mostrarTextoCarbo();
     }
 
     public void conluido(View view) {
         finish();
     }
 
-    private void mostrarTexto() {
+    private void mostrarTextoAgua() {
         Intent intent = getIntent();
 
         String mensagem = intent.getStringExtra(DefinicaoApp.TEXTO);
         TextView textViewAguaGeral = (TextView) findViewById(R.id.textViewAguaGeral);
+        textViewAguaGeral.setText(mensagem);
+    }
+
+    private void mostrarTextoProte() {
+        Intent intent = getIntent();
+
+        String mensagem = intent.getStringExtra(DefinicaoApp.TEXTO);
+        TextView textViewAguaGeral = (TextView) findViewById(R.id.textViewProteGeral);
+        textViewAguaGeral.setText(mensagem);
+    }
+
+    private void mostrarTextoLegu() {
+        Intent intent = getIntent();
+
+        String mensagem = intent.getStringExtra(DefinicaoApp.TEXTO);
+        TextView textViewAguaGeral = (TextView) findViewById(R.id.textViewLeguGeral);
+        textViewAguaGeral.setText(mensagem);
+    }
+
+    private void mostrarTextoCarbo() {
+        Intent intent = getIntent();
+
+        String mensagem = intent.getStringExtra(DefinicaoApp.TEXTO);
+        TextView textViewAguaGeral = (TextView) findViewById(R.id.textViewCarboGeral);
         textViewAguaGeral.setText(mensagem);
     }
 }
