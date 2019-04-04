@@ -45,7 +45,7 @@ public class Preencher extends AppCompatActivity {
         intent.putExtra(DefinicaoApp.TEXTOPROTE, mensagem);
         intent.putExtra(DefinicaoApp.TEXTOCARBO, mensagem);
         startActivity(intent);
-
+        finish();
 
     }
 

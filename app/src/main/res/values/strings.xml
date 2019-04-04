@@ -59,4 +59,6 @@
     <string name="_800_g">800 g</string>
     <string name="_230_g">230 g</string>
     <string name="conclu_do">Concluído</string>
+    <string name="tipo_de_consumo_editar">Tipo de Consumo á Editar</string>
+    <string name="tipo_de_consumo_apagar">Tipo de Consumo á Apagar</string>
 </resources>

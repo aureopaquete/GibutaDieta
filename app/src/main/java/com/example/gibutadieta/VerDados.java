@@ -42,24 +42,24 @@ public class VerDados extends AppCompatActivity {
         Intent intent = getIntent();
 
         String mensagem = intent.getStringExtra(DefinicaoApp.TEXTOPROTE);
-        TextView textViewAguaGeral = (TextView) findViewById(R.id.textViewProteGeral);
-        textViewAguaGeral.setText(mensagem);
+        TextView textViewProteGeral = (TextView) findViewById(R.id.textViewProteGeral);
+        textViewProteGeral.setText(mensagem);
     }
 
     private void mostrarTextoLegu() {
         Intent intent = getIntent();
 
         String mensagem = intent.getStringExtra(DefinicaoApp.TEXTOLEGU);
-        TextView textViewAguaGeral = (TextView) findViewById(R.id.textViewLeguGeral);
-        textViewAguaGeral.setText(mensagem);
+        TextView textViewLeguGeral = (TextView) findViewById(R.id.textViewLeguGeral);
+        textViewLeguGeral.setText(mensagem);
     }
 
     private void mostrarTextoCarbo() {
         Intent intent = getIntent();
 
         String mensagem = intent.getStringExtra(DefinicaoApp.TEXTOCARBO);
-        TextView textViewAguaGeral = (TextView) findViewById(R.id.textViewCarboGeral);
-        textViewAguaGeral.setText(mensagem);
+        TextView textViewCarboGeral = (TextView) findViewById(R.id.textViewCarboGeral);
+        textViewCarboGeral.setText(mensagem);
     }
 }
 
