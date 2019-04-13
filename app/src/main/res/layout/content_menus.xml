@@ -15,63 +15,65 @@
         android:layout_height="40dp"
         android:layout_marginStart="35dp"
         android:layout_marginLeft="35dp"
-        android:layout_marginTop="344dp"
-        android:layout_marginBottom="56dp"
+        android:layout_marginTop="70dp"
         android:background="@android:color/holo_blue_bright"
         android:onClick="Agua"
         android:text="@string/agua2"
         android:textColor="@android:color/background_dark"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonCarbo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/imageView7" />
 
     <Button
         android:id="@+id/buttonProte"
         android:layout_width="138dp"
         android:layout_height="42dp"
-        android:layout_marginTop="344dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
-        android:layout_marginBottom="56dp"
         android:background="@android:color/holo_red_light"
         android:onClick="Proteinas"
         android:text="@string/proteinas"
         android:textColor="@android:color/white"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonLegu"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/imageView7" />
 
     <Button
         android:id="@+id/buttonCarbo"
         android:layout_width="141dp"
         android:layout_height="44dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginBottom="88dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:background="@android:color/holo_orange_dark"
         android:onClick="Carbo"
         android:text="@string/carboidratos"
         android:textColor="@android:color/white"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAgua"
+        app:layout_constraintVertical_bias="0.712" />
 
     <Button
         android:id="@+id/buttonLegu"
         android:layout_width="138dp"
         android:layout_height="44dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginRight="35dp"
-        android:layout_marginBottom="88dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="8dp"
         android:background="@android:color/holo_green_dark"
         android:onClick="Legumes"
         android:text="@string/legumes"
         android:textColor="@android:color/white"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonProte"
+        app:layout_constraintVertical_bias="0.71" />
 
     <TextView
         android:id="@+id/logotipo"
@@ -79,40 +81,47 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/padrao"
         android:layout_marginLeft="@dimen/padrao"
+        android:layout_marginTop="55dp"
         android:layout_marginEnd="@dimen/padrao"
         android:layout_marginRight="@dimen/padrao"
-        android:layout_marginBottom="540dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/Gibuta"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="30sp"
+        app:fontFamily="serif-monospace"
+        app:layout_constraintBottom_toTopOf="@+id/imageView7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="79dp"
         android:layout_height="39dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="24dp"
         android:background="@android:color/darker_gray"
         android:onClick="Sair"
         android:text="@string/fechar"
         android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLegu" />
 
     <ImageView
         android:id="@+id/imageView7"
         android:layout_width="379dp"
-        android:layout_height="260dp"
+        android:layout_height="379dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="53dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
         android:contentDescription="@string/doofcomida"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -124,11 +133,13 @@
         android:layout_height="36dp"
         android:layout_marginStart="35dp"
         android:layout_marginLeft="35dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
         android:background="@android:color/holo_blue_dark"
         android:onClick="Dados"
         android:text="@string/dados"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCarbo" />
 
 </android.support.constraint.ConstraintLayout>
