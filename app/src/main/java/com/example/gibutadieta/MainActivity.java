@@ -23,6 +23,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    protected void onSaveInstanceState(Bundle outState) {
+        // todo: guardar o estado do aplicativo no momento da inversão
+        super.onSaveInstanceState(outState);
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

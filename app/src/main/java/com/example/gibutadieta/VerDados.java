@@ -24,6 +24,7 @@ public class VerDados extends AppCompatActivity {
         mostrarTextoProte();
         mostrarTextoLegu();
         mostrarTextoCarbo();
+
     }
 
     public void conluido(View view) {
