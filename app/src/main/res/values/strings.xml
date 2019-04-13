@@ -61,4 +61,5 @@
     <string name="conclu_do">Completed</string>
     <string name="tipo_de_consumo_editar">"Type of Consumption to Edit "</string>
     <string name="tipo_de_consumo_apagar">"Type of Consumption to Erase "</string>
+    <string name="todocomebem">TODOcomebem</string>
 </resources>
