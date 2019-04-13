@@ -25,6 +25,23 @@ public class VerDados extends AppCompatActivity {
         mostrarTextoLegu();
         mostrarTextoCarbo();
 
+        if (savedInstanceState == null) {
+
+            mostrarTextoAgua();
+            mostrarTextoProte();
+            mostrarTextoLegu();
+            mostrarTextoCarbo();
+
+        } else {
+            // todo: repor o estado da App
+        }
+
+
+    }
+
+    protected void onSaveInstanceState(Bundle outState) {
+        // todo: guardar o estado do aplicativo no momento da inversão
+        super.onSaveInstanceState(outState);
     }
 
     public void conluido(View view) {
