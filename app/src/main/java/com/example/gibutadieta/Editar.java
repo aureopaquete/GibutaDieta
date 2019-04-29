@@ -38,6 +38,20 @@ public class Editar extends AppCompatActivity {
             return;
         }
 
+        int valor = 0;
+
+        try {
+            valor = Integer.parseInt(TextEditor.getText().toString());
+        } catch (NumberFormatException e) {
+            return;
+        }
+
+        if (valor == 0) {
+            TextEditor.setError("Editar valor maior que 0");
+            TextEditor.requestFocus();
+            return;
+        }
+
         Toast.makeText(this, "Editado com Sucesso", Toast.LENGTH_SHORT).show();
         finish();
     }

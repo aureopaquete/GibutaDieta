@@ -37,6 +37,21 @@ public class Preencher extends AppCompatActivity {
             editorTexto.requestFocus();
             return;
         }
+
+        int valor = 0;
+
+        try {
+            valor = Integer.parseInt(editorTexto.getText().toString());
+        } catch (NumberFormatException e) {
+            return;
+        }
+
+        if (valor == 0) {
+            editorTexto.setError("Adicione valor maior que 0");
+            editorTexto.requestFocus();
+            return;
+        }
+
         Toast.makeText(this, "Guardado com sucesso", Toast.LENGTH_SHORT).show();
 
         Intent intent = new Intent(this, VerDados.class);

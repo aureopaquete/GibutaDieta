@@ -35,6 +35,19 @@ public class Eliminar extends AppCompatActivity {
             TextApagar.requestFocus();
             return;
         }
+        int valor = 0;
+
+        try {
+            valor = Integer.parseInt(TextApagar.getText().toString());
+        } catch (NumberFormatException e) {
+            return;
+        }
+
+        if (valor == 0) {
+            TextApagar.setError("Apagar valor maior que 0");
+            TextApagar.requestFocus();
+            return;
+        }
         Toast.makeText(this, "Apagado com Sucesso", Toast.LENGTH_SHORT).show();
         finish();
     }
