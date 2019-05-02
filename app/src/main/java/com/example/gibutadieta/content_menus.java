@@ -24,17 +24,6 @@ public class content_menus extends AppCompatActivity {
 
     }
 
-    public void Agua(View view) {
-    }
-
-    public void Proteinas(View view) {
-    }
-
-    public void Carbo(View view) {
-    }
-
-    public void Legumes(View view) {
-    }
 
     public void Sair(View view) {
     }
@@ -42,11 +31,18 @@ public class content_menus extends AppCompatActivity {
     public void Eliminar(View view) {
     }
 
-    public void Editar(View view) {
-    }
 
 
     public void Dados(View view) {
+    }
+
+    public void Adicionar(View view) {
+    }
+
+    public void Editar(View view) {
+    }
+
+    public void Deletar(View view) {
     }
 }
 

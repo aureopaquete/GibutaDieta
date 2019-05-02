@@ -50,29 +50,6 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void Agua(View view) {
-        Intent intent = new Intent(this, Inclusao.class);
-        Toast.makeText(this, "Adicionar Água", Toast.LENGTH_SHORT).show();
-        startActivity(intent);
-    }
-
-    public void Proteinas(View view) {
-        Intent intent = new Intent(this, Inclusao.class);
-        Toast.makeText(this, "Adicionar Proteinas", Toast.LENGTH_SHORT).show();
-        startActivity(intent);
-    }
-
-    public void Carbo(View view) {
-        Intent intent = new Intent(this, Inclusao.class);
-        Toast.makeText(this, "Adicionar Carboidratos", Toast.LENGTH_SHORT).show();
-        startActivity(intent);
-    }
-
-    public void Legumes(View view) {
-        Intent intent = new Intent(this, Inclusao.class);
-        Toast.makeText(this, "Adicionar Legumes", Toast.LENGTH_SHORT).show();
-        startActivity(intent);
-    }
 
     public void Sair(View view) {
         finish();
@@ -80,6 +57,21 @@ public class MainActivity extends AppCompatActivity {
 
     public void Dados(View view) {
         Intent intent = new Intent(this, VerDados.class);
+        startActivity(intent);
+    }
+
+    public void Adicionar(View view) {
+        Intent intent = new Intent(this, Preencher.class);
+        startActivity(intent);
+    }
+
+    public void Editar(View view) {
+        Intent intent = new Intent(this, Editar.class);
+        startActivity(intent);
+    }
+
+    public void Deletar(View view) {
+        Intent intent = new Intent(this, Eliminar.class);
         startActivity(intent);
     }
 }
