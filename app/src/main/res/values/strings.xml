@@ -62,4 +62,10 @@
     <string name="tipo_de_consumo_editar">"Type of Consumption to Edit "</string>
     <string name="tipo_de_consumo_apagar">"Type of Consumption to Erase "</string>
     <string name="todocomebem">TODOcomebem</string>
+    <string name="valor_do_consumo">Valor do Consumo</string>
+    <string name="introduzir_o_valor_do_consumo">Introduzir o valor do consumo</string>
+    <string name="introduza_o_valor_apagar">Introduza o valor á apagar</string>
+    <string name="introduzir_valor_editar">Introduzir valor á editar</string>
+    <string name="introduza_valor_editar">Introduza valor á editar</string>
+    <string name="recuar">Recuar</string>
 </resources>

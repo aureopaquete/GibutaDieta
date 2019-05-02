@@ -9,66 +9,6 @@
     tools:context=".content_menus"
     tools:showIn="@layout/activity_content_menus">
 
-    <Button
-        android:id="@+id/buttonAgua"
-        android:layout_width="141dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="80dp"
-        android:background="@android:color/holo_blue_bright"
-        android:onClick="Agua"
-        android:text="@string/agua2"
-        android:textColor="@android:color/background_dark"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/buttonProte"
-        android:layout_width="138dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:background="@android:color/holo_red_light"
-        android:onClick="Proteinas"
-        android:text="@string/proteinas"
-        android:textColor="@android:color/white"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/buttonCarbo"
-        android:layout_width="141dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="50dp"
-        android:background="@android:color/holo_orange_dark"
-        android:onClick="Carbo"
-        android:text="@string/carboidratos"
-        android:textColor="@android:color/white"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonAgua" />
-
-    <Button
-        android:id="@+id/buttonLegu"
-        android:layout_width="138dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:background="@android:color/holo_green_dark"
-        android:onClick="Legumes"
-        android:text="@string/legumes"
-        android:textColor="@android:color/white"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonProte" />
-
     <TextView
         android:id="@+id/logotipo"
         android:layout_width="103dp"
@@ -88,18 +28,15 @@
         android:id="@+id/button"
         android:layout_width="86dp"
         android:layout_height="39dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@android:color/darker_gray"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/bodas_redondas"
         android:onClick="Sair"
         android:text="@string/fechar"
-        android:textColor="@android:color/background_light"
+        android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonLegu"
-        app:layout_constraintVertical_bias="0.943" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/button6"
@@ -107,35 +44,28 @@
         android:layout_height="36dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@android:color/holo_blue_dark"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/bodas_redondas"
         android:onClick="Dados"
         android:text="@string/dados"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonCarbo"
-        app:layout_constraintVertical_bias="0.943" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="294dp"
-        android:layout_height="205dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@android:color/holo_green_dark"
-        android:contentDescription="@string/todocomebem"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.616"
-        app:srcCompat="@mipmap/saude" />
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="76dp"
+        android:layout_height="39dp"
+        android:background="@drawable/bodas_redondas_menu"
+        app:srcCompat="@android:drawable/ic_menu_add"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="90dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_delete"
+        tools:layout_editor_absoluteX="201dp"
+        tools:layout_editor_absoluteY="90dp" />
 
 </android.support.constraint.ConstraintLayout>

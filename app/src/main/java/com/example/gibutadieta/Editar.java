@@ -23,9 +23,6 @@ public class Editar extends AppCompatActivity {
 
 
 
-    public void Retroceder(View view) {
-        finish();
-    }
 
     public void Salvar(View view) {
         EditText TextEditor = (EditText) findViewById(R.id.TextEditor);
@@ -53,6 +50,10 @@ public class Editar extends AppCompatActivity {
         }
 
         Toast.makeText(this, "Editado com Sucesso", Toast.LENGTH_SHORT).show();
+        finish();
+    }
+
+    public void Recuar(View view) {
         finish();
     }
 }
