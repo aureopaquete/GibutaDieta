@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.Date;
+
 public class Preencher extends AppCompatActivity {
 
     @Override
@@ -47,18 +49,17 @@ public class Preencher extends AppCompatActivity {
         }
 
         if (valor == 0) {
-            editorTexto.setError("Adicione valor maior que 0");
+            editorTexto.setError("Valor inválido, adicione valor maior que Zero");
             editorTexto.requestFocus();
             return;
         }
 
         Toast.makeText(this, "Guardado com sucesso", Toast.LENGTH_SHORT).show();
 
-        Intent intent = new Intent(this, VerDados.class);
+        Date data = new Date();
+        Intent intent = new Intent(this, Dados.class);
         intent.putExtra(DefinicaoApp.TEXTO, mensagem);
-        intent.putExtra(DefinicaoApp.TEXTOLEGU, mensagem);
-        intent.putExtra(DefinicaoApp.TEXTOPROTE, mensagem);
-        intent.putExtra(DefinicaoApp.TEXTOCARBO, mensagem);
+        intent.putExtra(DefinicaoApp.DATA, data);
         startActivity(intent);
         finish();
 

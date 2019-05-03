@@ -55,11 +55,6 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
-    public void Dados(View view) {
-        Intent intent = new Intent(this, VerDados.class);
-        startActivity(intent);
-    }
-
     public void Adicionar(View view) {
         Intent intent = new Intent(this, Preencher.class);
         startActivity(intent);
@@ -72,6 +67,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void Deletar(View view) {
         Intent intent = new Intent(this, Eliminar.class);
+        startActivity(intent);
+    }
+    public void Dados(View view) {
+        Intent intent = new Intent(this, Dados.class);
         startActivity(intent);
     }
 }

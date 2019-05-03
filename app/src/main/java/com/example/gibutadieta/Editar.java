@@ -44,7 +44,7 @@ public class Editar extends AppCompatActivity {
         }
 
         if (valor == 0) {
-            TextEditor.setError("Editar valor maior que 0");
+            TextEditor.setError("Valor inválido, edite valor maior que Zero");
             TextEditor.requestFocus();
             return;
         }

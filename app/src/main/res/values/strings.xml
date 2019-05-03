@@ -35,7 +35,7 @@
     <string name="voltar">"Come back "</string>
     <string name="introduza_o_valor">"Enter Value "</string>
     <string name="retroceder">"Go back "</string>
-    <string name="introduzir_valor_mudar">" Enter value to change"</string>
+    <string name="introduzir_valor_mudar" translatable="false">" Enter value to change"</string>
     <string name="valor_alterar">" Value to Change"</string>
     <string name="editar">Edit</string>
     <string name="eliminar">Eliminate</string>
@@ -61,11 +61,29 @@
     <string name="conclu_do">Completed</string>
     <string name="tipo_de_consumo_editar">"Type of Consumption to Edit "</string>
     <string name="tipo_de_consumo_apagar">"Type of Consumption to Erase "</string>
-    <string name="todocomebem">TODOcomebem</string>
-    <string name="valor_do_consumo">Valor do Consumo</string>
-    <string name="introduzir_o_valor_do_consumo">Introduzir o valor do consumo</string>
-    <string name="introduza_o_valor_apagar">Introduza o valor á apagar</string>
-    <string name="introduzir_valor_editar">Introduzir valor á editar</string>
-    <string name="introduza_valor_editar">Introduza valor á editar</string>
-    <string name="recuar">Recuar</string>
+    <string name="todocomebem" translatable="false">TODOcomebem</string>
+    <string name="valor_do_consumo" translatable="false">Valor do Consumo</string>
+    <string name="introduzir_o_valor_do_consumo" translatable="false">Introduzir o valor do consumo</string>
+    <string name="introduza_o_valor_apagar" translatable="false">Introduza o valor á apagar</string>
+    <string name="introduzir_valor_editar" translatable="false">Introduzir valor á editar</string>
+    <string name="introduza_valor_editar" translatable="false">Introduza valor á editar</string>
+    <string name="recuar" translatable="false">Recuar</string>
+    <string name="buttonEditar" translatable="false">Botão Editar</string>
+    <string name="button_deletar" translatable="false">Botão Deletar</string>
+    <string name="Button_Adicionar" translatable="false">Botão Adicionar</string>
+    <string name="_03_05_2019_09h_00m_00" translatable="false">03/05/2019 09h:00m:00</string>
+    <string name="nao" translatable="false" />
+    <string name="sim" translatable="false" />
+    <string name="g" translatable="false">g</string>
+    <string name="title_activity_dados" translatable="false">Tabelas de Dados</string>
+    <string name="sair" translatable="false">Sair</string>
+    <string name="hora" translatable="false">Hora</string>
+
+    <string name="table_ver" translatable="false">Table Ver</string>
+
+    <string name="gramas_litros" translatable="false">Gramas Litros</string>
+    <string name="consumir_pelo_menos_2l_de_gua_por_dia">Consumir pelo menos 2L de Água por dia</string>
+    <string name="consuma_pelo_menos_150g_de_carboidratos_por_dia">Consuma pelo menos 150g de Carboidratos por dia</string>
+    <string name="consumir_pelo_menos_850g_de_vegetais_por_dia">Consumir pelo menos 850g de Vegetais por dia</string>
+    <string name="consumir_pelo_menos_230g_de_prote_nas_por_dia">Consumir pelo menos 230g de Proteínas por dia</string>
 </resources>

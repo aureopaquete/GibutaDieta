@@ -10,8 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".VerDados"
-            android:label="@string/title_activity_ver_dados"
+            android:name=".Dados"
+            android:label="@string/title_activity_dados"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".Eliminar"

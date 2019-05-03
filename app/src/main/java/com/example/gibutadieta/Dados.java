@@ -8,37 +8,32 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
-public class content_menus extends AppCompatActivity {
+import java.util.Date;
+
+public class Dados extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_content_menus);
+        setContentView(R.layout.activity_dados);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        mostrarTexto();
+    }
+
+    private void mostrarTexto() {
+        Intent intent = getIntent();
+
+        String mensagem = intent.getStringExtra(DefinicaoApp.TEXTO);
+        TextView textView8 = (TextView) findViewById(R.id.textView8);
+        textView8.setText(mensagem);
 
     }
 
-
-    public void Sair(View view) {
+    public void FecharTabela(View view) {
+        finish();
     }
-
-    public void Dados(View view) {
-    }
-
-    public void Adicionar(View view) {
-    }
-
-    public void Editar(View view) {
-    }
-
-    public void Deletar(View view) {
-    }
-
 }
-

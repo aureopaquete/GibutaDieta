@@ -1,8 +1,10 @@
 package com.example.gibutadieta;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -44,10 +46,11 @@ public class Eliminar extends AppCompatActivity {
         }
 
         if (valor == 0) {
-            TextApagar.setError("Apagar valor maior que 0");
+            TextApagar.setError("Valor inválido, apague valor mairo que Zero");
             TextApagar.requestFocus();
             return;
         }
+
         Toast.makeText(this, "Apagado com Sucesso", Toast.LENGTH_SHORT).show();
         finish();
     }
