@@ -1,5 +1,7 @@
 package com.example.gibutadieta;
 
+import android.content.ContentValues;
+
 public class Quantidade {
     private int id_Quantidade;
     private  String Quantidade;
@@ -30,5 +32,15 @@ public class Quantidade {
 
     public void setQuantidade(String quantidade) {
         this.Quantidade = quantidade;
+    }
+
+
+
+    // Funções getContentValues
+    public ContentValues getContentValues() {
+        ContentValues valores = new ContentValues();
+
+        valores.put(BdTabelaQuantidade.CAMPO_QUANTIDADE, Quantidade);
+        return valores;
     }
 }

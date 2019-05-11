@@ -1,5 +1,7 @@
 package com.example.gibutadieta;
 
+import android.content.ContentValues;
+
 public class TipoConsumo {
     int id_Consumo;
     private String Agua;
@@ -59,6 +61,19 @@ public class TipoConsumo {
 
     public void setProteinas(String proteinas) {
         this.Proteinas = proteinas;
+    }
+
+
+    // Funções getContentValues
+    public ContentValues getContentValues() {
+        ContentValues valores = new ContentValues();
+
+        valores.put(BdTabelaTipoConsumo.CAMPO_AGUA, Agua);
+        valores.put(BdTabelaTipoConsumo.CAMPO_CARBOIDRATO, Caboidratos);
+        valores.put(BdTabelaTipoConsumo.CAMPO_VEGETAIS, Vegetais);
+        valores.put(BdTabelaTipoConsumo.CAMPO_PROTEINAS, Proteinas);
+
+        return valores;
     }
 }
 
