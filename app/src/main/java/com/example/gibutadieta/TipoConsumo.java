@@ -77,6 +77,8 @@ public class TipoConsumo {
         return valores;
     }
 
+
+    //função estática que permita obter um objeto a partir de um cursor
     public static TipoConsumo fromCursor(Cursor cursor) {
         long id = cursor.getLong(
                 cursor.getColumnIndex(BdTabelaTipoConsumo.ID)

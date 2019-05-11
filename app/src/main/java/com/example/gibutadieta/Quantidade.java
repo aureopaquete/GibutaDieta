@@ -1,9 +1,10 @@
 package com.example.gibutadieta;
 
 import android.content.ContentValues;
+import android.database.Cursor;
 
 public class Quantidade {
-    private int id_Quantidade;
+    private long id_Quantidade;
     private  String Quantidade;
 
 
@@ -18,11 +19,11 @@ public class Quantidade {
 
 
     //Getter e Setter
-    public int getId_Quantidade() {
+    public long getId_Quantidade() {
         return id_Quantidade;
     }
 
-    public void setId_Quantidade(int id_Quantidade) {
+    public void setId_Quantidade(long id_Quantidade) {
         this.id_Quantidade = id_Quantidade;
     }
 
@@ -42,5 +43,25 @@ public class Quantidade {
 
         valores.put(BdTabelaQuantidade.CAMPO_QUANTIDADE, Quantidade);
         return valores;
+    }
+
+
+    //função estática que permita obter um objeto a partir de um cursor
+    public static Quantidade fromCursor(Cursor cursor) {
+        long id_Quantidade = cursor.getLong(
+                cursor.getColumnIndex(BdTabelaTipoConsumo.ID)
+        );
+
+        String Quantidade = cursor.getString(
+                cursor.getColumnIndex(BdTabelaQuantidade.CAMPO_QUANTIDADE)
+        );
+
+        Quantidade quantidade = new Quantidade();
+
+        quantidade.setId_Quantidade(id_Quantidade);
+        quantidade.setQuantidade(Quantidade);
+
+        return quantidade;
+
     }
 }
