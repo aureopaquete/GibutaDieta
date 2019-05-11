@@ -1,9 +1,10 @@
 package com.example.gibutadieta;
 
 import android.content.ContentValues;
+import android.database.Cursor;
 
 public class TipoConsumo {
-    int id_Consumo;
+    long id_Consumo;
     private String Agua;
     private String Caboidratos;
     private String Vegetais;
@@ -23,11 +24,11 @@ public class TipoConsumo {
 
 
     //Getter e Setter
-    public int getId_Consumo() {
+    public long getId_Consumo() {
         return id_Consumo;
     }
 
-    public void setId_Consumo(int id_Consumo) {
+    public void setId_Consumo(long id_Consumo) {
         this.id_Consumo = id_Consumo;
     }
 
@@ -74,6 +75,38 @@ public class TipoConsumo {
         valores.put(BdTabelaTipoConsumo.CAMPO_PROTEINAS, Proteinas);
 
         return valores;
+    }
+
+    public static TipoConsumo fromCursor(Cursor cursor) {
+        long id = cursor.getLong(
+                cursor.getColumnIndex(BdTabelaTipoConsumo.ID)
+        );
+
+        String agua = cursor.getString(
+                cursor.getColumnIndex(BdTabelaTipoConsumo.CAMPO_AGUA)
+        );
+
+        String carboidratos = cursor.getString(
+                cursor.getColumnIndex(BdTabelaTipoConsumo.CAMPO_CARBOIDRATO)
+        );
+
+        String proteinas = cursor.getString(
+                cursor.getColumnIndex(BdTabelaTipoConsumo.CAMPO_PROTEINAS)
+        );
+
+        String vegetais = cursor.getString(
+                cursor.getColumnIndex(BdTabelaTipoConsumo.CAMPO_VEGETAIS)
+        );
+
+        TipoConsumo tipoConsumo = new TipoConsumo();
+
+        tipoConsumo.setId_Consumo(id);
+        tipoConsumo.setAgua(agua);
+        tipoConsumo.setCaboidratos(carboidratos);
+        tipoConsumo.setProteinas(proteinas);
+        tipoConsumo.setVegetais(vegetais);
+
+        return tipoConsumo;
     }
 }
 
