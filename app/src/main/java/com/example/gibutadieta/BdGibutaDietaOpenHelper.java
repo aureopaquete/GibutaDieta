@@ -7,7 +7,7 @@ import android.support.annotation.Nullable;
 
 public class BdGibutaDietaOpenHelper extends SQLiteOpenHelper {
 
-    private static final String NOME_BASE_DADOS = "GibutaDieta.db";
+    public static final String NOME_BASE_DADOS = "GibutaDieta.db";
     private static final int VERSAO_BASE_DADOS = 1;
 
     //Construtor Defaul
