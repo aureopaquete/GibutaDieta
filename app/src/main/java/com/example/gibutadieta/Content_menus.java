@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class content_menus extends AppCompatActivity {
+public class Content_menus extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

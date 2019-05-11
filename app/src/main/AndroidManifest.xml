@@ -24,14 +24,14 @@
         <activity
             android:name=".Preencher"
             android:label="@string/title_activity_preencher"
-            android:parentActivityName=".content_menus"
+            android:parentActivityName=".Content_menus"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.gibutadieta.content_menus" />
+                android:value="com.example.gibutadieta.Content_menus" />
         </activity>
         <activity
-            android:name=".content_menus"
+            android:name=".Content_menus"
             android:label="@string/title_activity_content_menus"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
