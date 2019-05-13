@@ -43,7 +43,14 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
+        if (id == R.id.action_sobre) {
+            Intent intent = new Intent(this, Sobre.class);
+            startActivity(intent);
+            return true;
+        }
         if (id == R.id.action_settings) {
+            Intent intent = new Intent(this, Definicoes.class);
+            startActivity(intent);
             return true;
         }
 
