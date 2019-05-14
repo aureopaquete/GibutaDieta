@@ -5,21 +5,25 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Galeria" />
+            android:id="@+id/nav_Eliminacao"
+            android:icon="@android:drawable/ic_delete"
+            android:title="@string/eliminar2" />
         <item
-            android:id="@+id/nav_Gerir"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Gerir Dados" />
+            android:id="@+id/nav_Editacao"
+            android:icon="@android:drawable/ic_menu_edit"
+            android:title="@string/editar2" />
     </group>
 
-    <item android:title="Acerca">
+    <item android:title="@string/acerca">
         <menu>
             <item
                 android:id="@+id/nav_Sobre"
                 android:icon="@android:drawable/ic_menu_info_details"
-                android:title="Sobre" />
+                android:title="@string/title_activity_sobre" />
+            <item
+                android:id="@+id/nav_closed"
+                android:icon="@android:drawable/ic_lock_power_off"
+                android:title="@string/fechar2" />
         </menu>
     </item>
 

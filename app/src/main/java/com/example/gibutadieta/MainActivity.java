@@ -84,11 +84,17 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_Sobre) {
             Intent intent = new Intent(this, Sobre.class);
             startActivity(intent);
-        } else if (id == R.id.nav_gallery) {
 
-        } else if (id == R.id.nav_Gerir) {
-            Intent intent = new Intent(this, Dados.class);
+        } else if (id == R.id.nav_Eliminacao) {
+            Intent intent = new Intent(this, Eliminar.class);
             startActivity(intent);
+
+        } else if (id == R.id.nav_Editacao) {
+            Intent intent = new Intent(this, Editar.class);
+            startActivity(intent);
+        }
+        else if (id == R.id.nav_closed) {
+           finish();
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -96,24 +102,12 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    public void Sair(View view) {
-        finish();
-    }
 
     public void Adicionar(View view) {
         Intent intent = new Intent(this, Preencher.class);
         startActivity(intent);
     }
 
-    public void Editar(View view) {
-        Intent intent = new Intent(this, Editar.class);
-        startActivity(intent);
-    }
-
-    public void Deletar(View view) {
-        Intent intent = new Intent(this, Eliminar.class);
-        startActivity(intent);
-    }
     public void Dados(View view) {
         Intent intent = new Intent(this, Dados.class);
         startActivity(intent);

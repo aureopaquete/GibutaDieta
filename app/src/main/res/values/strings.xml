@@ -74,7 +74,6 @@
     <string name="programa_o_avan_ada">Programação Avançada</string>
     <string name="aureo_paquete">Aureo Paquete</string>
     <string name="este_app_est_sendo_desenvolvido_por">Este APP está sendo Desenvolvido por:</string>
-    <string name="sobre">Sobre</string>
     <string name="esta_app_contar_com_uma_base_de_dados_o_qual_ter_a_pr_ncipio_2_tabelas_de_base_de_dados">Esta APP contará com uma base de dados, o qual terá a príncipio 2 tabelas de base de dados.</string>
     <string name="objectivos_da_app">Objectivos da APP</string>
     <string name="diariamente_deverei_consumir_cerca_de_2_litros_de_gua_por_dia_de_forma_a_me_manter_hidratado_para_me_manter_forte_e_saud_vel_deverei_consumir_por_dia_cerca_de_850_gramas_de_legumes_por_dia_bem_como_150_gramas_de_prote_nas_230_gramas_de_carboidratos">Diariamente deverei consumir cerca de 2 litros de Água por dia de forma a me manter hidratado, para me manter forte e saudável deverei consumir por dia cerca de 850 gramas de Legumes por dia, bem como 150 gramas de Proteínas, 230 gramas de carboidratos.</string>
@@ -97,4 +96,9 @@
     <string name="aureopaquete007_outlook_com">aureopaquete007@outlook.com</string>
     <string name="communicate">Communicate</string>
     <string name="planos_cumprir">Planos á Cumprir</string>
+    <string name="eliminar2">Eliminar</string>
+    <string name="editar2">Editar</string>
+    <string name="sobre">Sobre</string>
+    <string name="acerca">Acerca</string>
+    <string name="fechar2">Fechar</string>
 </resources>
