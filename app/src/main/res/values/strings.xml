@@ -72,7 +72,6 @@
     <string name="contato_934559370">Contato | 934559370</string>
     <string name="_2018_2019">2018/2019</string>
     <string name="programa_o_avan_ada">Programação Avançada</string>
-    <string name="aureo_paquete">Aureo Paquete</string>
     <string name="este_app_est_sendo_desenvolvido_por">Este APP está sendo Desenvolvido por:</string>
     <string name="esta_app_contar_com_uma_base_de_dados_o_qual_ter_a_pr_ncipio_2_tabelas_de_base_de_dados">Esta APP contará com uma base de dados, o qual terá a príncipio 2 tabelas de base de dados.</string>
     <string name="objectivos_da_app">Objectivos da APP</string>
@@ -93,7 +92,6 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
-    <string name="aureopaquete007_outlook_com">aureopaquete007@outlook.com</string>
     <string name="communicate">Communicate</string>
     <string name="planos_cumprir">Planos á Cumprir</string>
     <string name="eliminar2">Eliminar</string>
@@ -101,4 +99,8 @@
     <string name="sobre">Sobre</string>
     <string name="acerca">Acerca</string>
     <string name="fechar2">Fechar</string>
+    <string name="aureo_paquete">Aureo Paquete</string>
+    <string name="_____">______________________________________________________________________________________________________________________________________________________________</string>
+    <string name="_______">___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</string>
+
 </resources>

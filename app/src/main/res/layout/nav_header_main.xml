@@ -14,20 +14,20 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="119dp"
-        android:layout_height="90dp"
+        android:layout_width="84dp"
+        android:layout_height="85dp"
+        android:background="@mipmap/logoprincipal"
         android:contentDescription="@string/nav_header_desc"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
-        app:srcCompat="@drawable/logoprincipal" />
+        android:paddingTop="@dimen/nav_header_vertical_spacing" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="@string/gibuta_dieta"
+        android:text="@string/aureo_paquete"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@color/colorPrimaryDark22"
         android:textSize="18sp"
-        app:fontFamily="sans-serif-medium" />
+        app:fontFamily="sans-serif-thin" />
 
 </LinearLayout>
