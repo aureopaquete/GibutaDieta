@@ -49,7 +49,7 @@ public class Quantidade {
     //função estática que permita obter um objeto a partir de um cursor
     public static Quantidade fromCursor(Cursor cursor) {
         long id_Quantidade = cursor.getLong(
-                cursor.getColumnIndex(BdTabelaTipoConsumo.ID)
+                cursor.getColumnIndex(BdTabelaTiposAlimentos.ID)
         );
 
         String Quantidade = cursor.getString(

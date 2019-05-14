@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GibutaDieta</string>
+    <string name="app_name">GIBUTA DIETA</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_content_menus">GIBUTA DIETA</string>
     <string name="legumes">Vegetables</string>
@@ -70,13 +70,13 @@
     <string name="gramas_litros" translatable="false">Gramas Litros</string>
     <string name="defini_es">Definições</string>
     <string name="contato_934559370">Contato | 934559370</string>
-    <string name="_2018_2019">2018/2019</string>
+    <string name="_2018_2019" translatable="false">2018/2019</string>
     <string name="programa_o_avan_ada">Programação Avançada</string>
     <string name="este_app_est_sendo_desenvolvido_por">Este APP está sendo Desenvolvido por:</string>
     <string name="esta_app_contar_com_uma_base_de_dados_o_qual_ter_a_pr_ncipio_2_tabelas_de_base_de_dados">Esta APP contará com uma base de dados, o qual terá a príncipio 2 tabelas de base de dados.</string>
     <string name="objectivos_da_app">Objectivos da APP</string>
     <string name="diariamente_deverei_consumir_cerca_de_2_litros_de_gua_por_dia_de_forma_a_me_manter_hidratado_para_me_manter_forte_e_saud_vel_deverei_consumir_por_dia_cerca_de_850_gramas_de_legumes_por_dia_bem_como_150_gramas_de_prote_nas_230_gramas_de_carboidratos">Diariamente deverei consumir cerca de 2 litros de Água por dia de forma a me manter hidratado, para me manter forte e saudável deverei consumir por dia cerca de 850 gramas de Legumes por dia, bem como 150 gramas de Proteínas, 230 gramas de carboidratos.</string>
-    <string name="___________">______________________________________________________________________________________________________________________________________________________</string>
+    <string name="___________" translatable="false">______________________________________________________________________________________________________________________________________________________</string>
     <string name="title_activity_sobre">Sobre</string>
     <string name="title_activity_definicoes">Definicoes</string>
     <string name="title_activity_navegacao">navegacao</string>
@@ -86,12 +86,6 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
-    <string name="menu_tools">Tools</string>
-    <string name="menu_share">Share</string>
-    <string name="menu_send">Send</string>
     <string name="communicate">Communicate</string>
     <string name="planos_cumprir">Planos á Cumprir</string>
     <string name="eliminar2">Eliminar</string>
@@ -100,7 +94,6 @@
     <string name="acerca">Acerca</string>
     <string name="fechar2">Fechar</string>
     <string name="aureo_paquete">Aureo Paquete</string>
-    <string name="_____">______________________________________________________________________________________________________________________________________________________________</string>
-    <string name="_______">___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</string>
+    <string name="_______" translatable="false">___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</string>
 
 </resources>

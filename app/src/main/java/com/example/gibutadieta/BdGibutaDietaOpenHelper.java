@@ -17,8 +17,9 @@ public class BdGibutaDietaOpenHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        new BdTabelaTipoConsumo(db).cria();
+        new BdTabelaTiposAlimentos(db).cria();
         new BdTabelaQuantidade(db).cria();
+        new BdTabelaTiposBebidas(db).cria();
     }
 
     @Override

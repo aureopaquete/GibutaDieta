@@ -4,26 +4,24 @@ import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-public class BdTabelaQuantidade {
+public class BdTabelaTiposBebidas {
 
-    public static final  String NOME_TABELA = "QUANTIDADE";
+    public static final  String NOME_TABELA = "Tipos de Bebidas";
 
-    public static final  String ID = "ID_QUANTIDADE";
-    public static final  String CAMPO_QUANTIDADE = "QUANTIDADE";
+    public static final  String ID = "ID_Bebidas";
+    public static final  String CAMPO_Bebidas = "Bebidas";
 
-    public  static final  String[] TODAS_COLUNAS = new String[] { ID,CAMPO_QUANTIDADE};
+    public  static final  String[] TODAS_COLUNAS = new String[] { ID,CAMPO_Bebidas};
 
     private SQLiteDatabase db;
 
-    public BdTabelaQuantidade(SQLiteDatabase db){this.db = db;}
+    public BdTabelaTiposBebidas(SQLiteDatabase db){this.db = db;}
 
     //Criação da tabela
     public void cria (){
         db.execSQL( "CREATE TABLE " + NOME_TABELA + "(" +
                 ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
-                CAMPO_QUANTIDADE + " INTEGER NOT NULL," +
-                "FOREIGN KEY (" + CAMPO_QUANTIDADE + ") REFERENCES " + BdTabelaTiposAlimentos.NOME_TABELA + "(" + BdTabelaTiposAlimentos.ID + ")" +
-                        "FOREIGN KEY (" + CAMPO_QUANTIDADE + ") REFERENCES " + BdTabelaTiposBebidas.NOME_TABELA + "(" + BdTabelaTiposBebidas.ID + ")" +
+                CAMPO_Bebidas + " INTEGER NOT NULL," +
                 ")"
         );
     }
@@ -49,8 +47,4 @@ public class BdTabelaQuantidade {
     public Cursor query (String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy){
         return db.query(NOME_TABELA, columns, selection, selectionArgs, groupBy, having, orderBy);
     }
-
 }
-
-
-
