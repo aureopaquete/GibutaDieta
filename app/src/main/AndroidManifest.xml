@@ -10,8 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".TipoBebidas"
-            android:label="@string/title_activity_tipo_bebidas"
+            android:name=".ConsumoLiquido"
+            android:label="@string/title_activity_consumo_liquido"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".Definicoes"
