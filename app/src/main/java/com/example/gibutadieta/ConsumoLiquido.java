@@ -24,27 +24,27 @@ public class ConsumoLiquido extends AppCompatActivity {
     }
 
     public void GuardarBebidas(View view) {
-        EditText editorTexto = (EditText) findViewById(R.id.editorTexto);
-        String mensagem = editorTexto.getText().toString();
+        EditText editorTexto2 = (EditText) findViewById(R.id.editorTexto2);
+        String mensagem = editorTexto2.getText().toString();
 
 
         if (mensagem.trim().length() == 0){
-            editorTexto.setError("Campo Obrigatório");
-            editorTexto.requestFocus();
+            editorTexto2.setError("Campo Obrigatório");
+            editorTexto2.requestFocus();
             return;
         }
 
         int valor = 0;
 
         try {
-            valor = Integer.parseInt(editorTexto.getText().toString());
+            valor = Integer.parseInt(editorTexto2.getText().toString());
         } catch (NumberFormatException e) {
             return;
         }
 
         if (valor == 0) {
-            editorTexto.setError("Valor inválido, adicione valor maior que Zero");
-            editorTexto.requestFocus();
+            editorTexto2.setError("Valor inválido, adicione valor maior que Zero");
+            editorTexto2.requestFocus();
             return;
         }
 

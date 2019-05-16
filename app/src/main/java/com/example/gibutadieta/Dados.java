@@ -39,7 +39,4 @@ public class Dados extends AppCompatActivity {
 
     }
 
-    public void FecharTabela(View view) {
-        finish();
-    }
 }
