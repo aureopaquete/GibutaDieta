@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void Bebidas(View view) {
-        Intent intent = new Intent(this, Dados.class);
+        Intent intent = new Intent(this, ConsumoLiquido.class);
         startActivity(intent);
     }
 }

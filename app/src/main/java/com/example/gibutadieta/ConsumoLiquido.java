@@ -51,7 +51,7 @@ public class ConsumoLiquido extends AppCompatActivity {
         Toast.makeText(this, "Guardado com sucesso", Toast.LENGTH_SHORT).show();
 
         Date data = new Date();
-        Intent intent = new Intent(this, ConsumoLiquido.class);
+        Intent intent = new Intent(this, Dados.class);
         intent.putExtra(DefinicaoApp.TEXTO, mensagem);
         intent.putExtra(DefinicaoApp.DATA, data);
         startActivity(intent);
