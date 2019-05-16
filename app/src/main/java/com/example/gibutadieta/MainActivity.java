@@ -95,6 +95,9 @@ public class MainActivity extends AppCompatActivity
         }
         else if (id == R.id.nav_closed) {
            finish();
+        }else if (id == R.id.nav_Listadados) {
+            Intent intent = new Intent(this, Dados.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -108,7 +111,7 @@ public class MainActivity extends AppCompatActivity
         startActivity(intent);
     }
 
-    public void Dados(View view) {
+    public void Bebidas(View view) {
         Intent intent = new Intent(this, Dados.class);
         startActivity(intent);
     }

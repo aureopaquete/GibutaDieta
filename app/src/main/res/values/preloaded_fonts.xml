@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/advent_pro_extralight</item>
+        <item>@font/armata</item>
+        <item>@font/bungee_outline</item>
+        <item>@font/geostar_fill</item>
+    </array>
+</resources>

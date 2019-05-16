@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GIBUTA DIETA</string>
+    <string name="app_name">Gibuta Dieta</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_content_menus">GIBUTA DIETA</string>
     <string name="legumes">Vegetables</string>
@@ -78,7 +78,7 @@
     <string name="diariamente_deverei_consumir_cerca_de_2_litros_de_gua_por_dia_de_forma_a_me_manter_hidratado_para_me_manter_forte_e_saud_vel_deverei_consumir_por_dia_cerca_de_850_gramas_de_legumes_por_dia_bem_como_150_gramas_de_prote_nas_230_gramas_de_carboidratos">Diariamente deverei consumir cerca de 2 litros de Água por dia de forma a me manter hidratado, para me manter forte e saudável deverei consumir por dia cerca de 850 gramas de Legumes por dia, bem como 150 gramas de Proteínas, 230 gramas de carboidratos.</string>
     <string name="___________" translatable="false">______________________________________________________________________________________________________________________________________________________</string>
     <string name="title_activity_sobre">Sobre</string>
-    <string name="title_activity_definicoes">Definicoes</string>
+    <string name="title_activity_definicoes">Definicões</string>
     <string name="title_activity_navegacao">navegacao</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -95,5 +95,9 @@
     <string name="fechar2">Fechar</string>
     <string name="aureo_paquete">Aureo Paquete</string>
     <string name="_______" translatable="false">___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</string>
+    <string name="valor_Input">Valor</string>
+    <string name="lista_de_dados">Lista de Dados</string>
+    <string name="bebidas">BEBIDAS</string>
+    <string name="title_activity_tipo_bebidas">TipoBebidas</string>
 
 </resources>
