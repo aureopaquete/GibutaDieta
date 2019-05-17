@@ -69,7 +69,7 @@ public class BDGibutaDietaTest {
         tiposAlimentos = getAlimentosCOMID(cursorAlimentos, idLegumes);
         assertEquals(nome, tiposAlimentos.getAlimentos());
 
-        // Teste update Alimentos (CRUD)
+        // Teste update/ Alimentos (CRUD)
 
         nome = "Proteinas/legumes";
         tiposAlimentos.setAlimentos(nome);
@@ -81,6 +81,22 @@ public class BDGibutaDietaTest {
         tiposAlimentos = getAlimentosCOMID(cursorAlimentos, idLegumes);
 
         assertEquals(nome, tiposAlimentos.getAlimentos());
+
+        // Teste Creat/Delete/Read (CRUD)
+
+        long id = criaTiposAlimentos(tabelaTiposAlimentos,"Testar");
+        cursorAlimentos = getAlimentos(tabelaTiposAlimentos);
+        assertEquals(3,cursorAlimentos.getCount());
+
+        tabelaTiposAlimentos.delete(BdTabelaTiposAlimentos.ID + "=?", new String[]{String.valueOf(id)});
+        cursorAlimentos = getAlimentos(tabelaTiposAlimentos);
+        assertEquals(2, cursorAlimentos.getCount());
+
+        getAlimentosCOMID(cursorAlimentos, idLegumes);
+        getAlimentosCOMID(cursorAlimentos, idCarboidratos);
+
+        //--------------------------------------------------------------------//
+
 
 
 
