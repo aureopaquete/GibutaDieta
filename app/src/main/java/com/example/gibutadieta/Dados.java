@@ -11,11 +11,15 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ListAdapter;
 import android.widget.TextView;
 
 import java.util.Date;
 
 public class Dados extends AppCompatActivity {
+
+    private ListAdapter adapter;
+    private RecyclerView recyclerViewListarDados;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,19 +28,24 @@ public class Dados extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
         mostrarTexto();
+        recyclerViewListarDados = (RecyclerView) findViewById(R.id.recyclerViewListarDados);
+        recyclerViewListarDados.setLayoutManager(new LinearLayoutManager(this));
+
+
     }
 
     private void mostrarTexto() {
 
         Intent intent = getIntent();
-        final LinearLayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         String mensagem = intent.getStringExtra(DefinicaoApp.TEXTO);
-        RecyclerView recyclerViewListarDados = (RecyclerView) findViewById(R.id.recyclerViewListarDados);
-        recyclerViewListarDados.setItemAnimator(new DefaultItemAnimator());
-        recyclerViewListarDados.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
+        TextView textView8 = (TextView) findViewById(R.id.textView8);
+        textView8.setText(mensagem + " "+"g");
 
     }
 
 }
+
+
+
+

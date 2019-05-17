@@ -38,5 +38,66 @@ public class BDGibutaDietaTest {
     }
 
 
+    public void testCRUD() {
+        BdGibutaDietaOpenHelper openHelper = new BdGibutaDietaOpenHelper(getAppContext());
+        SQLiteDatabase db = openHelper.getWritableDatabase(); //BD pra fazer escrita
+
+        BdTabelaTiposAlimentos tabelaTiposAlimentos = new BdTabelaTiposAlimentos(db);
+
+        // Teste read tabela alimentos (CRUD)
+        Cursor cursorAlimentos = getAlimentos(tabelaTiposAlimentos);
+        assertEquals(0,cursorAlimentos.getCount());
+
+        // Teste create/read Alimentos (CRUD)
+        String nome = "Carboidratos";
+        long idCarboidratos = criaTiposAlimentos(tabelaTiposAlimentos,nome);
+
+        cursorAlimentos = getAlimentos(tabelaTiposAlimentos);
+        assertEquals(1, cursorAlimentos.getCount());
+
+        TiposAlimentos tiposAlimentos = getAlimentosCOMID(cursorAlimentos, idCarboidratos);
+        assertEquals(nome, tiposAlimentos.getAlimentos());
+
+        // -----------------
+
+        nome = "Legumes";
+        long idLegumes = criaTiposAlimentos(tabelaTiposAlimentos,nome);
+
+        cursorAlimentos = getAlimentos(tabelaTiposAlimentos);
+        assertEquals(2, cursorAlimentos.getCount());
+
+        tiposAlimentos = getAlimentosCOMID(cursorAlimentos, idLegumes);
+        assertEquals(nome, tiposAlimentos.getAlimentos());
+    }
+
+
+
+    // Funções
+    private long criaTiposAlimentos(BdTabelaTiposAlimentos tabelaTiposAlimentos, String nome) {
+        TiposAlimentos tiposAlimentos = new TiposAlimentos();
+        tiposAlimentos.setAlimentos(nome);
+
+        long id = tabelaTiposAlimentos.insert(tiposAlimentos.getContentValues());
+        assertNotEquals(-1, id);
+
+        return id;
+    }
+
+    private Cursor getAlimentos(BdTabelaTiposAlimentos tabelaTiposAlimentos) {
+        return tabelaTiposAlimentos.query(BdTabelaTiposAlimentos.TODAS_COLUNAS, null, null, null, null, null);
+
+    }
+    private TiposAlimentos getAlimentosCOMID(Cursor cursor, long id) {
+           TiposAlimentos tiposAlimentos = null;
+           while (cursor.moveToNext()){
+               tiposAlimentos = TiposAlimentos.fromCursor(cursor);
+               if (tiposAlimentos.getId_Alimentos() == id) {
+                   break;
+               }
+           }
+           assertNotNull(tiposAlimentos);
+           return tiposAlimentos;
+    }
+
 }
 
