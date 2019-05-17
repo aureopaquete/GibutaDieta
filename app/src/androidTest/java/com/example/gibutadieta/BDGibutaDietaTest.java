@@ -44,7 +44,7 @@ public class BDGibutaDietaTest {
 
         BdTabelaTiposAlimentos tabelaTiposAlimentos = new BdTabelaTiposAlimentos(db);
 
-        // Teste read tabela alimentos (CRUD)
+        // Teste read alimentos (CRUD)
         Cursor cursorAlimentos = getAlimentos(tabelaTiposAlimentos);
         assertEquals(0,cursorAlimentos.getCount());
 
@@ -68,6 +68,23 @@ public class BDGibutaDietaTest {
 
         tiposAlimentos = getAlimentosCOMID(cursorAlimentos, idLegumes);
         assertEquals(nome, tiposAlimentos.getAlimentos());
+
+        // Teste update Alimentos (CRUD)
+
+        nome = "Proteinas/legumes";
+        tiposAlimentos.setAlimentos(nome);
+
+        int registosAlterados = tabelaTiposAlimentos.update(tiposAlimentos.getContentValues(), BdTabelaTiposAlimentos.ID + "=?", new String[]{String.valueOf(idLegumes)});
+        assertEquals(1,registosAlterados);
+
+        cursorAlimentos = getAlimentos(tabelaTiposAlimentos);
+        tiposAlimentos = getAlimentosCOMID(cursorAlimentos, idLegumes);
+
+        assertEquals(nome, tiposAlimentos.getAlimentos());
+
+
+
+
     }
 
 
