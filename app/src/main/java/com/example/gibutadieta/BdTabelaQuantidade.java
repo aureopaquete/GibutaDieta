@@ -3,8 +3,9 @@ package com.example.gibutadieta;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.provider.BaseColumns;
 
-public class BdTabelaQuantidade {
+public class BdTabelaQuantidade implements BaseColumns {
 
     public static final  String NOME_TABELA = "QUANTIDADE";
 
@@ -12,6 +13,7 @@ public class BdTabelaQuantidade {
     public static final  String CAMPO_QUANTIDADE = "QUANTIDADE";
 
     public  static final  String[] TODAS_COLUNAS = new String[] { ID,CAMPO_QUANTIDADE};
+
 
     private SQLiteDatabase db;
 
@@ -22,8 +24,8 @@ public class BdTabelaQuantidade {
         db.execSQL( "CREATE TABLE " + NOME_TABELA + "(" +
                 ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                 CAMPO_QUANTIDADE + " INTEGER NOT NULL," +
-                "FOREIGN KEY (" + CAMPO_QUANTIDADE + ") REFERENCES " + BdTabelaTiposAlimentos.NOME_TABELA + "(" + BdTabelaTiposAlimentos.ID + ")" +
-                        "FOREIGN KEY (" + CAMPO_QUANTIDADE + ") REFERENCES " + BdTabelaTiposBebidas.NOME_TABELA + "(" + BdTabelaTiposBebidas.ID + ")" +
+                "FOREIGN KEY (" + CAMPO_QUANTIDADE + ") REFERENCES " + BdTabelaTiposAlimentos.NOME_TABELA + "(" + BdTabelaTiposAlimentos.ID + "), " +
+                "FOREIGN KEY (" + CAMPO_QUANTIDADE + ") REFERENCES " + BdTabelaTiposBebidas.NOME_TABELA + "(" + BdTabelaTiposBebidas.ID + ")" +
                 ")"
         );
     }

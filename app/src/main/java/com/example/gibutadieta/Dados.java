@@ -28,19 +28,29 @@ public class Dados extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        mostrarTexto();
+        mostrarTextoAlimento();
+        mostrarTextoBebida();
         recyclerViewListarDados = (RecyclerView) findViewById(R.id.recyclerViewListarDados);
         recyclerViewListarDados.setLayoutManager(new LinearLayoutManager(this));
 
 
     }
 
-    private void mostrarTexto() {
+    private void mostrarTextoAlimento() {
 
         Intent intent = getIntent();
-        String mensagem = intent.getStringExtra(DefinicaoApp.TEXTO);
+        String mensagem = intent.getStringExtra(DefinicaoApp.TEXTOAlimetos);
         TextView textView8 = (TextView) findViewById(R.id.textView8);
         textView8.setText(mensagem + " "+"g");
+
+    }
+
+    private void mostrarTextoBebida() {
+
+        Intent intent = getIntent();
+        String mensagem  = intent.getStringExtra(DefinicaoApp.TEXTOBebidas);
+        TextView textView10 = (TextView) findViewById(R.id.textView10);
+        textView10.setText(mensagem + " "+"ml");
 
     }
 

@@ -56,10 +56,8 @@ public class Preencher extends AppCompatActivity {
 
         Toast.makeText(this, "Guardado com sucesso", Toast.LENGTH_SHORT).show();
 
-        Date data = new Date();
         Intent intent = new Intent(this, Dados.class);
-        intent.putExtra(DefinicaoApp.TEXTO, mensagem);
-        intent.putExtra(DefinicaoApp.DATA, data);
+        intent.putExtra(DefinicaoApp.TEXTOAlimetos, mensagem);
         startActivity(intent);
         finish();
 

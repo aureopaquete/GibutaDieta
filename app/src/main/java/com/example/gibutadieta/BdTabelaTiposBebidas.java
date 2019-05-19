@@ -3,15 +3,16 @@ package com.example.gibutadieta;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.provider.BaseColumns;
 
-public class BdTabelaTiposBebidas {
+public class BdTabelaTiposBebidas implements BaseColumns {
 
-    public static final  String NOME_TABELA = "Tipos de Bebidas";
+    public static final String NOME_TABELA = "TiposBebidas";
 
-    public static final  String ID = "ID_Bebidas";
-    public static final  String CAMPO_Bebidas = "Bebidas";
+    public static final String ID = "ID_Bebidas";
+    public static final String CAMPO_Bebidas = "Bebidas";
 
-    public  static final  String[] TODAS_COLUNAS = new String[] { ID,CAMPO_Bebidas};
+    public static final String[] TODAS_COLUNAS = new String[] { ID,CAMPO_Bebidas};
 
     private SQLiteDatabase db;
 
@@ -19,10 +20,10 @@ public class BdTabelaTiposBebidas {
 
     //Criação da tabela
     public void cria (){
-        db.execSQL( "CREATE TABLE " + NOME_TABELA + "(" +
+        db.execSQL(
+                "CREATE TABLE " + NOME_TABELA + "(" +
                 ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
-                CAMPO_Bebidas + " INTEGER NOT NULL," +
-                ")"
+                CAMPO_Bebidas + " TEXT NOT NULL)"
         );
     }
 

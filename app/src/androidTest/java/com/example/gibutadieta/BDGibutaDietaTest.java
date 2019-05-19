@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -18,11 +19,11 @@ import static org.junit.Assert.*;
  */
 @RunWith(AndroidJUnit4.class)
 public class BDGibutaDietaTest {
-    @Test
+    @Before
     public void apagarBaseDados() {
         getAppContext().deleteDatabase(BdGibutaDietaOpenHelper.NOME_BASE_DADOS);
     }
-
+    @Test
     public void criaBdGibutaDieta(){
         Context appContext = getAppContext();
 
@@ -37,7 +38,7 @@ public class BDGibutaDietaTest {
         return InstrumentationRegistry.getTargetContext();
     }
 
-
+    @Test
     public void testCRUD() {
         BdGibutaDietaOpenHelper openHelper = new BdGibutaDietaOpenHelper(getAppContext());
         SQLiteDatabase db = openHelper.getWritableDatabase(); //BD pra fazer escrita
@@ -97,15 +98,98 @@ public class BDGibutaDietaTest {
 
         //--------------------------------------------------------------------//
 
+        BdTabelaTiposBebidas tabelaTiposBebidas= new BdTabelaTiposBebidas(db);
+
+        //teste CRUD / Tipo Bebidas
+        Cursor cursorBebidas = getBebidas(tabelaTiposBebidas);
+        assertEquals(0,cursorBebidas.getCount());
+
+        // Teste create/read Bebidas (CRUD)
+        nome = "Agua";
+        long idAgua = criaTiposBebidas(tabelaTiposBebidas,nome);
+
+        cursorBebidas = getBebidas(tabelaTiposBebidas);
+        assertEquals(1, cursorBebidas.getCount());
+
+        TiposBebidas tiposBebidas = getBebidasCOMID(cursorBebidas, idAgua);
+        assertEquals(nome, tiposBebidas.getBebidas());
 
 
+        //-------------------------
+
+        // Teste create/read Alimentos (CRUD)
+        nome = "Cafe";
+        long idCafe = criaTiposBebidas(tabelaTiposBebidas,nome);
+
+        cursorBebidas = getBebidas(tabelaTiposBebidas);
+        assertEquals(1, cursorBebidas.getCount());
+
+        tiposBebidas = getBebidasCOMID(cursorBebidas, idCafe);
+        assertEquals(nome, tiposBebidas.getBebidas());
+
+
+        // Teste update/ Alimentos (CRUD)
+
+        nome = "Cafe/Agua";
+        tiposBebidas.setBebidas(nome);
+
+        int ValoresAlterados = tabelaTiposBebidas.update(tiposBebidas.getContentValues(), BdTabelaTiposAlimentos.ID + "=?", new String[]{String.valueOf(idLegumes)});
+        assertEquals(1,ValoresAlterados);
+
+        cursorBebidas = getBebidas(tabelaTiposBebidas);
+        tiposBebidas = getBebidasCOMID(cursorBebidas, idAgua);
+
+        assertEquals(nome, tiposBebidas.getBebidas());
+
+
+        // Teste Creat/Delete/Read (CRUD)
+
+        id = criaTiposBebidas(tabelaTiposBebidas,"Testar");
+        cursorBebidas = getBebidas(tabelaTiposBebidas);
+        assertEquals(3,cursorBebidas.getCount());
+
+        tabelaTiposBebidas.delete(BdTabelaTiposBebidas.ID + "=?", new String[]{String.valueOf(id)});
+        cursorBebidas = getBebidas(tabelaTiposBebidas);
+        assertEquals(2, cursorBebidas.getCount());
+
+        getBebidasCOMID(cursorBebidas, idAgua);
+        getBebidasCOMID(cursorBebidas, idCafe);
 
 
     }
 
 
-
     // Funções
+    private TiposBebidas getBebidasCOMID(Cursor cursor, long id) {
+        TiposBebidas tiposBebidas = null;
+        while (cursor.moveToNext()){
+            tiposBebidas= TiposBebidas.fromCursor(cursor);
+            if (tiposBebidas.getId_Bebidas() == id) {
+                break;
+            }
+        }
+        assertNotNull(tiposBebidas);
+        return tiposBebidas;
+    }
+
+    private long criaTiposBebidas(BdTabelaTiposBebidas tabelaTiposBebidas, String nome) {
+        TiposBebidas tiposBebidas = new TiposBebidas();
+        tiposBebidas.setBebidas(nome);
+
+
+
+        long id = tabelaTiposBebidas.insert(tiposBebidas.getContentValues());
+        assertNotEquals(-1, id);
+
+        return id;
+    }
+
+    private Cursor getBebidas(BdTabelaTiposBebidas tabelaTiposBebidas) {
+        return tabelaTiposBebidas.query(BdTabelaTiposBebidas.TODAS_COLUNAS, null, null, null, null, null);
+    }
+
+
+
     private long criaTiposAlimentos(BdTabelaTiposAlimentos tabelaTiposAlimentos, String nome) {
         TiposAlimentos tiposAlimentos = new TiposAlimentos();
         tiposAlimentos.setAlimentos(nome);

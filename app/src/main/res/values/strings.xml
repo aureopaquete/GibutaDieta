@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Gibuta Dieta</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_content_menus">GIBUTA DIETA</string>
+    <string name="title_activity_content_menus">Gibuta Dieta</string>
     <string name="legumes">Vegetables</string>
     <string name="carboidratos">carbohydrates</string>
     <string name="agua">Water</string>
@@ -15,7 +15,7 @@
     <string name="Gibuta" translatable="false">GIBUTA DIETA</string>
     <string name="adicionar" translatable="false">Adicionar</string>
     <string name="comida" translatable="false">Comida</string>
-    <string name="title_activity_preencher" translatable="false">Tipos de Consumo</string>
+    <string name="title_activity_preencher" translatable="false">Tipos de Alimentos</string>
     <string name="quantidade" translatable="false">Quantidade</string>
     <string name="tipoAlimento" translatable="false">TipoAlimento</string>
     <string name="guardar">Save</string>
@@ -106,5 +106,9 @@
     <string name="cancelarBebidas">Cancelar</string>
     <string name="introduza_o_valor_Alimentos">Introduza o valor</string>
     <string name="valor_Alimentos">Valor:</string>
+    <string name="alimentos">Alimentos</string>
+    <string name="guardarbebidas">Guardar</string>
+    <string name="tipo_de_alimentoNovo">Tipo de Alimento</string>
+    <string name="alimentosSpinner">Alimentos</string>
 
 </resources>

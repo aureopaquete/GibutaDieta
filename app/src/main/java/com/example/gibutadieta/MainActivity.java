@@ -106,13 +106,13 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-    public void Adicionar(View view) {
-        Intent intent = new Intent(this, Preencher.class);
+    public void Bebidas(View view) {
+        Intent intent = new Intent(this, ConsumoLiquido.class);
         startActivity(intent);
     }
 
-    public void Bebidas(View view) {
-        Intent intent = new Intent(this, ConsumoLiquido.class);
+    public void Alimentos(View view) {
+        Intent intent = new Intent(this, Preencher.class);
         startActivity(intent);
     }
 }

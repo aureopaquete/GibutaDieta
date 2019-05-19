@@ -2,7 +2,7 @@ package com.example.gibutadieta;
 
 public class DefinicaoApp {
 
-    public static final String TEXTO = "texto";
-    public static final String DATA = "data";
+    public static final String TEXTOAlimetos = "texto";
+    public static final String TEXTOBebidas= "texto2";
 
 }
