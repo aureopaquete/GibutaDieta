@@ -45,11 +45,11 @@ public class TiposAlimentos {
     //função estática que permita obter um objeto a partir de um cursor
     public static TiposAlimentos fromCursor(Cursor cursor) {
         long id_Alimentos = cursor.getLong(
-                cursor.getColumnIndex(BdTabelaTiposBebidas.ID)
+                cursor.getColumnIndex(BdTabelaTiposAlimentos.ID)
         );
 
         String Alimentos = cursor.getString(
-                cursor.getColumnIndex(BdTabelaTiposBebidas.CAMPO_Bebidas)
+                cursor.getColumnIndex(BdTabelaTiposAlimentos.CAMPO_Alimentos)
         );
 
         TiposAlimentos alimentos = new TiposAlimentos();
