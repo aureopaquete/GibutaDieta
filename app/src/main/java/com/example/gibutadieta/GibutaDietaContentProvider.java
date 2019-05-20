@@ -11,6 +11,8 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 
+
+
 public class GibutaDietaContentProvider extends ContentProvider {
 
     public static final String AUTHORITY = "com.example.gibutadieta";
