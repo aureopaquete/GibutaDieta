@@ -21,8 +21,8 @@ public class GibutaDietaContentProvider extends ContentProvider {
 
 
     private static final Uri ENDERECO_BASE = Uri.parse("content://" + AUTHORITY);
-    public static final Uri ENDERECO_CATEGORIAS = Uri.withAppendedPath(ENDERECO_BASE, ALIMENTOS);
-    public static final Uri ENDERECO_LIVROS = Uri.withAppendedPath(ENDERECO_BASE, BEBIDAS);
+    public static final Uri ENDERECO_ALIMENTO = Uri.withAppendedPath(ENDERECO_BASE, ALIMENTOS);
+    public static final Uri ENDERECO_BEBIDA = Uri.withAppendedPath(ENDERECO_BASE, BEBIDAS);
 
     public static final int URI_ALIMENTOS = 100;
     public static final int URI_ALIMENTO_ESPECIFICO = 101;
