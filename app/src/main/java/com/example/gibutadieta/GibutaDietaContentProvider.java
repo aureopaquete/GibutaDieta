@@ -127,7 +127,18 @@ public class GibutaDietaContentProvider extends ContentProvider {
 
     @Override
     public int delete(@NonNull Uri uri, @Nullable String selection, @Nullable String[] selectionArgs) {
-        return 0;
+        SQLiteDatabase bd = bdGibutaDietaOpenHelper.getWritableDatabase();
+
+        String id = uri.getLastPathSegment();
+
+        switch (getUriMatcher().match(uri)) {
+            case URI_ALIMENTO_ESPECIFICO:
+                return new BdTabelaTiposAlimentos(bd).delete( BdTabelaTiposAlimentos._ID + "=?", new String[] {id});
+            case URI_BEBIDAS_ESPECIFICA:
+                return new BdTabelaTiposBebidas(bd).delete(BdTabelaTiposBebidas._ID + "=?", new String[] {id});
+            default:
+                throw new UnsupportedOperationException("URI inválida (DELETE): " + uri.toString());
+        }
     }
 
     @Override
