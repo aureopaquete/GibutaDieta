@@ -4,6 +4,7 @@ import android.content.ContentProvider;
 import android.content.ContentValues;
 import android.content.UriMatcher;
 import android.database.Cursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.support.annotation.NonNull;
@@ -98,7 +99,30 @@ public class GibutaDietaContentProvider extends ContentProvider {
     @Override
     @NonNull
     public Uri insert( @NonNull Uri uri, @Nullable ContentValues values) {
-        return null;
+
+        SQLiteDatabase bd = bdGibutaDietaOpenHelper.getWritableDatabase();
+
+        long id = -1;
+
+        switch (getUriMatcher().match(uri)) {
+            case URI_ALIMENTOS:
+                id = new BdTabelaTiposAlimentos(bd).insert(values);
+                break;
+
+            case URI_BEBIDAS:
+                id = new BdTabelaTiposBebidas(bd).insert(values);
+                break;
+
+            default:
+                throw new UnsupportedOperationException("URI inválida (INSERT):" + uri.toString());
+        }
+
+        if (id == -1) {
+            throw new SQLException("Não foi possível inserir o registo");
+        }
+
+        return Uri.withAppendedPath(uri, String.valueOf(id));
+
     }
 
     @Override
