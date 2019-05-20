@@ -63,7 +63,7 @@
 
         <provider
             android:authorities="com.example.gibutadieta"
-            android:name=".GibutaDietaContetProvider"
+            android:name=".GibutaDietaContentProvider"
             android:exported="false" />
     </application>
 
