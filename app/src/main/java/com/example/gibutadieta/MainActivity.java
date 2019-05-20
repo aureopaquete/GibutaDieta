@@ -22,7 +22,7 @@ import android.view.View;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, LoaderManager.LoaderCallbacks<Cursor>  {
 
-
+    private AdaptadorGibutaDieta adaptadorGibutaDieta;
 
 
     @Override
@@ -136,12 +136,12 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    public void onLoadFinished(@NonNull Loader<Cursor> loader, Cursor cursor) {
-
+    public void onLoadFinished(@NonNull Loader<Cursor> loader, Cursor data) {
+        adaptadorGibutaDieta.setCursor(data);
     }
 
     @Override
     public void onLoaderReset(@NonNull Loader<Cursor> loader) {
-
+        adaptadorGibutaDieta.setCursor(null);
     }
 }
