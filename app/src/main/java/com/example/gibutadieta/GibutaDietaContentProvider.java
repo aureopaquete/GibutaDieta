@@ -80,7 +80,18 @@ public class GibutaDietaContentProvider extends ContentProvider {
     @Override
     @Nullable
     public String getType(@NonNull Uri uri) {
-        return null;
+        switch (getUriMatcher().match(uri)) {
+            case URI_ALIMENTOS:
+                return MULTIPLOS_ITEMS + ALIMENTOS;
+            case URI_ALIMENTO_ESPECIFICO:
+                return UNICO_ITEM + ALIMENTOS;
+            case URI_BEBIDAS:
+                return MULTIPLOS_ITEMS + BEBIDAS;
+            case URI_BEBIDAS_ESPECIFICA:
+                return UNICO_ITEM + BEBIDAS;
+            default:
+                return null;
+        }
     }
 
 
