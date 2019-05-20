@@ -4,6 +4,7 @@ import android.content.ContentProvider;
 import android.content.ContentValues;
 import android.content.UriMatcher;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -53,7 +54,26 @@ public class GibutaDietaContentProvider extends ContentProvider {
     public Cursor query(@NonNull Uri uri, @Nullable String[] projection, @Nullable String selection, @Nullable String[] selectionArgs, @Nullable String sortOrder) {
 
 
-        return null;
+        SQLiteDatabase bd = bdGibutaDietaOpenHelper.getReadableDatabase();
+
+        String id = uri.getLastPathSegment();
+
+        switch (getUriMatcher().match(uri)) {
+            case URI_ALIMENTOS:
+                return new BdTabelaTiposAlimentos(bd).query(projection, selection, selectionArgs, null, null, sortOrder);
+
+            case URI_ALIMENTO_ESPECIFICO:
+                return new BdTabelaTiposAlimentos(bd).query(projection, BdTabelaTiposAlimentos._ID + "=?", new String[] { id }, null, null, null);
+
+            case URI_BEBIDAS:
+                return new BdTabelaTiposBebidas(bd).query(projection, selection, selectionArgs, null, null, sortOrder);
+
+            case URI_BEBIDAS_ESPECIFICA:
+                return  new BdTabelaTiposBebidas(bd).query(projection, BdTabelaTiposBebidas._ID + "=?", new String[] { id }, null, null, null);
+
+            default:
+                throw new UnsupportedOperationException("URI inválida (QUERY): " + uri.toString());
+        }
     }
 
 
