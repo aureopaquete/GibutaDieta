@@ -2,11 +2,11 @@ package com.example.gibutadieta;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;
+import android.content.UriMatcher;
 import android.database.Cursor;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-
 
 
 public class GibutaDietaContentProvider extends ContentProvider {
@@ -30,18 +30,29 @@ public class GibutaDietaContentProvider extends ContentProvider {
 
     private BdGibutaDietaOpenHelper bdGibutaDietaOpenHelper;
 
+    private UriMatcher getUriMatcher() {
+        UriMatcher uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
 
+        uriMatcher.addURI(AUTHORITY, ALIMENTOS, URI_ALIMENTO_ESPECIFICO);
+        uriMatcher.addURI(AUTHORITY, ALIMENTOS + "/#", URI_ALIMENTO_ESPECIFICO);
+        uriMatcher.addURI(AUTHORITY, BEBIDAS, URI_BEBIDAS);
+        uriMatcher.addURI(AUTHORITY, BEBIDAS + "/#", URI_BEBIDAS_ESPECIFICA);
+
+        return uriMatcher;
+    }
 
 
     @Override
     public boolean onCreate() {
         bdGibutaDietaOpenHelper = new BdGibutaDietaOpenHelper(getContext());
-        return false;
+        return true;
     }
 
 
     @Override
     public Cursor query(@NonNull Uri uri, @Nullable String[] projection, @Nullable String selection, @Nullable String[] selectionArgs, @Nullable String sortOrder) {
+
+
         return null;
     }
 
