@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 public class AdaptadorGibutaDieta extends RecyclerView.Adapter<AdaptadorGibutaDieta.ViewHolderGibutaDieta>{
 
@@ -55,12 +56,21 @@ public class AdaptadorGibutaDieta extends RecyclerView.Adapter<AdaptadorGibutaDi
     public class ViewHolderGibutaDieta extends RecyclerView.ViewHolder {
 
 
-        
+        private TextView textViewconsumo;
+        private TextView textViewHora;
+        private TextView textViewQuantidade;
+
 
         private TiposAlimentos alimentos;
 
         public ViewHolderGibutaDieta(@NonNull View itemView) {
             super(itemView);
+
+            textViewconsumo = (TextView)itemView.findViewById(R.id.textViewconsumo);
+            textViewHora =  (TextView)itemView.findViewById(R.id.textViewHora);
+            textViewQuantidade =  (TextView)itemView.findViewById(R.id.textViewQuantidade);
+
+            
         }
 
         public void setAlimentos(TiposAlimentos alimentos) {

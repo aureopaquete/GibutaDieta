@@ -11,7 +11,7 @@
     android:layout_marginBottom="20dp">
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/textViewconsumo"
         android:layout_width="312dp"
         android:layout_height="33dp"
         android:layout_marginStart="8dp"
@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/textViewHora"
         android:layout_width="312dp"
         android:layout_height="28dp"
         android:layout_marginStart="8dp"
@@ -32,12 +32,12 @@
         android:layout_marginBottom="13dp"
         android:text="07/05/2019"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView16"
-        app:layout_constraintStart_toStartOf="@+id/textView12"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintEnd_toStartOf="@+id/textViewQuantidade"
+        app:layout_constraintStart_toStartOf="@+id/textViewconsumo"
+        app:layout_constraintTop_toBottomOf="@+id/textViewconsumo" />
 
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/textViewQuantidade"
         android:layout_width="75dp"
         android:layout_height="62dp"
         android:layout_marginTop="6dp"
@@ -49,6 +49,6 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintStart_toEndOf="@+id/textViewconsumo"
         app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
