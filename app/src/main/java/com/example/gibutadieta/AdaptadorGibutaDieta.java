@@ -41,6 +41,8 @@ public class AdaptadorGibutaDieta extends RecyclerView.Adapter<AdaptadorGibutaDi
         cursor.moveToPosition(position);
         TiposAlimentos alimentos = TiposAlimentos.fromCursor(cursor);
         holder.setAlimentos(alimentos);
+        TiposBebidas bebidas = TiposBebidas.fromCursor(cursor);
+        holder.setBebidas(bebidas);
     }
 
     @Override
@@ -62,6 +64,7 @@ public class AdaptadorGibutaDieta extends RecyclerView.Adapter<AdaptadorGibutaDi
 
 
         private TiposAlimentos alimentos;
+        private TiposBebidas bebidas;
 
         public ViewHolderGibutaDieta(@NonNull View itemView) {
             super(itemView);
@@ -70,11 +73,39 @@ public class AdaptadorGibutaDieta extends RecyclerView.Adapter<AdaptadorGibutaDi
             textViewHora =  (TextView)itemView.findViewById(R.id.textViewHora);
             textViewQuantidade =  (TextView)itemView.findViewById(R.id.textViewQuantidade);
 
-            
+
         }
 
         public void setAlimentos(TiposAlimentos alimentos) {
             this.alimentos = alimentos;
+
+            textViewconsumo.setText(alimentos.getAlimentos());
+
+        }
+
+        public void setBebidas(TiposBebidas bebidas) {
+            this.bebidas = bebidas;
+
+            textViewconsumo.setText(bebidas.getBebidas());
+
+        }
+
+        public void onClick(View v) {
+            if (viewHolderGibutaDietaSelecionado != null) {
+                viewHolderGibutaDietaSelecionado.desSeleciona();
+            }
+
+            viewHolderGibutaDietaSelecionado = this;
+
+            seleciona();
+        }
+
+        private void desSeleciona() {
+            itemView.setBackgroundResource(android.R.color.white);
+        }
+
+        private void seleciona() {
+            itemView.setBackgroundResource(R.color.colorAccent);
         }
     }
 }
