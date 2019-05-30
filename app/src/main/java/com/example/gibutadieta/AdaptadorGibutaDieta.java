@@ -17,7 +17,7 @@ public class AdaptadorGibutaDieta extends RecyclerView.Adapter<AdaptadorGibutaDi
         this.context = context;
     }
 
-
+    //Notificação do Cursor
     public void setCursor(Cursor cursor) {
         if (this.cursor != cursor) {
             this.cursor = cursor;
@@ -49,8 +49,13 @@ public class AdaptadorGibutaDieta extends RecyclerView.Adapter<AdaptadorGibutaDi
         return cursor.getCount();
     }
 
+    private static ViewHolderGibutaDieta viewHolderGibutaDietaSelecionado = null;
+
+
     public class ViewHolderGibutaDieta extends RecyclerView.ViewHolder {
 
+
+        
 
         private TiposAlimentos alimentos;
 

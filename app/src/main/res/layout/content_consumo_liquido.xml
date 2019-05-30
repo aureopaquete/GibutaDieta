@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        android:id="@+id/spinner3"
+        android:id="@+id/spinnerBebidas"
         android:layout_width="86dp"
         android:layout_height="31dp"
         android:layout_marginStart="8dp"
