@@ -13,8 +13,6 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,8 +24,7 @@ public class MainActivity extends AppCompatActivity
 
     private AdaptadorGibutaDieta adaptadorGibutaDieta;
 
-    private static final int ID_CURSO_LOADER_GibutaDieta = 0;
-    private RecyclerView recyclerViewListarDados;
+    //private static final int ID_CURSO_LOADER_GibutaDieta = 0;
 
 
 
@@ -39,6 +36,7 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -46,14 +44,6 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
-
-        getSupportLoaderManager().initLoader(ID_CURSO_LOADER_GibutaDieta, null, this);
-
-        recyclerViewListarDados = (RecyclerView) findViewById(R.id.recyclerViewListarDados);
-        adaptadorGibutaDieta = new AdaptadorGibutaDieta(this);
-        recyclerViewListarDados.setAdapter(adaptadorGibutaDieta);
-        recyclerViewListarDados.setLayoutManager(new LinearLayoutManager(this));
-
     }
 
     @Override
@@ -67,8 +57,6 @@ public class MainActivity extends AppCompatActivity
     }
 
     protected void onResume() {
-        getSupportLoaderManager().restartLoader(ID_CURSO_LOADER_GibutaDieta, null, this);
-
         super.onResume();
     }
 

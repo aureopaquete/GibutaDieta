@@ -2,23 +2,15 @@ package com.example.gibutadieta;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.widget.ListAdapter;
 import android.widget.TextView;
-
-import java.util.Date;
 
 public class Dados extends AppCompatActivity {
 
-    private ListAdapter adapter;
+    private AdaptadorGibutaDieta adaptadorGibutaDieta;
     private RecyclerView recyclerViewListarDados;
 
     @Override
@@ -28,10 +20,15 @@ public class Dados extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
+        recyclerViewListarDados = (RecyclerView) findViewById(R.id.recyclerViewListarDados);
+        adaptadorGibutaDieta = new AdaptadorGibutaDieta(this);
+        recyclerViewListarDados.setAdapter(adaptadorGibutaDieta);
+        recyclerViewListarDados.setLayoutManager(new LinearLayoutManager(this));
+
+
         mostrarTextoAlimento();
         mostrarTextoBebida();
-        recyclerViewListarDados = (RecyclerView) findViewById(R.id.recyclerViewListarDados);
-        recyclerViewListarDados.setLayoutManager(new LinearLayoutManager(this));
 
 
     }

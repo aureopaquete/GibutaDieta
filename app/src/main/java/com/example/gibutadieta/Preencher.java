@@ -6,12 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 public class Preencher extends AppCompatActivity {
 
-    private Spinner spinnerAlimentos;
+
     private  TiposAlimentos tiposAlimentos;
 
 
@@ -22,7 +21,7 @@ public class Preencher extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        spinnerAlimentos = (Spinner) findViewById(R.id.spinnerAlimentos);
+
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -36,7 +35,7 @@ public class Preencher extends AppCompatActivity {
 
         EditText editorTexto = (EditText) findViewById(R.id.editorTexto);
         String mensagem = editorTexto.getText().toString();
-        tiposAlimentos.setId_Alimentos((int) spinnerAlimentos.getSelectedItemId());
+
 
 
         if (mensagem.trim().length() == 0){
