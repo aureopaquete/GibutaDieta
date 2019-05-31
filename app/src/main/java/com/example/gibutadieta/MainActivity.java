@@ -13,6 +13,8 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -23,6 +25,11 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, LoaderManager.LoaderCallbacks<Cursor>  {
 
     private AdaptadorGibutaDieta adaptadorGibutaDieta;
+
+    private static final int ID_CURSO_LOADER_GibutaDieta = 0;
+    private RecyclerView recyclerViewListarDados;
+
+
 
 
     @Override
@@ -39,6 +46,14 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
+        getSupportLoaderManager().initLoader(ID_CURSO_LOADER_GibutaDieta, null, this);
+
+        recyclerViewListarDados = (RecyclerView) findViewById(R.id.recyclerViewListarDados);
+        adaptadorGibutaDieta = new AdaptadorGibutaDieta(this);
+        recyclerViewListarDados.setAdapter(adaptadorGibutaDieta);
+        recyclerViewListarDados.setLayoutManager(new LinearLayoutManager(this));
+
     }
 
     @Override

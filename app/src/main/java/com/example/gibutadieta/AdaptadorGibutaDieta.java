@@ -14,7 +14,7 @@ public class AdaptadorGibutaDieta extends RecyclerView.Adapter<AdaptadorGibutaDi
     private Cursor cursor;
     private Context context;
 
-    public void setContext(Context context) {
+    public  AdaptadorGibutaDieta(Context context) {
         this.context = context;
     }
 
