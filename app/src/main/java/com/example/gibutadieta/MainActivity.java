@@ -65,6 +65,13 @@ public class MainActivity extends AppCompatActivity
             super.onBackPressed();
         }
     }
+
+    protected void onResume() {
+        getSupportLoaderManager().restartLoader(ID_CURSO_LOADER_GibutaDieta, null, this);
+
+        super.onResume();
+    }
+
     protected void onSaveInstanceState(Bundle outState) {
         // todo: guardar o estado do aplicativo no momento da inversão
         super.onSaveInstanceState(outState);
