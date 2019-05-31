@@ -55,7 +55,7 @@ public class AdaptadorGibutaDieta extends RecyclerView.Adapter<AdaptadorGibutaDi
     private static ViewHolderGibutaDieta viewHolderGibutaDietaSelecionado = null;
 
 
-    public class ViewHolderGibutaDieta extends RecyclerView.ViewHolder {
+    public class ViewHolderGibutaDieta extends RecyclerView.ViewHolder implements View.OnClickListener {
 
 
         private TextView textViewconsumo;
