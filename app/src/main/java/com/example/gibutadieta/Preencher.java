@@ -3,6 +3,10 @@ package com.example.gibutadieta;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.Loader;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -11,10 +15,10 @@ import android.widget.SimpleCursorAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class Preencher extends AppCompatActivity {
+public class Preencher extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Object> {
 
     private Spinner spinnerAlimentos;
-
+    private static final int ID_CURSO_LOADER_ALIMENTOS = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +30,10 @@ public class Preencher extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         spinnerAlimentos = (Spinner) findViewById(R.id.spinnerAlimentos);
+
+        getSupportLoaderManager().initLoader(ID_CURSO_LOADER_ALIMENTOS, null, this);
+
+
     }
 
     private void mostrarAliemtoSpinner(Cursor cursorAlimentos) {
@@ -82,11 +90,20 @@ public class Preencher extends AppCompatActivity {
 
     }
 
-    
 
+    @NonNull
+    @Override
+    public Loader<Object> onCreateLoader(int i, @Nullable Bundle bundle) {
+        return null;
+    }
 
+    @Override
+    public void onLoadFinished(@NonNull Loader<Object> loader, Object o) {
 
+    }
 
+    @Override
+    public void onLoaderReset(@NonNull Loader<Object> loader) {
 
-
+    }
 }
