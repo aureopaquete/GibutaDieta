@@ -14,8 +14,10 @@ import android.widget.EditText;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
+import android.support.v4.content.CursorLoader;
 
-public class Preencher extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Object> {
+
+public class Preencher extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
     private Spinner spinnerAlimentos;
     private static final int ID_CURSO_LOADER_ALIMENTOS = 0;
@@ -93,17 +95,21 @@ public class Preencher extends AppCompatActivity implements LoaderManager.Loader
 
     @NonNull
     @Override
-    public Loader<Object> onCreateLoader(int i, @Nullable Bundle bundle) {
-        return null;
+    public Loader<Cursor> onCreateLoader(int i, @Nullable Bundle bundle) {
+
+        CursorLoader cursorLoader = new CursorLoader(this, GibutaDietaContentProvider.ENDERECO_ALIMENTO, BdTabelaTiposAlimentos.TODAS_COLUNAS, null, null, BdTabelaTiposAlimentos.CAMPO_Alimentos);
+
+        return cursorLoader;
+
     }
 
     @Override
-    public void onLoadFinished(@NonNull Loader<Object> loader, Object o) {
-
+    public void onLoadFinished(@NonNull Loader<Cursor> loader, Cursor data) {
+        mostrarAliemtoSpinner(data);
     }
 
     @Override
-    public void onLoaderReset(@NonNull Loader<Object> loader) {
-
+    public void onLoaderReset(@NonNull Loader<Cursor> loader) {
+        mostrarAliemtoSpinner(null);
     }
 }
