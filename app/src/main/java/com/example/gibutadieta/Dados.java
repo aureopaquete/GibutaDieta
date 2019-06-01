@@ -3,6 +3,8 @@ package com.example.gibutadieta;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -29,7 +31,7 @@ public class Dados extends AppCompatActivity {
 
         mostrarTextoAlimento();
         mostrarTextoBebida();
-
+        initComponents();
 
     }
 
@@ -49,6 +51,15 @@ public class Dados extends AppCompatActivity {
         TextView textView10 = (TextView) findViewById(R.id.textView10);
         textView10.setText(mensagem + " "+"ml");
 
+    }
+
+    private void initComponents(){
+
+        final LinearLayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
+        recyclerViewListarDados.setLayoutManager(layoutManager);
+        recyclerViewListarDados.setItemAnimator(new DefaultItemAnimator());
+        recyclerViewListarDados.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
+        recyclerViewListarDados.setAdapter(adaptadorGibutaDieta);
     }
 
 }

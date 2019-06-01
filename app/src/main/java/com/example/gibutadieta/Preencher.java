@@ -1,17 +1,19 @@
 package com.example.gibutadieta;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.SimpleCursorAdapter;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 public class Preencher extends AppCompatActivity {
 
-
-    private  TiposAlimentos tiposAlimentos;
+    private Spinner spinnerAlimentos;
 
 
     @Override
@@ -21,11 +23,24 @@ public class Preencher extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        spinnerAlimentos = (Spinner) findViewById(R.id.spinnerAlimentos);
     }
+
+    private void mostrarAliemtoSpinner(Cursor cursorAlimentos) {
+        SimpleCursorAdapter adaptadorAlimentos = new SimpleCursorAdapter(
+                this,
+                android.R.layout.simple_list_item_1,
+                cursorAlimentos,
+                new String[]{BdTabelaTiposAlimentos.CAMPO_Alimentos},
+                new int[]{android.R.id.text1}
+        );
+        spinnerAlimentos.setAdapter(adaptadorAlimentos);
+    }
+
+
+
 
     public void Cancelar(View view) { // Botão Cancelar
         finish();                     // função Cancelar
@@ -66,6 +81,8 @@ public class Preencher extends AppCompatActivity {
         finish();
 
     }
+
+    
 
 
 
