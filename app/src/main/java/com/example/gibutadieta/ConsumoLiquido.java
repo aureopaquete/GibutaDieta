@@ -2,17 +2,17 @@ package com.example.gibutadieta;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
-import java.util.Date;
-
 public class ConsumoLiquido extends AppCompatActivity {
+
+    private Spinner spinnerBebidas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,12 @@ public class ConsumoLiquido extends AppCompatActivity {
         setContentView(R.layout.activity_consumo_liquido);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        spinnerBebidas = (Spinner) findViewById(R.id.spinnerBebidas);
+        ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.Bebidas, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerBebidas.setAdapter(adapter);
+
 
     }
 

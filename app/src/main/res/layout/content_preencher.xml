@@ -62,25 +62,26 @@
 
     <Spinner
         android:id="@+id/spinnerAlimentos"
-        android:layout_width="72dp"
-        android:layout_height="37dp"
+        android:layout_width="382dp"
+        android:layout_height="29dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="161dp"
-        android:layout_marginEnd="210dp"
-        android:layout_marginRight="210dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="113dp"
-        android:layout_height="52dp"
+        android:layout_width="114dp"
+        android:layout_height="26dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="167dp"
+        android:layout_marginTop="172dp"
         android:text="@string/alimentosSpinner"
+        android:textColor="@android:color/holo_red_light"
         android:textSize="18sp"
         app:fontFamily="@font/armata"
         app:layout_constraintStart_toStartOf="parent"

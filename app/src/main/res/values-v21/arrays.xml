@@ -5,6 +5,13 @@
         <item>Proteínas</item>
         <item>Carboidratos</item>
         <item>Legumes</item>
+        <item>Fibras</item>
+    </string-array>
+
+    <string-array name="Bebidas">
+        <item>Água</item>
+        <item>Café</item>
+        <item>Sumo</item>
     </string-array>
 
 </resources>
