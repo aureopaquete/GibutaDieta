@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="Alimetos">
+        <item>Proteínas</item>
+        <item>Carboidratos</item>
+        <item>Legumes</item>
+    </string-array>
+
+</resources>

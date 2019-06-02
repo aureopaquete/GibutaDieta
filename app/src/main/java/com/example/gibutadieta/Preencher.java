@@ -5,22 +5,25 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.LoaderManager;
+import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
-import android.support.v4.content.CursorLoader;
 
 
 public class Preencher extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
     private Spinner spinnerAlimentos;
-    private static final int ID_CURSO_LOADER_ALIMENTOS = 0;
+    //private EditText editorTexto;
+    //private static final int ID_CURSO_LOADER_ALIMENTOS = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,14 +32,16 @@ public class Preencher extends AppCompatActivity implements LoaderManager.Loader
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         spinnerAlimentos = (Spinner) findViewById(R.id.spinnerAlimentos);
-
-        getSupportLoaderManager().initLoader(ID_CURSO_LOADER_ALIMENTOS, null, this);
-
+        ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.Alimetos, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerAlimentos.setAdapter(adapter);
 
     }
+
+
 
     private void mostrarAliemtoSpinner(Cursor cursorAlimentos) {
         SimpleCursorAdapter adaptadorAlimentos = new SimpleCursorAdapter(
@@ -82,6 +87,33 @@ public class Preencher extends AppCompatActivity implements LoaderManager.Loader
             editorTexto.requestFocus();
             return;
         }
+
+
+        long Alimentos = spinnerAlimentos.getSelectedItemId();
+
+        // guardar os dados
+        TiposAlimentos tiposAlimentos = new TiposAlimentos();
+
+        tiposAlimentos.setAlimentos(mensagem);
+
+
+        try {
+            getContentResolver().insert(GibutaDietaContentProvider.ENDERECO_ALIMENTO, tiposAlimentos.getContentValues());
+
+            Toast.makeText(this, getString(R.string.Guardado_com_Sucesso), Toast.LENGTH_SHORT).show();
+            finish();
+        } catch (Exception e) {
+            Snackbar.make(
+                    editorTexto,
+                    getString(R.string.Erros_ao_Guardar),
+                    Snackbar.LENGTH_LONG)
+                    .show();
+
+            e.printStackTrace();
+        }
+
+
+
 
         Toast.makeText(this, "Guardado com sucesso", Toast.LENGTH_SHORT).show();
 

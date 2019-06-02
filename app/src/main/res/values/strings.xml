@@ -110,5 +110,8 @@
     <string name="guardarbebidas">Guardar</string>
     <string name="tipo_de_alimentoNovo">Tipo de Alimento</string>
     <string name="alimentosSpinner">Alimentos</string>
+    <string name="Erro_Na_Introdução">Erro Na Introdução</string>
+    <string name="Erros_ao_Guardar">Erros ao Guardar</string>
+    <string name="Guardado_com_Sucesso">Guardado com Sucesso</string>
 
 </resources>
