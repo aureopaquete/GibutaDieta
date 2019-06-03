@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity
 
     private AdaptadorGibutaDieta adaptadorGibutaDieta;
 
-    //private static final int ID_CURSO_LOADER_GibutaDieta = 0;
+    private static final int ID_CURSO_LOADER_GibutaDieta = 0;
 
 
 

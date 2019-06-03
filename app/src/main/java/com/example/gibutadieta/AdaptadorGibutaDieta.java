@@ -30,7 +30,10 @@ public class AdaptadorGibutaDieta extends RecyclerView.Adapter<AdaptadorGibutaDi
     @NonNull
     @Override
     public ViewHolderGibutaDieta onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemDados = LayoutInflater.from(context).inflate(R.layout.item_dados, parent, false);
+
+        LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
+
+        View itemDados = layoutInflater.from(context).inflate(R.layout.item_dados, parent, false);
 
         return new ViewHolderGibutaDieta(itemDados);
 
@@ -52,15 +55,29 @@ public class AdaptadorGibutaDieta extends RecyclerView.Adapter<AdaptadorGibutaDi
         return cursor.getCount();
     }
 
+    public TiposAlimentos getTiposAlimentosSelecionado() {
+        if (viewHolderGibutaDietaSelecionado == null) return null;
+
+        return viewHolderGibutaDietaSelecionado.alimentos;
+    }
+
+
+    public TiposBebidas getTiposBebidasSelecionado() {
+        if (viewHolderGibutaDietaSelecionado == null) return null;
+
+        return viewHolderGibutaDietaSelecionado.bebidas;
+    }
+
     private static ViewHolderGibutaDieta viewHolderGibutaDietaSelecionado = null;
 
 
     public class ViewHolderGibutaDieta extends RecyclerView.ViewHolder implements View.OnClickListener {
 
 
-        private TextView textViewconsumo;
-        private TextView textViewHora;
-        private TextView textViewQuantidade;
+        public TextView textViewconsumo;
+        public TextView textViewQuantidade;
+        //private TextView textViewHora;
+
 
 
         private TiposAlimentos alimentos;
@@ -70,23 +87,24 @@ public class AdaptadorGibutaDieta extends RecyclerView.Adapter<AdaptadorGibutaDi
             super(itemView);
 
             textViewconsumo = (TextView)itemView.findViewById(R.id.textViewconsumo);
-            textViewHora =  (TextView)itemView.findViewById(R.id.textViewHora);
             textViewQuantidade =  (TextView)itemView.findViewById(R.id.textViewQuantidade);
+            //textViewHora =  (TextView)itemView.findViewById(R.id.textViewHora);
 
+            itemView.setOnClickListener(this);
 
         }
 
         public void setAlimentos(TiposAlimentos alimentos) {
             this.alimentos = alimentos;
 
-            textViewconsumo.setText(alimentos.getAlimentos());
+            textViewQuantidade.setText(alimentos.getAlimentos());
 
         }
 
         public void setBebidas(TiposBebidas bebidas) {
             this.bebidas = bebidas;
 
-            textViewconsumo.setText(bebidas.getBebidas());
+            textViewQuantidade.setText(bebidas.getBebidas());
 
         }
 

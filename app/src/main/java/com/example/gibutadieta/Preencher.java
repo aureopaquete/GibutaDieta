@@ -14,6 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.SimpleCursorAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -22,7 +23,7 @@ public class Preencher extends AppCompatActivity implements LoaderManager.Loader
 
     private Spinner spinnerAlimentos;
     //private EditText editorTexto;
-    //private static final int ID_CURSO_LOADER_ALIMENTOS = 0;
+    private static final int ID_CURSO_LOADER_ALIMENTOS = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +32,10 @@ public class Preencher extends AppCompatActivity implements LoaderManager.Loader
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        //getSupportLoaderManager().initLoader(ID_CURSO_LOADER_ALIMENTOS, null, this);
+
 
         spinnerAlimentos = (Spinner) findViewById(R.id.spinnerAlimentos);
         ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.Alimetos, android.R.layout.simple_spinner_item);
@@ -42,16 +46,16 @@ public class Preencher extends AppCompatActivity implements LoaderManager.Loader
 
 
 
-    //private void mostrarAliemtoSpinner(Cursor cursorAlimentos) {
-        //SimpleCursorAdapter adaptadorAlimentos = new SimpleCursorAdapter(
-                //this,
-                //android.R.layout.simple_list_item_1,
-                //cursorAlimentos,
-                //new String[]{BdTabelaTiposAlimentos.CAMPO_Alimentos},
-                //new int[]{android.R.id.text1}
-        //);
-        //spinnerAlimentos.setAdapter(adaptadorAlimentos);
-    //}
+    private void mostrarAliemtoSpinner(Cursor cursorAlimentos) {
+        SimpleCursorAdapter adaptadorAlimentos = new SimpleCursorAdapter(
+                this,
+                android.R.layout.simple_list_item_1,
+                cursorAlimentos,
+                new String[]{BdTabelaTiposAlimentos.CAMPO_Alimentos},
+                new int[]{android.R.id.text1}
+        );
+        spinnerAlimentos.setAdapter(adaptadorAlimentos);
+    }
 
 
 
@@ -136,11 +140,11 @@ public class Preencher extends AppCompatActivity implements LoaderManager.Loader
 
     @Override
     public void onLoadFinished(@NonNull Loader<Cursor> loader, Cursor data) {
-        //mostrarAliemtoSpinner(data);
+        mostrarAliemtoSpinner(data);
     }
 
     @Override
     public void onLoaderReset(@NonNull Loader<Cursor> loader) {
-        //mostrarAliemtoSpinner(null);
+        mostrarAliemtoSpinner(null);
     }
 }

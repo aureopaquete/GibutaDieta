@@ -1,16 +1,20 @@
 package com.example.gibutadieta;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.CursorLoader;
+import android.support.v4.content.Loader;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 
-public class Dados extends AppCompatActivity {
+public class Dados extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
     private AdaptadorGibutaDieta adaptadorGibutaDieta;
     private RecyclerView recyclerViewListarDados;
@@ -24,14 +28,15 @@ public class Dados extends AppCompatActivity {
 
 
         recyclerViewListarDados = (RecyclerView) findViewById(R.id.recyclerViewListarDados);
+        recyclerViewListarDados.setHasFixedSize(true);
+        recyclerViewListarDados.setLayoutManager(new LinearLayoutManager(this));
         adaptadorGibutaDieta = new AdaptadorGibutaDieta(this);
         recyclerViewListarDados.setAdapter(adaptadorGibutaDieta);
-        recyclerViewListarDados.setLayoutManager(new LinearLayoutManager(this));
+
 
 
         mostrarTextoAlimento();
         mostrarTextoBebida();
-        initComponents();
 
     }
 
@@ -53,15 +58,25 @@ public class Dados extends AppCompatActivity {
 
     }
 
-    private void initComponents(){
 
-        final LinearLayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
-        recyclerViewListarDados.setLayoutManager(layoutManager);
-        recyclerViewListarDados.setItemAnimator(new DefaultItemAnimator());
-        recyclerViewListarDados.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
-        recyclerViewListarDados.setAdapter(adaptadorGibutaDieta);
+    @NonNull
+    @Override
+    public Loader<Cursor> onCreateLoader(int i, @Nullable Bundle bundle) {
+        CursorLoader cursorLoader = new CursorLoader(this, GibutaDietaContentProvider.ENDERECO_ALIMENTO, BdTabelaTiposAlimentos.TODAS_COLUNAS, null, null, BdTabelaTiposAlimentos.CAMPO_Alimentos);
+
+        return cursorLoader;
+
     }
 
+    @Override
+    public void onLoadFinished(@NonNull Loader<Cursor> loader, Cursor data) {
+        adaptadorGibutaDieta.setCursor(data);
+    }
+
+    @Override
+    public void onLoaderReset(@NonNull Loader<Cursor> loader) {
+        adaptadorGibutaDieta.setCursor(null);
+    }
 }
 
 
