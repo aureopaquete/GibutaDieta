@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".EditarBebidas"></activity>
         <activity
             android:name=".ConsumoLiquido"
             android:label="@string/title_activity_consumo_liquido"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Definicoes"
             android:label="@string/title_activity_definicoes"
@@ -30,7 +31,7 @@
             android:label="@string/title_activity_eliminar"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Editar"
+            android:name=".EditarAlimentos"
             android:label="@string/title_activity_editar"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -62,8 +63,8 @@
             android:resource="@array/preloaded_fonts" />
 
         <provider
-            android:authorities="com.example.gibutadieta"
             android:name=".GibutaDietaContentProvider"
+            android:authorities="com.example.gibutadieta"
             android:exported="false" />
     </application>
 

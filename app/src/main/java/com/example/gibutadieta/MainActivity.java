@@ -108,8 +108,12 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(this, Eliminar.class);
             startActivity(intent);
 
-        } else if (id == R.id.nav_Editacao) {
-            Intent intent = new Intent(this, Editar.class);
+        } else if (id == R.id.nav_EditacaoAlimentos) {
+            Intent intent = new Intent(this, EditarAlimentos.class);
+            startActivity(intent);
+        }
+        else if (id == R.id.EditorBebidas) {
+            Intent intent = new Intent(this, EditarBebidas.class);
             startActivity(intent);
         }
         else if (id == R.id.nav_closed) {

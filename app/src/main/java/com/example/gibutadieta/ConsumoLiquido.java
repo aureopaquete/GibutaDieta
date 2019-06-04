@@ -13,6 +13,7 @@ import android.widget.Toast;
 public class ConsumoLiquido extends AppCompatActivity {
 
     private Spinner spinnerBebidas;
+    private  EditText DescBebidas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,7 @@ public class ConsumoLiquido extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        DescBebidas = (EditText) findViewById(R.id.DescBebidas);
         spinnerBebidas = (Spinner) findViewById(R.id.spinnerBebidas);
         ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.Bebidas, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -30,6 +32,19 @@ public class ConsumoLiquido extends AppCompatActivity {
     }
 
     public void GuardarBebidas(View view) {
+
+
+        EditText DescBebidas = (EditText) findViewById(R.id.DescBebidas);
+        String mensagem1 = DescBebidas.getText().toString();
+
+
+        if (mensagem1.trim().length() == 0){
+            DescBebidas.setError("Campo Obrigatório");
+            DescBebidas.requestFocus();
+            return;
+        }
+
+
         EditText editorTexto2 = (EditText) findViewById(R.id.editorTexto2);
         String mensagem = editorTexto2.getText().toString();
 

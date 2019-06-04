@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
@@ -9,9 +10,13 @@
             android:icon="@android:drawable/ic_delete"
             android:title="@string/eliminar2" />
         <item
-            android:id="@+id/nav_Editacao"
+            android:id="@+id/nav_EditacaoAlimentos"
             android:icon="@android:drawable/ic_menu_edit"
-            android:title="@string/editar2" />
+            android:title="Editar Alimentos" />
+        <item
+            android:id="@+id/EditorBebidas"
+            android:icon="@android:drawable/ic_menu_edit"
+            android:title="Editar Bebidas" />
         <item
             android:id="@+id/nav_Listadados"
             android:icon="@android:drawable/ic_menu_sort_by_size"

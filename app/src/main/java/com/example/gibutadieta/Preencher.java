@@ -22,6 +22,7 @@ import android.widget.Toast;
 public class Preencher extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
     private Spinner spinnerAlimentos;
+    private EditText DesAlimento;
     //private EditText editorTexto;
     private static final int ID_CURSO_LOADER_ALIMENTOS = 0;
 
@@ -36,7 +37,7 @@ public class Preencher extends AppCompatActivity implements LoaderManager.Loader
 
         //getSupportLoaderManager().initLoader(ID_CURSO_LOADER_ALIMENTOS, null, this);
 
-
+        DesAlimento = (EditText) findViewById(R.id.DesAlimento);
         spinnerAlimentos = (Spinner) findViewById(R.id.spinnerAlimentos);
         ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.Alimetos, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -66,6 +67,18 @@ public class Preencher extends AppCompatActivity implements LoaderManager.Loader
 
     public void Guardar(View view) {
 
+
+        EditText DesAlimento = (EditText) findViewById(R.id.DesAlimento);
+        String mensagem1 = DesAlimento.getText().toString();
+
+
+        if (mensagem1.trim().length() == 0){
+            DesAlimento.setError("Campo Obrigatório");
+            DesAlimento.requestFocus();
+            return;
+        }
+
+
         EditText editorTexto = (EditText) findViewById(R.id.editorTexto);
         String mensagem = editorTexto.getText().toString();
 
@@ -90,6 +103,8 @@ public class Preencher extends AppCompatActivity implements LoaderManager.Loader
             editorTexto.requestFocus();
             return;
         }
+
+
 
 
         long Alimentos = spinnerAlimentos.getSelectedItemId();

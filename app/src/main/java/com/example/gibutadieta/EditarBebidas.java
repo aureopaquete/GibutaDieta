@@ -1,31 +1,26 @@
 package com.example.gibutadieta;
 
-import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class Editar extends AppCompatActivity {
+public class EditarBebidas extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_editar);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-
+        setContentView(R.layout.activity_editar_bebidas);
     }
 
+    public void Cancelar(View view) {
+        finish();
+    }
 
+    public void Guardar(View view) {
 
-
-    public void Salvar(View view) {
-        EditText TextEditor = (EditText) findViewById(R.id.TextEditor);
+        EditText TextEditor = (EditText) findViewById(R.id.editorTexto);
         String mensagem = TextEditor.getText().toString();
 
 
@@ -53,7 +48,4 @@ public class Editar extends AppCompatActivity {
         finish();
     }
 
-    public void Recuar(View view) {
-        finish();
-    }
 }
