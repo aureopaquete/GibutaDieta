@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".ConsumoLiquido"
-    tools:showIn="@layout/activity_consumo_liquido">
+    tools:context=".InserirBebidas"
+    tools:showIn="@layout/activity_inserir_bebidas">
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/textInputLayout4"
@@ -20,10 +20,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerBebidas">
+        app:layout_constraintTop_toBottomOf="@+id/spinnerEdBebidas">
 
         <android.support.design.widget.TextInputEditText
-            android:id="@+id/DescBebidas"
+            android:id="@+id/DescBebidasEditBe"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Descrição da Bebida"
@@ -48,7 +48,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        android:id="@+id/spinnerBebidas"
+        android:id="@+id/spinnerEdBebidas"
         android:layout_width="382dp"
         android:layout_height="31dp"
         android:layout_marginStart="8dp"
@@ -87,7 +87,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
 
         <android.support.design.widget.TextInputEditText
-            android:id="@+id/editorTexto2"
+            android:id="@+id/editorTextoEdBe"
             android:layout_width="match_parent"
             android:layout_height="43dp"
             android:hint="@string/introduza_o_valor_2"

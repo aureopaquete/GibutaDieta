@@ -26,7 +26,7 @@
     <string name="proteinas">Proteins</string>
     <string name="salvar">Save</string>
     <string name="apagar">Delete</string>
-    <string name="title_activity_editar" translatable="false">Editar</string>
+    <string name="title_activity_editar" translatable="false">Editar Alimentos</string>
     <string name="title_activity_eliminar" translatable="false">Eliminar</string>
     <string name="dados_eliminar">"Data to Delete "</string>
     <string name="simples" translatable="false">simples</string>
@@ -113,5 +113,6 @@
     <string name="Erro_Na_Introdução">Erro Na Introdução</string>
     <string name="Erros_ao_Guardar">Erros ao Guardar</string>
     <string name="Guardado_com_Sucesso">Guardado com Sucesso</string>
+    <string name="title_activity_editar_bebidas">Editar Bebidas</string>
 
 </resources>

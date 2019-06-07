@@ -6,14 +6,19 @@ import android.database.Cursor;
 public class TiposAlimentos {
     long id_Alimentos;
     private String Alimentos;
+    private String DescricaoAlimentos;
+    private String nomeCategoria;
+
 
     //Construtores
     public TiposAlimentos(){
     }
 
-    public TiposAlimentos(long id_Alimentos, String alimentos) {
+    public TiposAlimentos(long id_Alimentos, String alimentos, String descricaoAlimentos, String nomeCategoria) {
         this.id_Alimentos = id_Alimentos;
         this.Alimentos = alimentos;
+        this.DescricaoAlimentos = descricaoAlimentos;
+        this.nomeCategoria = nomeCategoria;
     }
 
     //Getter e Setter
@@ -33,12 +38,25 @@ public class TiposAlimentos {
     public void setAlimentos(String alimentos) {
         this.Alimentos = alimentos;
     }
+    public String getDescricaoAlimentos() {
+        return DescricaoAlimentos;
+    }
+    public void setDescricaoAlimentos(String descricaoAlimentos) {
+        this.DescricaoAlimentos = descricaoAlimentos;
+    }
+    public String getNomeCategoria() {
+        return nomeCategoria;
+    }
+
+
 
     // Funções getContentValues
     public ContentValues getContentValues() {
         ContentValues valores = new ContentValues();
 
         valores.put(BdTabelaTiposAlimentos.CAMPO_Alimentos,Alimentos );
+        valores.put(BdTabelaTiposAlimentos.CAMPO_DescricaoAliemtos,DescricaoAlimentos );
+
         return valores;
     }
 
@@ -51,11 +69,22 @@ public class TiposAlimentos {
         String Alimentos = cursor.getString(
                 cursor.getColumnIndex(BdTabelaTiposAlimentos.CAMPO_Alimentos)
         );
+        String DescricaoAlimentos = cursor.getString(
+                cursor.getColumnIndex(BdTabelaTiposAlimentos.CAMPO_DescricaoAliemtos)
+        );
+        String nomeCategoria = cursor.getString(
+                cursor.getColumnIndex(BdTabelaTiposAlimentos.CAMPO_NOME_CATEGORIA_Alimentos)
+        );
+
+
 
         TiposAlimentos alimentos = new TiposAlimentos();
 
         alimentos.setId_Alimentos(id_Alimentos);
         alimentos.setAlimentos(Alimentos);
+        alimentos.setDescricaoAlimentos(DescricaoAlimentos);
+        alimentos.nomeCategoria = nomeCategoria;
+
 
         return alimentos;
 

@@ -1,14 +1,8 @@
 package com.example.gibutadieta;
 
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.LoaderManager;
-import android.support.v4.content.CursorLoader;
-import android.support.v4.content.Loader;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -20,14 +14,9 @@ import android.view.View;
 
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, LoaderManager.LoaderCallbacks<Cursor>  {
+        implements NavigationView.OnNavigationItemSelectedListener {
 
     private AdaptadorGibutaDieta adaptadorGibutaDieta;
-
-    private static final int ID_CURSO_LOADER_GibutaDieta = 0;
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,7 +108,7 @@ public class MainActivity extends AppCompatActivity
         else if (id == R.id.nav_closed) {
            finish();
         }else if (id == R.id.nav_Listadados) {
-            Intent intent = new Intent(this, Dados.class);
+            Intent intent = new Intent(this, ListaGeral.class);
             startActivity(intent);
         }
 
@@ -130,15 +119,16 @@ public class MainActivity extends AppCompatActivity
 
 
     public void Bebidas(View view) {
-        Intent intent = new Intent(this, ConsumoLiquido.class);
+        Intent intent = new Intent(this, InserirBebidas.class);
         startActivity(intent);
     }
 
     public void Alimentos(View view) {
-        Intent intent = new Intent(this, Preencher.class);
+        Intent intent = new Intent(this, InserirAlimentos.class);
         startActivity(intent);
     }
 
+    /*
     @NonNull
     @Override
     public Loader<Cursor> onCreateLoader(int i, @Nullable Bundle bundle) {
@@ -157,5 +147,5 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onLoaderReset(@NonNull Loader<Cursor> loader) {
         adaptadorGibutaDieta.setCursor(null);
-    }
+    }*/
 }

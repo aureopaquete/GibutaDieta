@@ -8,11 +8,14 @@ import android.provider.BaseColumns;
 public class BdTabelaTiposAlimentos implements BaseColumns {
 
     public static final  String NOME_TABELA = "TiposAlimentos";
+    public static final String NOME_CATEGORIA = "ElementoSpinner";
 
     public static final  String ID = "ID_Alimentos";
     public static final  String CAMPO_Alimentos = "Alimentos";
+    public static final  String CAMPO_DescricaoAliemtos = "Descricao";
+    public static final  String CAMPO_NOME_CATEGORIA_Alimentos = BdTabelaQuantidade.NOME_TABELA + "." + BdTabelaQuantidade.CAMPO_QUANTIDADE + " AS " + NOME_CATEGORIA; // tabela de categorias (só de leitura)
 
-    public static final String[] TODAS_COLUNAS = new String[] { ID,CAMPO_Alimentos };
+    public static final String[] TODAS_COLUNAS = new String[] { ID,CAMPO_Alimentos,CAMPO_NOME_CATEGORIA_Alimentos };
 
 
     private SQLiteDatabase db;
@@ -24,6 +27,7 @@ public class BdTabelaTiposAlimentos implements BaseColumns {
         db.execSQL(
                 "CREATE TABLE " + NOME_TABELA + "(" +
                 ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                CAMPO_DescricaoAliemtos + " TEXT NOT NULL," +
                 CAMPO_Alimentos + " TEXT NOT NULL)"
         );
     }

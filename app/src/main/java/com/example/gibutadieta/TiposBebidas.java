@@ -6,15 +6,19 @@ import android.database.Cursor;
 public class TiposBebidas {
     long id_Bebidas;
     private String Bebidas;
+    private String DescricaoBebidas;
+    private String nomeCategoriaBebida;
 
     //Construtores
     public TiposBebidas(){
     }
-
-    public TiposBebidas(long id_Bebidas, String bebidas) {
+    public TiposBebidas(long id_Bebidas, String bebidas, String descricaoBebidas, String nomeCategoriaBebida) {
         this.id_Bebidas = id_Bebidas;
         this.Bebidas = bebidas;
+        this.DescricaoBebidas = descricaoBebidas;
+        this.nomeCategoriaBebida = nomeCategoriaBebida;
     }
+
 
     //Getter e Setter
     public long getId_Bebidas() {
@@ -33,11 +37,25 @@ public class TiposBebidas {
         this.Bebidas = bebidas;
     }
 
+    public String getDescricaoBebidas() {
+        return DescricaoBebidas;
+    }
+
+    public void setDescricaoBebidas(String descricaoBebidas) {
+        DescricaoBebidas = descricaoBebidas;
+    }
+
+    public String getNomeCategoriaBebida() {
+        return nomeCategoriaBebida;
+    }
+
     // Funções getContentValues
     public ContentValues getContentValues() {
         ContentValues valores = new ContentValues();
 
         valores.put(BdTabelaTiposBebidas.CAMPO_Bebidas, Bebidas);
+        valores.put(BdTabelaTiposBebidas.CAMPO_DescricaoBebidas,DescricaoBebidas );
+
         return valores;
     }
 
@@ -50,11 +68,19 @@ public class TiposBebidas {
         String Bebidas = cursor.getString(
                 cursor.getColumnIndex(BdTabelaTiposBebidas.CAMPO_Bebidas)
         );
+        String DescricaoBebidas = cursor.getString(
+                cursor.getColumnIndex(BdTabelaTiposBebidas.CAMPO_DescricaoBebidas)
+        );
+        String nomeCategoriaBebida = cursor.getString(
+                cursor.getColumnIndex(BdTabelaTiposBebidas.CAMPO_NOME_CATEGORIA_Bebidas)
+        );
 
       TiposBebidas bebidas = new TiposBebidas();
 
         bebidas.setId_Bebidas(id_Bebidas);
         bebidas.setBebidas(Bebidas);
+        bebidas.setDescricaoBebidas(DescricaoBebidas);
+        bebidas.nomeCategoriaBebida = nomeCategoriaBebida;
 
         return bebidas;
 

@@ -1,6 +1,5 @@
 package com.example.gibutadieta;
 
-import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -12,9 +11,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.widget.TextView;
 
-public class Dados extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
+
+public class ListaGeral extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
+
+
+    private static final int ID_CURSO_LOADER_GibutaDieta = 0;
 
     private AdaptadorGibutaDieta adaptadorGibutaDieta;
     private RecyclerView recyclerViewListarDados;
@@ -22,24 +24,52 @@ public class Dados extends AppCompatActivity implements LoaderManager.LoaderCall
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dados);
+        setContentView(R.layout.activity_lista_geral);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        //getSupportLoaderManager().initLoader(ID_CURSO_LOADER_GibutaDieta, null, this);
 
 
         recyclerViewListarDados = (RecyclerView) findViewById(R.id.recyclerViewListarDados);
-        recyclerViewListarDados.setHasFixedSize(true);
-        recyclerViewListarDados.setLayoutManager(new LinearLayoutManager(this));
         adaptadorGibutaDieta = new AdaptadorGibutaDieta(this);
+        recyclerViewListarDados.setHasFixedSize(true);
         recyclerViewListarDados.setAdapter(adaptadorGibutaDieta);
+        recyclerViewListarDados.setLayoutManager(new LinearLayoutManager(this));
 
-
-
-        mostrarTextoAlimento();
-        mostrarTextoBebida();
-
+        //mostrarTextoAlimento();
+        //mostrarTextoBebida();
     }
 
+
+    @Override
+    protected void onResume() {
+        //getSupportLoaderManager().restartLoader(ID_CURSO_LOADER_GibutaDieta, null, this);
+        super.onResume();
+    }
+
+
+
+
+    @NonNull
+    @Override
+    public Loader<Cursor> onCreateLoader(int id, @Nullable Bundle args) {
+        CursorLoader cursorLoader = new CursorLoader(this, GibutaDietaContentProvider.ENDERECO_ALIMENTO, BdTabelaTiposAlimentos.TODAS_COLUNAS, null, null, BdTabelaTiposAlimentos.CAMPO_Alimentos);
+        return cursorLoader;
+    }
+
+    @Override
+    public void onLoadFinished(@NonNull Loader<Cursor> loader, Cursor data) {
+        adaptadorGibutaDieta.setCursor(data);
+    }
+
+    @Override
+    public void onLoaderReset(@NonNull Loader<Cursor> loader) {
+        adaptadorGibutaDieta.setCursor(null);
+    }
+
+    /*
     private void mostrarTextoAlimento() {
 
         Intent intent = getIntent();
@@ -57,26 +87,7 @@ public class Dados extends AppCompatActivity implements LoaderManager.LoaderCall
         textView10.setText(mensagem + " "+"ml");
 
     }
-
-
-    @NonNull
-    @Override
-    public Loader<Cursor> onCreateLoader(int i, @Nullable Bundle bundle) {
-        CursorLoader cursorLoader = new CursorLoader(this, GibutaDietaContentProvider.ENDERECO_ALIMENTO, BdTabelaTiposAlimentos.TODAS_COLUNAS, null, null, BdTabelaTiposAlimentos.CAMPO_Alimentos);
-
-        return cursorLoader;
-
-    }
-
-    @Override
-    public void onLoadFinished(@NonNull Loader<Cursor> loader, Cursor data) {
-        adaptadorGibutaDieta.setCursor(data);
-    }
-
-    @Override
-    public void onLoaderReset(@NonNull Loader<Cursor> loader) {
-        adaptadorGibutaDieta.setCursor(null);
-    }
+    */
 }
 
 

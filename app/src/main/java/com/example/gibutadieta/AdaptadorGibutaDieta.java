@@ -9,16 +9,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class AdaptadorGibutaDieta extends RecyclerView.Adapter<AdaptadorGibutaDieta.ViewHolderGibutaDieta>{
+public class AdaptadorGibutaDieta  extends RecyclerView.Adapter<AdaptadorGibutaDieta.ViewHolderGibutaDieta>  {
 
     private Cursor cursor;
     private Context context;
+    private BdGibutaDietaOpenHelper bdGibutaDietaOpenHelper;
 
-    public  AdaptadorGibutaDieta(Context context) {
+    public AdaptadorGibutaDieta(Context context) {
         this.context = context;
     }
 
-    //Notificação do Cursor
     public void setCursor(Cursor cursor) {
         if (this.cursor != cursor) {
             this.cursor = cursor;
@@ -26,26 +26,19 @@ public class AdaptadorGibutaDieta extends RecyclerView.Adapter<AdaptadorGibutaDi
         }
     }
 
-
     @NonNull
     @Override
     public ViewHolderGibutaDieta onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-
-        LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-
-        View itemDados = layoutInflater.from(context).inflate(R.layout.item_dados, parent, false);
-
-        return new ViewHolderGibutaDieta(itemDados);
-
+            View view = LayoutInflater.from(context).inflate(R.layout.item_dados, parent, false);
+            ViewHolderGibutaDieta holderGibutaDieta = new ViewHolderGibutaDieta(view);
+        return holderGibutaDieta;
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolderGibutaDieta holder, int position) {
         cursor.moveToPosition(position);
-        TiposAlimentos alimentos = TiposAlimentos.fromCursor(cursor);
-        holder.setAlimentos(alimentos);
-        TiposBebidas bebidas = TiposBebidas.fromCursor(cursor);
-        holder.setBebidas(bebidas);
+        TiposAlimentos tiposAlimentos = TiposAlimentos.fromCursor(cursor);
+        holder.setTiposAlimentos(tiposAlimentos);
     }
 
     @Override
@@ -55,65 +48,55 @@ public class AdaptadorGibutaDieta extends RecyclerView.Adapter<AdaptadorGibutaDi
         return cursor.getCount();
     }
 
-    public TiposAlimentos getTiposAlimentosSelecionado() {
-        if (viewHolderGibutaDietaSelecionado == null) return null;
 
-        return viewHolderGibutaDietaSelecionado.alimentos;
+    public TiposAlimentos getAlimentoSelecionado() {
+        if (viewHolderLivroSelecionado == null) return null;
+
+        return viewHolderLivroSelecionado.tiposAlimentos;
     }
 
+    private static ViewHolderGibutaDieta viewHolderLivroSelecionado = null;
 
-    public TiposBebidas getTiposBebidasSelecionado() {
-        if (viewHolderGibutaDietaSelecionado == null) return null;
-
-        return viewHolderGibutaDietaSelecionado.bebidas;
-    }
-
-    private static ViewHolderGibutaDieta viewHolderGibutaDietaSelecionado = null;
+    public class ViewHolderGibutaDieta extends RecyclerView.ViewHolder implements View.OnClickListener  {
 
 
-    public class ViewHolderGibutaDieta extends RecyclerView.ViewHolder implements View.OnClickListener {
+        public TextView textViewTipo;
+        public TextView textViewDescricao;
+        public TextView textViewValor;
 
+        private TiposAlimentos tiposAlimentos;
 
-        public TextView textViewconsumo;
-        public TextView textViewQuantidade;
-        //private TextView textViewHora;
-
-
-
-        private TiposAlimentos alimentos;
-        private TiposBebidas bebidas;
 
         public ViewHolderGibutaDieta(@NonNull View itemView) {
             super(itemView);
 
-            textViewconsumo = (TextView)itemView.findViewById(R.id.textViewconsumo);
-            textViewQuantidade =  (TextView)itemView.findViewById(R.id.textViewQuantidade);
-            //textViewHora =  (TextView)itemView.findViewById(R.id.textViewHora);
+
+            textViewTipo = (TextView)itemView.findViewById(R.id.textViewTipo);
+            textViewDescricao =  (TextView)itemView.findViewById(R.id.textViewDescricao);
+            textViewValor =  (TextView)itemView.findViewById(R.id.textViewValor);
 
             itemView.setOnClickListener(this);
+        }
+
+        BdGibutaDietaOpenHelper bdGibutaDietaOpenHelper = new BdGibutaDietaOpenHelper(context);
+
+
+        public void setTiposAlimentos(TiposAlimentos tiposAlimentos) {
+            this.tiposAlimentos = tiposAlimentos;
+
+            textViewTipo.setText(tiposAlimentos.getAlimentos());
+            textViewDescricao.setText(String.valueOf(tiposAlimentos.getDescricaoAlimentos()));
+            textViewValor.setText(tiposAlimentos.getNomeCategoria());
 
         }
 
-        public void setAlimentos(TiposAlimentos alimentos) {
-            this.alimentos = alimentos;
-
-            textViewQuantidade.setText(alimentos.getAlimentos());
-
-        }
-
-        public void setBebidas(TiposBebidas bebidas) {
-            this.bebidas = bebidas;
-
-            textViewQuantidade.setText(bebidas.getBebidas());
-
-        }
-
+        @Override
         public void onClick(View v) {
-            if (viewHolderGibutaDietaSelecionado != null) {
-                viewHolderGibutaDietaSelecionado.desSeleciona();
+            if (viewHolderLivroSelecionado != null) {
+                viewHolderLivroSelecionado.desSeleciona();
             }
 
-            viewHolderGibutaDietaSelecionado = this;
+            viewHolderLivroSelecionado = this;
 
             seleciona();
         }
@@ -125,5 +108,6 @@ public class AdaptadorGibutaDieta extends RecyclerView.Adapter<AdaptadorGibutaDi
         private void seleciona() {
             itemView.setBackgroundResource(R.color.colorAccent);
         }
-    }
+        }
 }
+

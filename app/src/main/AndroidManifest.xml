@@ -9,9 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EditarBebidas"></activity>
         <activity
-            android:name=".ConsumoLiquido"
+            android:name=".EditarBebidas"
+            android:label="@string/title_activity_editar_bebidas"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".InserirBebidas"
             android:label="@string/title_activity_consumo_liquido"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -23,7 +26,7 @@
             android:label="@string/title_activity_sobre"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Dados"
+            android:name=".ListaGeral"
             android:label="@string/title_activity_dados"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -35,7 +38,7 @@
             android:label="@string/title_activity_editar"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Preencher"
+            android:name=".InserirAlimentos"
             android:label="@string/title_activity_preencher"
             android:parentActivityName=".Content_menus"
             android:theme="@style/AppTheme.NoActionBar">
