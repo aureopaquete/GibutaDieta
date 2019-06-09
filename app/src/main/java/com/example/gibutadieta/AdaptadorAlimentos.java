@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class AdaptadorAlimentos extends RecyclerView.Adapter<AdaptadorAlimentos.ViewHolderGibutaDieta>  {
+public class AdaptadorAlimentos extends RecyclerView.Adapter<AdaptadorAlimentos.ViewHolderAlimentos>  {
 
     private Cursor cursor;
     private Context context;
@@ -27,13 +27,13 @@ public class AdaptadorAlimentos extends RecyclerView.Adapter<AdaptadorAlimentos.
 
     @NonNull
     @Override
-    public ViewHolderGibutaDieta onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolderAlimentos onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             View itemdados = LayoutInflater.from(context).inflate(R.layout.item_dados, parent, false);
-        return new ViewHolderGibutaDieta(itemdados);
+        return new ViewHolderAlimentos(itemdados);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolderGibutaDieta holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolderAlimentos holder, int position) {
         cursor.moveToPosition(position);
         TiposAlimentos tiposAlimentos = TiposAlimentos.fromCursor(cursor);
         holder.setTiposAlimentos(tiposAlimentos);
@@ -48,14 +48,14 @@ public class AdaptadorAlimentos extends RecyclerView.Adapter<AdaptadorAlimentos.
 
 
     public TiposAlimentos getAlimentoSelecionado() {
-        if (viewHolderLivroSelecionado == null) return null;
+        if (viewHolderAlimentoSelecionado == null) return null;
 
-        return viewHolderLivroSelecionado.tiposAlimentos;
+        return viewHolderAlimentoSelecionado.tiposAlimentos;
     }
 
-    private static ViewHolderGibutaDieta viewHolderLivroSelecionado = null;
+    private static ViewHolderAlimentos viewHolderAlimentoSelecionado = null;
 
-    public class ViewHolderGibutaDieta extends RecyclerView.ViewHolder implements View.OnClickListener  {
+    public class ViewHolderAlimentos extends RecyclerView.ViewHolder implements View.OnClickListener  {
 
 
         public TextView textViewTipo;
@@ -65,7 +65,7 @@ public class AdaptadorAlimentos extends RecyclerView.Adapter<AdaptadorAlimentos.
         private TiposAlimentos tiposAlimentos;
 
 
-        public ViewHolderGibutaDieta(@NonNull View itemView) {
+        public ViewHolderAlimentos(@NonNull View itemView) {
             super(itemView);
 
 
@@ -80,19 +80,19 @@ public class AdaptadorAlimentos extends RecyclerView.Adapter<AdaptadorAlimentos.
         public void setTiposAlimentos(TiposAlimentos tiposAlimentos) {
             this.tiposAlimentos = tiposAlimentos;
 
-            textViewTipo.setText(tiposAlimentos.getAlimentos());
-            textViewDescricao.setText(String.valueOf(tiposAlimentos.getDescricaoAlimentos()));
-            textViewValor.setText(tiposAlimentos.getNomeCategoria());
+            textViewDescricao.setText(tiposAlimentos.getAlimentos());
+            textViewValor.setText(String.valueOf(tiposAlimentos.getDescricaoAlimentos()));
+            textViewTipo.setText(tiposAlimentos.getNomeCategoria());
 
         }
 
         @Override
         public void onClick(View v) {
-            if (viewHolderLivroSelecionado != null) {
-                viewHolderLivroSelecionado.desSeleciona();
+            if (viewHolderAlimentoSelecionado != null) {
+                viewHolderAlimentoSelecionado.desSeleciona();
             }
 
-            viewHolderLivroSelecionado = this;
+            viewHolderAlimentoSelecionado = this;
 
             seleciona();
         }

@@ -61,16 +61,16 @@ public class TiposBebidas {
         String DescricaoBebidas = cursor.getString(
                 cursor.getColumnIndex(BdTabelaTiposBebidas.CAMPO_DescricaoBebidas)
         );
-        //String nomeCategoriaBebida = cursor.getString(
-                //cursor.getColumnIndex(BdTabelaTiposBebidas.CAMPO_NOME_CATEGORIA_Bebidas)
-        //);
+        String nomeCategoriaBebida = cursor.getString(
+                cursor.getColumnIndex(BdTabelaTiposBebidas.CAMPO_NOME_CATEGORIA_Bebidas)
+        );
 
       TiposBebidas bebidas = new TiposBebidas();
 
         bebidas.setId(id);
         bebidas.setBebidas(Bebidas);
         bebidas.setDescricaoBebidas(DescricaoBebidas);
-        //bebidas.nomeCategoriaBebida = nomeCategoriaBebida;
+        bebidas.nomeCategoriaBebida = nomeCategoriaBebida;
 
         return bebidas;
 
