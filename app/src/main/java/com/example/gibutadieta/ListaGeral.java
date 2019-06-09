@@ -18,7 +18,7 @@ public class ListaGeral extends AppCompatActivity implements LoaderManager.Loade
 
     private static final int ID_CURSO_LOADER_GibutaDieta = 0;
 
-    private AdaptadorGibutaDieta adaptadorGibutaDieta;
+    private AdaptadorAlimentos adaptadorAlimentos;
     private RecyclerView recyclerViewListarDados;
 
     @Override
@@ -33,9 +33,9 @@ public class ListaGeral extends AppCompatActivity implements LoaderManager.Loade
 
 
         recyclerViewListarDados = (RecyclerView) findViewById(R.id.recyclerViewListarDados);
-        adaptadorGibutaDieta = new AdaptadorGibutaDieta(this);
+        adaptadorAlimentos = new AdaptadorAlimentos(this);
         recyclerViewListarDados.setHasFixedSize(true);
-        recyclerViewListarDados.setAdapter(adaptadorGibutaDieta);
+        recyclerViewListarDados.setAdapter(adaptadorAlimentos);
         recyclerViewListarDados.setLayoutManager(new LinearLayoutManager(this));
 
         //mostrarTextoAlimento();
@@ -61,12 +61,12 @@ public class ListaGeral extends AppCompatActivity implements LoaderManager.Loade
 
     @Override
     public void onLoadFinished(@NonNull Loader<Cursor> loader, Cursor data) {
-        adaptadorGibutaDieta.setCursor(data);
+        adaptadorAlimentos.setCursor(data);
     }
 
     @Override
     public void onLoaderReset(@NonNull Loader<Cursor> loader) {
-        adaptadorGibutaDieta.setCursor(null);
+        adaptadorAlimentos.setCursor(null);
     }
 
     /*

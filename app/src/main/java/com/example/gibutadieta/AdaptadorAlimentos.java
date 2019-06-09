@@ -9,13 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class AdaptadorGibutaDieta  extends RecyclerView.Adapter<AdaptadorGibutaDieta.ViewHolderGibutaDieta>  {
+public class AdaptadorAlimentos extends RecyclerView.Adapter<AdaptadorAlimentos.ViewHolderGibutaDieta>  {
 
     private Cursor cursor;
     private Context context;
-    private BdGibutaDietaOpenHelper bdGibutaDietaOpenHelper;
 
-    public AdaptadorGibutaDieta(Context context) {
+    public AdaptadorAlimentos(Context context) {
         this.context = context;
     }
 
@@ -29,9 +28,8 @@ public class AdaptadorGibutaDieta  extends RecyclerView.Adapter<AdaptadorGibutaD
     @NonNull
     @Override
     public ViewHolderGibutaDieta onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            View view = LayoutInflater.from(context).inflate(R.layout.item_dados, parent, false);
-            ViewHolderGibutaDieta holderGibutaDieta = new ViewHolderGibutaDieta(view);
-        return holderGibutaDieta;
+            View itemdados = LayoutInflater.from(context).inflate(R.layout.item_dados, parent, false);
+        return new ViewHolderGibutaDieta(itemdados);
     }
 
     @Override
@@ -77,8 +75,6 @@ public class AdaptadorGibutaDieta  extends RecyclerView.Adapter<AdaptadorGibutaD
 
             itemView.setOnClickListener(this);
         }
-
-        BdGibutaDietaOpenHelper bdGibutaDietaOpenHelper = new BdGibutaDietaOpenHelper(context);
 
 
         public void setTiposAlimentos(TiposAlimentos tiposAlimentos) {

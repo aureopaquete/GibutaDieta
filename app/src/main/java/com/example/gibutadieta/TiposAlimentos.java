@@ -4,31 +4,21 @@ import android.content.ContentValues;
 import android.database.Cursor;
 
 public class TiposAlimentos {
-    long id_Alimentos;
+
+    private long id;
     private String Alimentos;
     private String DescricaoAlimentos;
     private String nomeCategoria;
 
 
-    //Construtores
-    public TiposAlimentos(){
-    }
-
-    public TiposAlimentos(long id_Alimentos, String alimentos, String descricaoAlimentos, String nomeCategoria) {
-        this.id_Alimentos = id_Alimentos;
-        this.Alimentos = alimentos;
-        this.DescricaoAlimentos = descricaoAlimentos;
-        this.nomeCategoria = nomeCategoria;
-    }
-
     //Getter e Setter
 
-    public long getId_Alimentos() {
-        return id_Alimentos;
+    public long getId() {
+        return id;
     }
 
-    public void setId_Alimentos(long id_Alimentos) {
-        this.id_Alimentos = id_Alimentos;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getAlimentos() {
@@ -38,16 +28,18 @@ public class TiposAlimentos {
     public void setAlimentos(String alimentos) {
         this.Alimentos = alimentos;
     }
+
     public String getDescricaoAlimentos() {
         return DescricaoAlimentos;
     }
+
     public void setDescricaoAlimentos(String descricaoAlimentos) {
         this.DescricaoAlimentos = descricaoAlimentos;
     }
+
     public String getNomeCategoria() {
         return nomeCategoria;
     }
-
 
 
     // Funções getContentValues
@@ -62,8 +54,8 @@ public class TiposAlimentos {
 
     //função estática que permita obter um objeto a partir de um cursor
     public static TiposAlimentos fromCursor(Cursor cursor) {
-        long id_Alimentos = cursor.getLong(
-                cursor.getColumnIndex(BdTabelaTiposAlimentos.ID)
+        long id = cursor.getLong(
+                cursor.getColumnIndex(BdTabelaTiposAlimentos._ID)
         );
 
         String Alimentos = cursor.getString(
@@ -72,18 +64,18 @@ public class TiposAlimentos {
         String DescricaoAlimentos = cursor.getString(
                 cursor.getColumnIndex(BdTabelaTiposAlimentos.CAMPO_DescricaoAliemtos)
         );
-        String nomeCategoria = cursor.getString(
-                cursor.getColumnIndex(BdTabelaTiposAlimentos.CAMPO_NOME_CATEGORIA_Alimentos)
-        );
+        //String nomeCategoria = cursor.getString(
+                //cursor.getColumnIndex(BdTabelaTiposAlimentos.CAMPO_NOME_CATEGORIA_Alimentos)
+        //);
 
 
 
         TiposAlimentos alimentos = new TiposAlimentos();
 
-        alimentos.setId_Alimentos(id_Alimentos);
+        alimentos.setId(id);
         alimentos.setAlimentos(Alimentos);
         alimentos.setDescricaoAlimentos(DescricaoAlimentos);
-        alimentos.nomeCategoria = nomeCategoria;
+        //alimentos.nomeCategoria = nomeCategoria;
 
 
         return alimentos;

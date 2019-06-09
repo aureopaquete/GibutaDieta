@@ -4,34 +4,25 @@ import android.content.ContentValues;
 import android.database.Cursor;
 
 public class Quantidade {
-    private long id_Quantidade;
-    private  String Quantidade;
+    private long id;
+    private  int Quantidade;
 
-
-    //Construtores
-    public Quantidade(){
-    }
-
-    public Quantidade(int id_Quantidade, String quantidade) {
-        this.id_Quantidade = id_Quantidade;
-        Quantidade = quantidade;
-    }
 
 
     //Getter e Setter
-    public long getId_Quantidade() {
-        return id_Quantidade;
+    public long getId() {
+        return id;
     }
 
-    public void setId_Quantidade(long id_Quantidade) {
-        this.id_Quantidade = id_Quantidade;
+    public void setId(long id) {
+        this.id = id;
     }
 
-    public String getQuantidade() {
+    public int getQuantidade() {
         return Quantidade;
     }
 
-    public void setQuantidade(String quantidade) {
+    public void setQuantidade(int quantidade) {
         this.Quantidade = quantidade;
     }
 
@@ -48,17 +39,17 @@ public class Quantidade {
 
     //função estática que permita obter um objeto a partir de um cursor
     public static Quantidade fromCursor(Cursor cursor) {
-        long id_Quantidade = cursor.getLong(
-                cursor.getColumnIndex(BdTabelaQuantidade.ID)
+        long id = cursor.getLong(
+                cursor.getColumnIndex(BdTabelaQuantidade._ID)
         );
 
-        String Quantidade = cursor.getString(
+        int Quantidade = cursor.getInt(
                 cursor.getColumnIndex(BdTabelaQuantidade.CAMPO_QUANTIDADE)
         );
 
         Quantidade quantidade = new Quantidade();
 
-        quantidade.setId_Quantidade(id_Quantidade);
+        quantidade.setId(id);
         quantidade.setQuantidade(Quantidade);
 
         return quantidade;

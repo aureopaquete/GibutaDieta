@@ -7,15 +7,15 @@ import android.provider.BaseColumns;
 
 public class BdTabelaTiposAlimentos implements BaseColumns {
 
-    public static final  String NOME_TABELA = "TiposAlimentos";
-    public static final String NOME_CATEGORIA = "ElementoSpinner";
+    public static final String NOME_TABELA = "TiposAlimentos";
+    public static final String NOME_CATEGORIA_Alimentos = "Elemento_Spinner";
 
-    public static final  String ID = "ID_Alimentos";
-    public static final  String CAMPO_Alimentos = "Alimentos";
-    public static final  String CAMPO_DescricaoAliemtos = "Descricao";
-    public static final  String CAMPO_NOME_CATEGORIA_Alimentos = BdTabelaQuantidade.NOME_TABELA + "." + BdTabelaQuantidade.CAMPO_QUANTIDADE + " AS " + NOME_CATEGORIA; // tabela de categorias (só de leitura)
+    public static final String CAMPO_Alimentos = "Alimentos";
+    public static final String CAMPO_DescricaoAliemtos = "Descricao";
+   // public static final String CAMPO_NOME_CATEGORIA_Alimentos = "CATEGORIAS_BEBIDAS"; // tabela de categorias (só de leitura)
 
-    public static final String[] TODAS_COLUNAS = new String[] { ID,CAMPO_Alimentos,CAMPO_NOME_CATEGORIA_Alimentos };
+    public static final String[] TODAS_COLUNAS = new String[] {
+            NOME_TABELA + "." + _ID, CAMPO_Alimentos, CAMPO_DescricaoAliemtos };
 
 
     private SQLiteDatabase db;
@@ -26,14 +26,18 @@ public class BdTabelaTiposAlimentos implements BaseColumns {
     public void cria (){
         db.execSQL(
                 "CREATE TABLE " + NOME_TABELA + "(" +
-                ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                _ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                 CAMPO_DescricaoAliemtos + " TEXT NOT NULL," +
-                CAMPO_Alimentos + " TEXT NOT NULL)"
+                CAMPO_Alimentos + " INTEGER NOT NULL)"
         );
     }
 
     //CRUD
 
+    //read
+    public Cursor query (String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy){
+        return db.query(NOME_TABELA, columns, selection, selectionArgs, groupBy, having, orderBy);
+    }
     //create
     public long insert(ContentValues values){
         return db.insert(NOME_TABELA, null, values);
@@ -43,15 +47,8 @@ public class BdTabelaTiposAlimentos implements BaseColumns {
     public int update(ContentValues values, String whereClause, String[] whereArgs){
         return db.update(NOME_TABELA,values,whereClause,whereArgs);
     }
-
     //delete
     public int delete(String whereClause, String[] whereArgs){
         return db.delete(NOME_TABELA,whereClause,whereArgs);
     }
-
-    //read
-    public Cursor query (String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy){
-        return db.query(NOME_TABELA, columns, selection, selectionArgs, groupBy, having, orderBy);
-    }
-
 }

@@ -60,7 +60,7 @@ public class InserirAlimentos extends AppCompatActivity implements LoaderManager
                 this,
                 android.R.layout.simple_list_item_1,
                 cursorAlimentos,
-                new String[]{BdTabelaTiposAlimentos.CAMPO_NOME_CATEGORIA_Alimentos},
+                new String[]{BdTabelaTiposAlimentos.CAMPO_Alimentos},
                 new int[]{android.R.id.text1}
         );
         spinnerAlimentos.setAdapter(adaptadorAlimentos);
@@ -111,13 +111,13 @@ public class InserirAlimentos extends AppCompatActivity implements LoaderManager
 
 
 
-            long id_Alimentos = spinnerAlimentos.getSelectedItemId();
+            long id = spinnerAlimentos.getSelectedItemId();
 
             // guardar os dados
 
             TiposAlimentos alimentos = new TiposAlimentos();
 
-            alimentos.setId_Alimentos(id_Alimentos);
+            alimentos.setId(id);
             alimentos.setDescricaoAlimentos(DescricaoAlimentos);
             alimentos.setAlimentos(Alimentos);
 
@@ -125,7 +125,7 @@ public class InserirAlimentos extends AppCompatActivity implements LoaderManager
             try {
                 getContentResolver().insert(GibutaDietaContentProvider.ENDERECO_ALIMENTO, alimentos.getContentValues());
 
-                Toast.makeText(this, getString(R.string.Guardado_com_Sucesso), Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.Guardado_com_Sucesso), Toast.LENGTH_LONG).show();
                 finish();
             } catch (Exception e) {
                 Snackbar.make(

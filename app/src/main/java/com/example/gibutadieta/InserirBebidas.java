@@ -50,7 +50,6 @@ public class InserirBebidas extends AppCompatActivity  implements LoaderManager.
     @Override
     protected void onResume() {
         //getSupportLoaderManager().restartLoader(ID_CURSO_LOADER_Bebidas, null, this);
-
         super.onResume();
     }
 
@@ -60,7 +59,7 @@ public class InserirBebidas extends AppCompatActivity  implements LoaderManager.
                 this,
                 android.R.layout.simple_list_item_1,
                 cursorBebidas,
-                new String[]{BdTabelaTiposBebidas.CAMPO_NOME_CATEGORIA_Bebidas},
+                new String[]{BdTabelaTiposBebidas.CAMPO_Bebidas},
                 new int[]{android.R.id.text1}
         );
         spinnerBebidas.setAdapter(adaptadorBebidas);
@@ -101,13 +100,13 @@ public class InserirBebidas extends AppCompatActivity  implements LoaderManager.
         }
 
 
-        long id_Bebidas = spinnerBebidas.getSelectedItemId();
+        long id = spinnerBebidas.getSelectedItemId();
 
         // guardar os dados
 
         TiposBebidas bebidas = new TiposBebidas();
 
-        bebidas.setId_Bebidas(id_Bebidas);
+        bebidas.setId(id);
         bebidas.setBebidas(Bebidas);
         bebidas.setDescricaoBebidas(DescricaoBebidas);
 
@@ -115,7 +114,7 @@ public class InserirBebidas extends AppCompatActivity  implements LoaderManager.
         try {
             getContentResolver().insert(GibutaDietaContentProvider.ENDERECO_ALIMENTO, bebidas.getContentValues());
 
-            Toast.makeText(this, getString(R.string.Guardado_com_Sucesso), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.Guardado_com_Sucesso), Toast.LENGTH_LONG).show();
             finish();
         } catch (Exception e) {
             Snackbar.make(

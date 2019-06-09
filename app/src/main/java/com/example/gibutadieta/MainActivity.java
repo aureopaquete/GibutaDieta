@@ -1,7 +1,9 @@
 package com.example.gibutadieta;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -16,7 +18,10 @@ import android.view.View;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private AdaptadorGibutaDieta adaptadorGibutaDieta;
+    private AdaptadorAlimentos adaptadorAlimentos;
+    private BdGibutaDietaOpenHelper BdGibutaDietaOpenHelper;
+    private SQLiteDatabase conexao;
+    private ConstraintLayout layoutPrincipal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +38,35 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        layoutPrincipal = (ConstraintLayout) findViewById(R.id.layoutPrincipal);
+
+        //criarconexao ();
     }
+
+    //metodo pra criar conexao com base de dados
+    //Testado dentro de ym bloco try catch
+
+    /*private void criarconexao () {
+
+        try {
+            BdGibutaDietaOpenHelper = new BdGibutaDietaOpenHelper(this);
+            conexao = BdGibutaDietaOpenHelper.getWritableDatabase();
+            Snackbar.make(layoutPrincipal, R.string.conexao_bd,
+                    Snackbar.LENGTH_LONG)
+                    .setAction("ok",null)
+                    .show();
+        } catch (SQLException ex) {
+
+            AlertDialog.Builder dlg = new AlertDialog.Builder(this);
+            dlg.setTitle("Erro");
+            dlg.setMessage(ex.getMessage());
+            dlg.setNeutralButton("ok",null);
+            dlg.show();
+        }
+    }*/
+
 
     @Override
     public void onBackPressed() {
@@ -128,24 +161,5 @@ public class MainActivity extends AppCompatActivity
         startActivity(intent);
     }
 
-    /*
-    @NonNull
-    @Override
-    public Loader<Cursor> onCreateLoader(int i, @Nullable Bundle bundle) {
 
-        CursorLoader cursorLoader = new CursorLoader(this, GibutaDietaContentProvider.ENDERECO_ALIMENTO, BdTabelaTiposAlimentos.TODAS_COLUNAS, null, null, BdTabelaTiposAlimentos.CAMPO_Alimentos);
-
-        return cursorLoader;
-
-    }
-
-    @Override
-    public void onLoadFinished(@NonNull Loader<Cursor> loader, Cursor data) {
-        adaptadorGibutaDieta.setCursor(data);
-    }
-
-    @Override
-    public void onLoaderReset(@NonNull Loader<Cursor> loader) {
-        adaptadorGibutaDieta.setCursor(null);
-    }*/
 }
