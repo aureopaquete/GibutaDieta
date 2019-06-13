@@ -51,46 +51,46 @@ public class BDGibutaDietaTest {
         assertEquals(0,cursorAlimentos.getCount());
 
         // Teste create/read Alimentos(CRUD)
-        String nome = "Carcoidratos";
-        long idCarboidratoa = criaTiposAlimentos(tabelaTiposAlimentos,nome);
+        String nome = "Carboidratos";
+        long idCarboidratos = criaTiposAlimentos(tabelaTiposAlimentos,"Carboidratos", "Batata");
 
         cursorAlimentos = getAlimentos(tabelaTiposAlimentos);
         assertEquals(1, cursorAlimentos.getCount());
 
-        TiposAlimentos tiposAlimentos = getAlimentosCOMID(cursorAlimentos, idCarboidratoa);
+        TiposAlimentos tiposAlimentos = getAlimentosCOMID(cursorAlimentos, idCarboidratos);
         assertEquals(nome, tiposAlimentos.getAlimentos());
 
 
         //-------------------------
 
-        // Teste create/read Bebidas (CRUD)
-        nome = "Proteinas";
-        long idProteinas = criaTiposAlimentos(tabelaTiposAlimentos,nome);
+        // Teste create/read Alimentos (CRUD)
+        String Alimentos = "Proteinas";
+        long idProteinas = criaTiposAlimentos(tabelaTiposAlimentos,"Proteinas", "Carne Vemelha");
 
         cursorAlimentos = getAlimentos(tabelaTiposAlimentos);
         assertEquals(2, cursorAlimentos.getCount());
 
         tiposAlimentos = getAlimentosCOMID(cursorAlimentos, idProteinas);
-        assertEquals(nome, tiposAlimentos.getAlimentos());
+        assertEquals(Alimentos, tiposAlimentos.getAlimentos());
 
 
-        // Teste update/ Bebidas (CRUD)
+        // Teste update/ Alimentos (CRUD)
 
         nome = "Proteinas/Carboidratos";
         tiposAlimentos.setAlimentos(nome);
 
-        int ValoresAlterados = tabelaTiposAlimentos.update(tiposAlimentos.getContentValues(), BdTabelaTiposAlimentos._ID + "=?", new String[]{String.valueOf(idCarboidratoa)});
+        int ValoresAlterados = tabelaTiposAlimentos.update(tiposAlimentos.getContentValues(), BdTabelaTiposAlimentos._ID + "=?", new String[]{String.valueOf(idCarboidratos)});
         assertEquals(1,ValoresAlterados);
 
         cursorAlimentos = getAlimentos(tabelaTiposAlimentos);
-        tiposAlimentos = getAlimentosCOMID(cursorAlimentos, idCarboidratoa);
+        tiposAlimentos = getAlimentosCOMID(cursorAlimentos, idCarboidratos);
 
         assertEquals(nome, tiposAlimentos.getAlimentos());
 
 
         // Teste Creat/Delete/Read (CRUD)
 
-        long id = criaTiposAlimentos(tabelaTiposAlimentos,"Testar");
+        long id = criaTiposAlimentos(tabelaTiposAlimentos,"Legumas", "Legumas");
         cursorAlimentos = getAlimentos(tabelaTiposAlimentos);
         assertEquals(3,cursorAlimentos.getCount());
 
@@ -98,7 +98,7 @@ public class BDGibutaDietaTest {
         cursorAlimentos = getAlimentos(tabelaTiposAlimentos);
         assertEquals(2, cursorAlimentos.getCount());
 
-        getAlimentosCOMID(cursorAlimentos, idCarboidratoa);
+        getAlimentosCOMID(cursorAlimentos, idCarboidratos);
         getAlimentosCOMID(cursorAlimentos, idProteinas);
 
     }
@@ -274,9 +274,10 @@ public class BDGibutaDietaTest {
 
     // Funções Alimentos
 
-    private long criaTiposAlimentos(BdTabelaTiposAlimentos tabelaTiposAlimentos, String nome) {
+    private long criaTiposAlimentos(BdTabelaTiposAlimentos tabelaTiposAlimentos, String Alimentos, String descricaoAlimentos) {
         TiposAlimentos tiposAlimentos = new TiposAlimentos();
-        tiposAlimentos.setAlimentos(nome);
+        tiposAlimentos.setAlimentos(Alimentos);
+        tiposAlimentos.setDescricaoAlimentos(descricaoAlimentos);
 
         long id = tabelaTiposAlimentos.insert(tiposAlimentos.getContentValues());
         assertNotEquals(-1, id);
@@ -307,8 +308,7 @@ public class BDGibutaDietaTest {
     private long criaTiposBebidas(BdTabelaTiposBebidas tabelaTiposBebidas, String nome) {
         TiposBebidas tiposBebidas = new TiposBebidas();
         tiposBebidas.setBebidas(nome);
-
-
+        tiposBebidas.setDescricaoBebidas(nome);
 
         long id = tabelaTiposBebidas.insert(tiposBebidas.getContentValues());
         assertNotEquals(-1, id);
