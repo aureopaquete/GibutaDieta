@@ -22,6 +22,7 @@ public class InserirAlimentos extends AppCompatActivity implements LoaderManager
 
     private static final int ID_CURSO_LOADER_Alimentos = 0;
 
+
     private Spinner spinnerAlimentos;
     private EditText DesAlimento;
     private EditText editorTexto;
@@ -37,8 +38,8 @@ public class InserirAlimentos extends AppCompatActivity implements LoaderManager
        getSupportLoaderManager().initLoader(ID_CURSO_LOADER_Alimentos, null, this);
 
         DesAlimento = (EditText) findViewById(R.id.DesAlimento);
-        editorTexto = (EditText) findViewById(R.id.editorEdTextoAli);
-        spinnerAlimentos = (Spinner) findViewById(R.id.spinnerEdAlimentos);
+        editorTexto = (EditText) findViewById(R.id.editorTexto);
+        spinnerAlimentos = (Spinner) findViewById(R.id.spinnerAlimentos);
         ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.Alimetos, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerAlimentos.setAdapter(adapter);
@@ -145,8 +146,7 @@ public class InserirAlimentos extends AppCompatActivity implements LoaderManager
     @Override
     public Loader<Cursor> onCreateLoader(int id, @Nullable Bundle args) {
 
-        CursorLoader cursorLoader = new CursorLoader(this,
-                GibutaDietaContentProvider.ENDERECO_ALIMENTO, BdTabelaTiposAlimentos.TODAS_COLUNAS, null, null, BdTabelaTiposAlimentos.CAMPO_Alimentos);
+        CursorLoader cursorLoader = new CursorLoader(this,GibutaDietaContentProvider.ENDERECO_ALIMENTO, BdTabelaTiposAlimentos.TODAS_COLUNAS, null, null, BdTabelaTiposAlimentos.CAMPO_Alimentos);
 
         return cursorLoader;
 

@@ -21,6 +21,7 @@ import android.widget.Toast;
 public class InserirBebidas extends AppCompatActivity  implements LoaderManager.LoaderCallbacks<Cursor> {
 
     private static final int ID_CURSO_LOADER_Bebidas = 0;
+    public static final String ID_BEBIDA = "ID_BEBIDA";
 
     private Spinner spinnerBebidas;
     private  EditText DescBebidas;
@@ -106,9 +107,8 @@ public class InserirBebidas extends AppCompatActivity  implements LoaderManager.
         TiposBebidas bebidas = new TiposBebidas();
 
         bebidas.setId(id);
-        bebidas.setBebidas(Bebidas);
         bebidas.setDescricaoBebidas(DescricaoBebidas);
-
+        bebidas.setBebidas(Bebidas);
 
         try {
             getContentResolver().insert(GibutaDietaContentProvider.ENDERECO_BEBIDA, bebidas.getContentValues());

@@ -24,8 +24,8 @@ public class EditarAlimentos extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         DescEdAlim = (EditText) findViewById(R.id.DescEdAlim);
-        editorEdTextoAli = (EditText) findViewById(R.id.editorEdTextoAli);
-        spinnerEdAlimentos = (Spinner) findViewById(R.id.spinnerEdAlimentos);
+        editorEdTextoAli = (EditText) findViewById(R.id.editorTexto);
+        spinnerEdAlimentos = (Spinner) findViewById(R.id.spinnerAlimentos);
         ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.Alimetos, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerEdAlimentos.setAdapter(adapter);

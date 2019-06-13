@@ -61,6 +61,8 @@ public class TiposBebidas {
         String DescricaoBebidas = cursor.getString(
                 cursor.getColumnIndex(BdTabelaTiposBebidas.CAMPO_DescricaoBebidas)
         );
+
+        //Não usado
         /*
         String nomeCategoriaBebida = cursor.getString(
                 cursor.getColumnIndex(BdTabelaTiposBebidas.CAMPO_NOME_CATEGORIA_Bebidas)

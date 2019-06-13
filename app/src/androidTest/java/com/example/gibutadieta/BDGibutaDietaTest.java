@@ -90,7 +90,7 @@ public class BDGibutaDietaTest {
 
         // Teste Creat/Delete/Read (CRUD)
 
-        long id = criaTiposAlimentos(tabelaTiposAlimentos,"Legumas", "Legumas");
+        long id = criaTiposAlimentos(tabelaTiposAlimentos,"Legumes", "Legumas");
         cursorAlimentos = getAlimentos(tabelaTiposAlimentos);
         assertEquals(3,cursorAlimentos.getCount());
 

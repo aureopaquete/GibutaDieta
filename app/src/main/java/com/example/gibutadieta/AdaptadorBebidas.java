@@ -80,9 +80,9 @@ public class AdaptadorBebidas extends RecyclerView.Adapter<AdaptadorBebidas.View
         public void setTiposBebidas(TiposBebidas tiposBebidas) {
             this.tiposBebidas = tiposBebidas;
 
+            textViewTipo.setText(tiposBebidas.getNomeCategoriaBebida());
             textViewDescricao.setText(tiposBebidas.getBebidas());
             textViewValor.setText(String.valueOf(tiposBebidas.getDescricaoBebidas()));
-            textViewTipo.setText(tiposBebidas.getNomeCategoriaBebida());
 
         }
 
