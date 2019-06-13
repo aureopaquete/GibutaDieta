@@ -13,7 +13,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
 
-public class ListaGeral extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
+public class ListaAlimentos extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
 
     private static final int ID_CURSO_LOADER_GibutaDieta = 0;

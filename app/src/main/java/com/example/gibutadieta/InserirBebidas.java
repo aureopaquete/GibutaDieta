@@ -126,7 +126,7 @@ public class InserirBebidas extends AppCompatActivity  implements LoaderManager.
             e.printStackTrace();
         }
 
-        Intent intent = new Intent(this, ListaGeral.class);
+        Intent intent = new Intent(this, ListaBebidas.class);
         //intent.putExtra(DefinicaoApp.TEXTOBebidas, mensagem);
         startActivity(intent);
         finish();

@@ -141,7 +141,7 @@ public class InserirAlimentos extends AppCompatActivity implements LoaderManager
 
 
         //Toast.makeText(this, "Guardado com sucesso", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(this, ListaGeral.class);
+        Intent intent = new Intent(this, ListaAlimentos.class);
         //intent.putExtra(DefinicaoApp.TEXTOAlimetos, mensagem);
         startActivity(intent);
         finish();

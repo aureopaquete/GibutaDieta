@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".ListaBebidas"
+            android:label="@string/title_activity_lista_bebidas"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".EditarBebidas"
             android:label="@string/title_activity_editar_bebidas"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".InserirBebidas"
             android:label="@string/title_activity_consumo_liquido"
@@ -26,7 +30,7 @@
             android:label="@string/title_activity_sobre"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ListaGeral"
+            android:name=".ListaAlimentos"
             android:label="@string/title_activity_dados"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

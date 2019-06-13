@@ -141,9 +141,13 @@ public class MainActivity extends AppCompatActivity
         else if (id == R.id.nav_closed) {
            finish();
         }else if (id == R.id.nav_Listadados) {
-            Intent intent = new Intent(this, ListaGeral.class);
+            Intent intent = new Intent(this, ListaAlimentos.class);
+            startActivity(intent);
+        }else if (id == R.id.nav_Bebidas) {
+            Intent intent = new Intent(this, ListaBebidas.class);
             startActivity(intent);
         }
+
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

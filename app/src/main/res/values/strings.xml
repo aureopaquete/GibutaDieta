@@ -64,7 +64,7 @@
     <string name="nao" translatable="false" />
     <string name="sim" translatable="false" />
     <string name="g" translatable="false">g</string>
-    <string name="title_activity_dados" translatable="false">Tabelas de Dados</string>
+    <string name="title_activity_dados" translatable="false">Lista de Alimentos</string>
     <string name="sair" translatable="false">Sair</string>
     <string name="table_ver" translatable="false">Table Ver</string>
     <string name="gramas_litros" translatable="false">Gramas Litros</string>
@@ -116,5 +116,6 @@
     <string name="title_activity_editar_bebidas">Editar Bebidas</string>
     <string name="Conexão_com_BD_criada_com_sucesso">Conexão com BD criada com sucesso</string>
     <string name="conexao_bd">conexão com a base de dados criada com sucesso</string>
+    <string name="title_activity_lista_bebidas">Lista de Bebidas</string>
 
 </resources>
