@@ -29,7 +29,7 @@ public class ListaAlimentos extends AppCompatActivity implements LoaderManager.L
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //getSupportLoaderManager().initLoader(ID_CURSO_LOADER_GibutaDieta, null, this);
+        getSupportLoaderManager().initLoader(ID_CURSO_LOADER_GibutaDieta, null, this);
 
 
         recyclerViewListarDados = (RecyclerView) findViewById(R.id.recyclerViewListarDados);
@@ -45,7 +45,7 @@ public class ListaAlimentos extends AppCompatActivity implements LoaderManager.L
 
     @Override
     protected void onResume() {
-        //getSupportLoaderManager().restartLoader(ID_CURSO_LOADER_GibutaDieta, null, this);
+        getSupportLoaderManager().restartLoader(ID_CURSO_LOADER_GibutaDieta, null, this);
         super.onResume();
     }
 

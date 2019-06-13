@@ -29,7 +29,7 @@ public class ListaBebidas extends AppCompatActivity implements LoaderManager.Loa
         setSupportActionBar(toolbar);
 
 
-        //getSupportLoaderManager().initLoader(ID_CURSO_LOADER_GibutaDieta, null, this);
+        getSupportLoaderManager().initLoader(ID_CURSO_LOADER_GibutaDieta, null, this);
 
 
         recyclerViewBebidas = (RecyclerView) findViewById(R.id.recyclerViewBebidas);
@@ -41,7 +41,7 @@ public class ListaBebidas extends AppCompatActivity implements LoaderManager.Loa
     }
 
     protected void onResume() {
-        //getSupportLoaderManager().restartLoader(ID_CURSO_LOADER_GibutaDieta, null, this);
+        getSupportLoaderManager().restartLoader(ID_CURSO_LOADER_GibutaDieta, null, this);
         super.onResume();
     }
 

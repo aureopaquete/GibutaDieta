@@ -14,14 +14,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.SimpleCursorAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 
 public class InserirAlimentos extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
-    //private static final int ID_CURSO_LOADER_Alimentos = 0;
+    private static final int ID_CURSO_LOADER_Alimentos = 0;
 
     private Spinner spinnerAlimentos;
     private EditText DesAlimento;
@@ -35,7 +34,7 @@ public class InserirAlimentos extends AppCompatActivity implements LoaderManager
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-       //getSupportLoaderManager().initLoader(ID_CURSO_LOADER_Alimentos, null, this);
+       getSupportLoaderManager().initLoader(ID_CURSO_LOADER_Alimentos, null, this);
 
         DesAlimento = (EditText) findViewById(R.id.DesAlimento);
         editorTexto = (EditText) findViewById(R.id.editorEdTextoAli);
@@ -48,14 +47,14 @@ public class InserirAlimentos extends AppCompatActivity implements LoaderManager
 
     @Override
     protected void onResume() {
-        //getSupportLoaderManager().restartLoader(ID_CURSO_LOADER_Alimentos, null, this);
+        getSupportLoaderManager().restartLoader(ID_CURSO_LOADER_Alimentos, null, this);
 
         super.onResume();
     }
 
 
 
-    private void mostrarAliemtoSpinner(Cursor cursorAlimentos) {
+    /*private void mostrarAliemtoSpinner(Cursor cursorAlimentos) {
         SimpleCursorAdapter adaptadorAlimentos = new SimpleCursorAdapter(
                 this,
                 android.R.layout.simple_list_item_1,
@@ -64,7 +63,7 @@ public class InserirAlimentos extends AppCompatActivity implements LoaderManager
                 new int[]{android.R.id.text1}
         );
         spinnerAlimentos.setAdapter(adaptadorAlimentos);
-    }
+    }*/
 
 
 
@@ -124,8 +123,9 @@ public class InserirAlimentos extends AppCompatActivity implements LoaderManager
 
             try {
                 getContentResolver().insert(GibutaDietaContentProvider.ENDERECO_ALIMENTO, alimentos.getContentValues());
-
                 Toast.makeText(this, getString(R.string.Guardado_com_Sucesso), Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(this, ListaAlimentos.class);
+                startActivity(intent);
                 finish();
             } catch (Exception e) {
                 Snackbar.make(
@@ -137,14 +137,6 @@ public class InserirAlimentos extends AppCompatActivity implements LoaderManager
                 e.printStackTrace();
             }
 
-
-
-
-        //Toast.makeText(this, "Guardado com sucesso", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(this, ListaAlimentos.class);
-        //intent.putExtra(DefinicaoApp.TEXTOAlimetos, mensagem);
-        startActivity(intent);
-        finish();
 
     }
 
@@ -162,11 +154,11 @@ public class InserirAlimentos extends AppCompatActivity implements LoaderManager
 
     @Override
     public void onLoadFinished(@NonNull Loader<Cursor> loader, Cursor data) {
-        mostrarAliemtoSpinner(data);
+        //mostrarAliemtoSpinner(data);
     }
 
     @Override
     public void onLoaderReset(@NonNull Loader<Cursor> loader) {
-        mostrarAliemtoSpinner(null);
+        //mostrarAliemtoSpinner(null);
     }
 }

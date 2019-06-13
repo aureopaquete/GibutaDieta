@@ -10,7 +10,6 @@ public class BdTabelaTiposBebidas implements BaseColumns {
     public static final String NOME_TABELA = "TiposBebidas";
     public static final String NOME_CATEGORIA_Bebidas = "Elemento_Spinner";
 
-    public static final String _ID = "ID";
     public static final String CAMPO_Bebidas = "Bebidas";
     public static final String CAMPO_DescricaoBebidas = "DescricaoBebidas";
     public static final String CAMPO_NOME_CATEGORIA_Bebidas = "CATEGORIAS_BEBIDAS"; // tabela de categorias (só de leitura)

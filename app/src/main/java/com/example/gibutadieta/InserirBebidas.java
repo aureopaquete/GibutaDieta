@@ -14,14 +14,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.SimpleCursorAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 
 public class InserirBebidas extends AppCompatActivity  implements LoaderManager.LoaderCallbacks<Cursor> {
 
-    //private static final int ID_CURSO_LOADER_Bebidas = 0;
+    private static final int ID_CURSO_LOADER_Bebidas = 0;
 
     private Spinner spinnerBebidas;
     private  EditText DescBebidas;
@@ -34,7 +33,7 @@ public class InserirBebidas extends AppCompatActivity  implements LoaderManager.
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        //getSupportLoaderManager().initLoader(ID_CURSO_LOADER_Bebidas, null, this);
+        getSupportLoaderManager().initLoader(ID_CURSO_LOADER_Bebidas, null, this);
 
 
         DescBebidas = (EditText) findViewById(R.id.DescBebidasEditBe);
@@ -49,12 +48,12 @@ public class InserirBebidas extends AppCompatActivity  implements LoaderManager.
 
     @Override
     protected void onResume() {
-        //getSupportLoaderManager().restartLoader(ID_CURSO_LOADER_Bebidas, null, this);
+        getSupportLoaderManager().restartLoader(ID_CURSO_LOADER_Bebidas, null, this);
         super.onResume();
     }
 
 
-    private void mostrarBebidaSpinner(Cursor cursorBebidas) {
+    /*private void mostrarBebidaSpinner(Cursor cursorBebidas) {
         SimpleCursorAdapter adaptadorBebidas = new SimpleCursorAdapter(
                 this,
                 android.R.layout.simple_list_item_1,
@@ -63,7 +62,7 @@ public class InserirBebidas extends AppCompatActivity  implements LoaderManager.
                 new int[]{android.R.id.text1}
         );
         spinnerBebidas.setAdapter(adaptadorBebidas);
-    }
+    }*/
 
     public void GuardarBebidas(View view) {
 
@@ -112,9 +111,10 @@ public class InserirBebidas extends AppCompatActivity  implements LoaderManager.
 
 
         try {
-            getContentResolver().insert(GibutaDietaContentProvider.ENDERECO_ALIMENTO, bebidas.getContentValues());
-
+            getContentResolver().insert(GibutaDietaContentProvider.ENDERECO_BEBIDA, bebidas.getContentValues());
             Toast.makeText(this, getString(R.string.Guardado_com_Sucesso), Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, ListaBebidas.class);
+            startActivity(intent);
             finish();
         } catch (Exception e) {
             Snackbar.make(
@@ -125,11 +125,6 @@ public class InserirBebidas extends AppCompatActivity  implements LoaderManager.
 
             e.printStackTrace();
         }
-
-        Intent intent = new Intent(this, ListaBebidas.class);
-        //intent.putExtra(DefinicaoApp.TEXTOBebidas, mensagem);
-        startActivity(intent);
-        finish();
 
     }
 
@@ -142,7 +137,7 @@ public class InserirBebidas extends AppCompatActivity  implements LoaderManager.
     @Override
     public Loader<Cursor> onCreateLoader(int id, @Nullable Bundle args) {
 
-        CursorLoader cursorLoader = new CursorLoader(this, GibutaDietaContentProvider.ENDERECO_BEBIDA, BdTabelaTiposAlimentos.TODAS_COLUNAS, null, null, BdTabelaTiposBebidas.CAMPO_Bebidas);
+        CursorLoader cursorLoader = new CursorLoader(this, GibutaDietaContentProvider.ENDERECO_BEBIDA, BdTabelaTiposBebidas.TODAS_COLUNAS, null, null, BdTabelaTiposBebidas.CAMPO_Bebidas);
 
         return cursorLoader;
 
@@ -150,11 +145,11 @@ public class InserirBebidas extends AppCompatActivity  implements LoaderManager.
 
     @Override
     public void onLoadFinished(@NonNull Loader<Cursor> loader, Cursor data) {
-        mostrarBebidaSpinner(data);
+        //mostrarBebidaSpinner(data);
     }
 
     @Override
     public void onLoaderReset(@NonNull Loader<Cursor> loader) {
-        mostrarBebidaSpinner(null);
+        //mostrarBebidaSpinner(null);
     }
 }
