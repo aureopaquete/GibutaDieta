@@ -65,5 +65,8 @@ public class Eliminar extends AppCompatActivity {
 
     public void Apagar(View view) {
        getContentResolver().delete(ApagarDados, null, null);
+        Intent intent = new Intent(this, ListaBebidas.class);
+        startActivity(intent);
+        finish();
     }
 }
