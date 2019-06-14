@@ -6,10 +6,6 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_Eliminacao"
-            android:icon="@android:drawable/ic_delete"
-            android:title="@string/eliminar2" />
-        <item
             android:id="@+id/nav_EditacaoAlimentos"
             android:icon="@android:drawable/ic_menu_edit"
             android:title="Editar Alimentos" />
