@@ -81,8 +81,8 @@ public class AdaptadorBebidas extends RecyclerView.Adapter<AdaptadorBebidas.View
             this.tiposBebidas = tiposBebidas;
 
             textViewTipo.setText(tiposBebidas.getNomeCategoriaBebida());
-            textViewDescricao.setText(tiposBebidas.getBebidas());
-            textViewValor.setText(String.valueOf(tiposBebidas.getDescricaoBebidas())+"cl");
+            textViewDescricao.setText(tiposBebidas.getDescricaoBebidas());
+            textViewValor.setText(String.valueOf(tiposBebidas.getBebidas())+"cl");
 
         }
 
