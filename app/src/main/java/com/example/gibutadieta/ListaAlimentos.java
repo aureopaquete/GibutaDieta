@@ -1,5 +1,6 @@
 package com.example.gibutadieta;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -11,12 +12,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 
 
 public class ListaAlimentos extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
 
     private static final int ID_CURSO_LOADER_GibutaDieta = 0;
+    public static final String ID_ALIMENTO ="ID_ALIMENTO";
 
     private AdaptadorAlimentos adaptadorAlimentos;
     private RecyclerView recyclerViewListarDados;
@@ -38,8 +42,6 @@ public class ListaAlimentos extends AppCompatActivity implements LoaderManager.L
         recyclerViewListarDados.setAdapter(adaptadorAlimentos);
         recyclerViewListarDados.setLayoutManager(new LinearLayoutManager(this));
 
-        //mostrarTextoAlimento();
-        //mostrarTextoBebida();
     }
 
 
@@ -47,6 +49,30 @@ public class ListaAlimentos extends AppCompatActivity implements LoaderManager.L
     protected void onResume() {
         getSupportLoaderManager().restartLoader(ID_CURSO_LOADER_GibutaDieta, null, this);
         super.onResume();
+    }
+
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_apagador, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.nav_apgador) {
+            Intent intent = new Intent(this, EliminarAlimentos.class);
+            intent.putExtra(ID_ALIMENTO, adaptadorAlimentos.getAlimentoSelecionado().getId());
+            startActivity(intent);
+            return true;
+
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 
@@ -69,25 +95,6 @@ public class ListaAlimentos extends AppCompatActivity implements LoaderManager.L
         adaptadorAlimentos.setCursor(null);
     }
 
-    /*
-    private void mostrarTextoAlimento() {
-
-        Intent intent = getIntent();
-        String mensagem = intent.getStringExtra(DefinicaoApp.TEXTOAlimetos);
-        TextView textView8 = (TextView) findViewById(R.id.textView8);
-        textView8.setText(mensagem + " "+"g");
-
-    }
-
-    private void mostrarTextoBebida() {
-
-        Intent intent = getIntent();
-        String mensagem  = intent.getStringExtra(DefinicaoApp.TEXTOBebidas);
-        TextView textView10 = (TextView) findViewById(R.id.textView10);
-        textView10.setText(mensagem + " "+"ml");
-
-    }
-    */
 }
 
 

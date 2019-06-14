@@ -117,5 +117,6 @@
     <string name="Conexão_com_BD_criada_com_sucesso">Conexão com BD criada com sucesso</string>
     <string name="conexao_bd">conexão com a base de dados criada com sucesso</string>
     <string name="title_activity_lista_bebidas">Lista de Bebidas</string>
+    <string name="title_activity_eliminar_alimentos">EliminarAlimentos</string>
 
 </resources>

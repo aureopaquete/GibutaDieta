@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Eliminar extends AppCompatActivity {
+public class EliminarBebidas extends AppCompatActivity {
 
     private Uri ApagarDados;
 
@@ -18,7 +18,7 @@ public class Eliminar extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_eliminar);
+        setContentView(R.layout.activity_eliminar_bebidas);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -30,19 +30,19 @@ public class Eliminar extends AppCompatActivity {
 
 
         Intent intent = getIntent();
-        long idLivro = intent.getLongExtra(ListaBebidas.ID_BEBIDA, -1);
-        if (idLivro == -1) {
-            Toast.makeText(this, "Erro: não foi possível apagar o livro", Toast.LENGTH_LONG).show();
+        long idBebida = intent.getLongExtra(ListaBebidas.ID_BEBIDA, -1);
+        if (idBebida == -1) {
+            Toast.makeText(this, "Erro: não foi possível apagar o item", Toast.LENGTH_LONG).show();
             finish();
             return;
         }
 
-        ApagarDados = Uri.withAppendedPath(GibutaDietaContentProvider.ENDERECO_BEBIDA, String.valueOf(idLivro));
+        ApagarDados = Uri.withAppendedPath(GibutaDietaContentProvider.ENDERECO_BEBIDA, String.valueOf(idBebida));
 
         Cursor cursor = getContentResolver().query(ApagarDados, BdTabelaTiposBebidas.TODAS_COLUNAS, null, null, null);
 
         if (!cursor.moveToNext()) {
-            Toast.makeText(this, "Erro: não foi possível apagar o livro", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Erro: não foi possível apagar o item", Toast.LENGTH_LONG).show();
             finish();
             return;
         }

@@ -64,7 +64,7 @@ public class ListaBebidas extends AppCompatActivity implements LoaderManager.Loa
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.nav_apgador) {
-            Intent intent = new Intent(this, Eliminar.class);
+            Intent intent = new Intent(this, EliminarBebidas.class);
             intent.putExtra(ID_BEBIDA, adaptadorBebidas.getBebidaSelecionada().getId());
             startActivity(intent);
             return true;

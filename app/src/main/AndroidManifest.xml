@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".EliminarAlimentos"
+            android:label="@string/title_activity_eliminar_alimentos"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".ListaBebidas"
             android:label="@string/title_activity_lista_bebidas"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".EditarBebidas"
             android:label="@string/title_activity_editar_bebidas"
@@ -34,7 +38,7 @@
             android:label="@string/title_activity_dados"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Eliminar"
+            android:name=".EliminarBebidas"
             android:label="@string/title_activity_eliminar"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

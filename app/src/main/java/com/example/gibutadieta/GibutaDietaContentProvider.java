@@ -37,7 +37,7 @@ public class GibutaDietaContentProvider extends ContentProvider {
     private UriMatcher getUriMatcher() {
         UriMatcher uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
 
-        uriMatcher.addURI(AUTHORITY, ALIMENTOS, URI_ALIMENTO_ESPECIFICO);
+        uriMatcher.addURI(AUTHORITY, ALIMENTOS,URI_ALIMENTOS );
         uriMatcher.addURI(AUTHORITY, ALIMENTOS + "/#", URI_ALIMENTO_ESPECIFICO);
         uriMatcher.addURI(AUTHORITY, BEBIDAS, URI_BEBIDAS);
         uriMatcher.addURI(AUTHORITY, BEBIDAS + "/#", URI_BEBIDAS_ESPECIFICA);
