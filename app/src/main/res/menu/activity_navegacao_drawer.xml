@@ -6,14 +6,6 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_EditacaoAlimentos"
-            android:icon="@android:drawable/ic_menu_edit"
-            android:title="Editar Alimentos" />
-        <item
-            android:id="@+id/EditorBebidas"
-            android:icon="@android:drawable/ic_menu_edit"
-            android:title="Editar Bebidas" />
-        <item
             android:id="@+id/nav_Listadados"
             android:icon="@android:drawable/ic_menu_sort_by_size"
             android:title="Lista de Alimentos" />

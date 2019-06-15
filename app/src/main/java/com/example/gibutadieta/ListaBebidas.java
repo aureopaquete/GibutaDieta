@@ -70,6 +70,12 @@ public class ListaBebidas extends AppCompatActivity implements LoaderManager.Loa
             return true;
 
         }
+        if (id == R.id.nav_editar) {
+            Intent intent = new Intent(this, EditarBebidas.class);
+            intent.putExtra(ID_BEBIDA, adaptadorBebidas.getBebidaSelecionada().getId());
+            startActivity(intent);
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 

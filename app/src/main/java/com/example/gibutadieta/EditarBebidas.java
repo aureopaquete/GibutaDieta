@@ -48,15 +48,15 @@ public class EditarBebidas extends AppCompatActivity   implements LoaderManager.
 
         Intent intent = getIntent();
 
-        long idLivro = intent.getLongExtra(ListaBebidas.ID_BEBIDA, -1);
+        long idBebida = intent.getLongExtra(ListaBebidas.ID_BEBIDA, -1);
 
-        if (idLivro == -1) {
+        if (idBebida == -1) {
             Toast.makeText(this, "Erro: não foi possível ler", Toast.LENGTH_LONG).show();
             finish();
             return;
         }
 
-        enderecoBebidaEditar = Uri.withAppendedPath(GibutaDietaContentProvider.ENDERECO_BEBIDA, String.valueOf(idLivro));
+        enderecoBebidaEditar = Uri.withAppendedPath(GibutaDietaContentProvider.ENDERECO_BEBIDA, String.valueOf(idBebida));
 
         Cursor cursor = getContentResolver().query(enderecoBebidaEditar, BdTabelaTiposBebidas.TODAS_COLUNAS, null, null, null);
 

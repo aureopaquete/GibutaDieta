@@ -72,6 +72,12 @@ public class ListaAlimentos extends AppCompatActivity implements LoaderManager.L
             return true;
 
         }
+        if (id == R.id.nav_editar) {
+            Intent intent = new Intent(this, EditarAlimentos.class);
+            intent.putExtra(ID_ALIMENTO, adaptadorAlimentos.getAlimentoSelecionado().getId());
+            startActivity(intent);
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 
