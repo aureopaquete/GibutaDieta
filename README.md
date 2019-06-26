@@ -1,9 +1,12 @@
 # GibutaDieta
 Um aplicativo de dieta caseira de forma simples e prática, este aplicativo será de uso pessoal, pois cumprirá os objetivos imposto pelo professor, este aplicativo terá 3 tabelas de base de dados.
 
----> Tipos de Consumo
-            Nesta tabela irei inserir, altera e guardar a quantidade de consumos, inicialmente pretendo colocar uma meta diária saudável para consumo.
+---> Tabela Tipos de Alimento 
+            Nesta tabela irei inserir, alterar, eliminar o tipo de alimento que consumo, bem como sua quantidade.
+            
+---> Tabela Tipos de Bebidas
+            Nesta tabela irei inserir, alterar, eliminar o tipo de bebida que consumo, bem como sua quantidade.
             
 ---> Tabela Quantidade
-           Será adicionado a quantidade dos consumos o qual também será irei inserir, altera e guardar.
+            Esta tabela será armazenada a quantidade de dos consumos feitos.
 
