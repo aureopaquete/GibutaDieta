@@ -9,34 +9,19 @@
     tools:showIn="@layout/activity_definicoes">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="375dp"
-        android:layout_height="208dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:lineSpacingExtra="8sp"
-        android:text="O objectivo deste aplicativo é auxiliar na minha dieta, face a isto selecionei um plano á cumprir... Diariamente deverei consumir certas quantidades de alimentos e bebidas.  Nos Alimentos tomarei em conta as Proteínas, os Carboidratos, os Legumes, desta forma terei que consumir de forma saúdavel esses tipos de alimentos,  nas bebidas, para a minha dieta é claro não deveria faltar como é claro bebidas, bebidas essas como a Água, sumos e cafés."
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-    <TextView
         android:id="@+id/textView3"
         android:layout_width="387dp"
         android:layout_height="25dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="71dp"
+        android:layout_marginTop="75dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="@string/___________"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <TextView
         android:id="@+id/textView4"
@@ -47,23 +32,23 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="Sobre o Aplicativo"
+        android:text="@string/sobre_o_aplicativo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView5"
-        android:layout_width="387dp"
-        android:layout_height="98dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:lineSpacingExtra="8sp"
-        android:text="Este Aplicativo tem uma base de dados o qual tem três Tabelas,  1ª - > Tabela de Tipos de Cosumo, 2ª -> Tabela de Tipos de Bebidas, 3ª -> Tabela da Quantidade."
+        android:id="@+id/textView"
+        android:layout_width="373dp"
+        android:layout_height="234dp"
+        android:layout_marginTop="29dp"
+        android:lineSpacingExtra="5sp"
+        android:text="@string/texto_verrrr"
+        android:textAllCaps="false"
+        android:typeface="sans"
+        app:fontFamily="@font/armata"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
 </android.support.constraint.ConstraintLayout>

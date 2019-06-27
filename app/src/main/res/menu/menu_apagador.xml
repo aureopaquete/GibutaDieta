@@ -5,8 +5,8 @@
     <item
         android:id="@+id/nav_apgador"
         android:icon="@android:drawable/ic_menu_delete"
-        android:title="Apagar" />
+        android:title="@string/apagar_Nav" />
     <item
         android:id="@+id/nav_editar"
-        android:title="Editar" />
+        android:title="@string/editar_Nav" />
 </menu>

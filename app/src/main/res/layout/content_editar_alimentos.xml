@@ -112,7 +112,7 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="57dp"
+        android:layout_width="65dp"
         android:layout_height="38dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"

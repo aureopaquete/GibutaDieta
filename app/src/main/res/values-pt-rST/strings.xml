@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Gibuta Dieta</string>
-    <string name="action_settings">Settings</string>
-    <string name="title_activity_content_menus">Menus</string>
+    <string name="action_settings">Definições</string>
+    <string name="title_activity_content_menus">Gibuta Dieta</string>
     <string name="agua">Água</string>
-    <string name="proteinas">" Proteinas"</string>
+    <string name="proteinas">Proteinas</string>
     <string name="carboidratos">Carboidratos</string>
     <string name="legumes">Vegetais</string>
     <string name="tipo_de_alimento">Tipos de Consumos</string>
@@ -30,4 +30,57 @@
     <string name="bot_o_adicionar">Botão Adicionar</string>
     <string name="tipo_de_consumo_editar">Tipo de Consumo á Editar</string>
     <string name="tipo_de_consumo_apagar">Tipo de Consumo á Apagar</string>
+    <string name="valorbebida">Valor:</string>
+    <string name="title_activity_editar">Editar Alimentos</string>
+    <string name="title_activity_editar_bebidas">Editar Bebidas</string>
+    <string name="sobre">Sobre</string>
+    <string name="planos_cumprir">Planos á Cumprir</string>
+    <string name="objectivos_da_app">Objectivos da APP</string>
+    <string name="introduza_o_valor_2">Introduza o valor</string>
+    <string name="introduza_o_valor_Alimentos">Introduza o valor</string>
+    <string name="guardarbebidas">Guardar</string>
+    <string name="guardaBebidas">Guarda</string>
+    <string name="fechar2">Fechar</string>
+    <string name="defini_es">Definições</string>
+    <string name="valor_Alimentos">Valor:</string>
+    <string name="title_activity_sobre">Sobre</string>
+    <string name="title_activity_lista_bebidas">Lista de Bebidas</string>
+    <string name="cancelarBebidas">Cancelar</string>
+    <string name="Guardado_com_Sucesso">Guardado com Sucesso</string>
+    <string name="contato_934559370">Contato | 934559370</string>
+    <string name="title_activity_preencher" translatable="false">Tipos de Alimentos</string>
+    <string name="title_activity_eliminar">Eliminar</string>
+    <string name="title_activity_dados" translatable="false">Lista de Alimentos</string>
+    <string name="title_activity_consumo_liquido">Tipos de Bebidas</string>
+    <string name="title_activity_definicoes">Definições</string>
+    <string name="programa_o_avan_ada">Programação Avançada</string>
+    <string name="introduzir_o_valor_do_consumo">Introduzir o valor do consumo</string>
+    <string name="este_app_est_sendo_desenvolvido_por">Este APP está sendo Desenvolvido por:</string>
+    <string name="eliminar2">Eliminar</string>
+    <string name="alimentosSpinner">Alimentos</string>
+    <string name="alimentos">Alimentos</string>
+    <string name="bebidasConsumo">Bebidas</string>
+    <string name="editar2">Editar</string>
+    <string name="title_activity_lista">Lista de Alimentos</string>
+    <string name="valor_do_consumo" translatable="false">Valor do Consumo</string>
+    <string name="tipo_de_alimentoNovo">Tipo de Alimento</string>
+    <string name="introduzir_valor_editar">Introduzir valor á editar</string>
+    <string name="bebidas">BEBIDAS</string>
+    <string name="introduza_o_valor_apagar">Introduza o valor á apagar</string>
+    <string name="introduza_valor_editar">Introduza valor á editar</string>
+    <string name="lista_de_dados">Lista de Alimentos</string>
+    <string name="nav_header_desc">Nav</string>
+    <string name="title_activity_eliminar_alimentos">Eliminar Alimentos</string>
+    <string name="lista_de_alimentos_Nav">Lista de Alimentos</string>
+    <string name="lista_de_bebidas_NAV">Lista de Bebidas</string>
+    <string name="consumo_NavAl">Consumo</string>
+    <string name="consumo_NavB">Consumo</string>
+    <string name="descri_o_NavAl">Descrição</string>
+    <string name="descri_o_NavB">Descrição</string>
+    <string name="editar_Nav">Editar</string>
+    <string name="valor_do_consumo_NavAl">Valor do Consumo</string>
+    <string name="valor_do_consumo_NavB">Valor do Consumo</string>
+    <string name="apagar_Nav">Apagar</string>
+    <string name="texto_verrrr">Um aplicativo de dieta caseira de forma simples e prática, este aplicativo será de uso pessoal, desenvolvido no âmbito da unidade curricular Programação Avançada, cumprirá os objetivos imposto pelo professor, este aplicativo terá 3 tabelas de base de dados. Este aplicativo tem como objetivo principal me auxiliar para uma alimentação balanceada e simples, poderei adicionar tipos de consumo, sua quantidade, bem como alterar, e eliminar dados adicionados.</string>
+    <string name="sobre_o_aplicativo">Sobre o Aplicativo</string>
 </resources>

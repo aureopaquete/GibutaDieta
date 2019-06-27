@@ -8,11 +8,11 @@
         <item
             android:id="@+id/nav_Listadados"
             android:icon="@android:drawable/ic_menu_sort_by_size"
-            android:title="Lista de Alimentos" />
+            android:title="@string/lista_de_alimentos_Nav" />
         <item
             android:id="@+id/nav_Bebidas"
             android:icon="@android:drawable/ic_menu_sort_by_size"
-            android:title="Lista de Bebidas" />
+            android:title="@string/lista_de_bebidas_NAV" />
     </group>
 
     <item android:title="">
