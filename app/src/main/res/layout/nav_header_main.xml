@@ -16,7 +16,7 @@
         android:id="@+id/imageView"
         android:layout_width="84dp"
         android:layout_height="85dp"
-        android:background="@mipmap/logoprincipal"
+        android:background="@mipmap/logosaude"
         android:contentDescription="@string/nav_header_desc"
         android:paddingTop="@dimen/nav_header_vertical_spacing" />
 
