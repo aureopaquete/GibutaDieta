@@ -24,7 +24,7 @@ public class EliminarAlimentos extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        TextView textViewOConsumo = (TextView) findViewById(R.id.textViewOConsumo);
+        //TextView textViewOConsumo = (TextView) findViewById(R.id.textViewOConsumo);
         TextView textViewDescricao = (TextView) findViewById(R.id.textViewDescricao);
         TextView textViewValorCosumo = (TextView) findViewById(R.id.textViewValorCosumo);
 
@@ -49,9 +49,9 @@ public class EliminarAlimentos extends AppCompatActivity {
 
         TiposAlimentos alimentos = TiposAlimentos.fromCursor(cursor);
 
-        textViewOConsumo.setText(alimentos.getAlimentos());
+        //textViewOConsumo.setText(alimentos.getAlimentos());
         textViewDescricao.setText(alimentos.getDescricaoAlimentos());
-        textViewValorCosumo.setText(String.valueOf(alimentos.getAlimentos()));
+        textViewValorCosumo.setText(String.valueOf(alimentos.getAlimentos()+"g"));
 
 
     }

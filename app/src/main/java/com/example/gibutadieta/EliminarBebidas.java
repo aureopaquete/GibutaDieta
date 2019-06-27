@@ -24,7 +24,7 @@ public class EliminarBebidas extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        TextView textViewOConsumo = (TextView) findViewById(R.id.textViewOConsumo);
+        //TextView textViewOConsumo = (TextView) findViewById(R.id.textViewOConsumo);
         TextView textViewDescricao = (TextView) findViewById(R.id.textViewDescricao);
         TextView textViewValorCosumo = (TextView) findViewById(R.id.textViewValorCosumo);
 
@@ -49,9 +49,9 @@ public class EliminarBebidas extends AppCompatActivity {
 
         TiposBebidas bebidas = TiposBebidas.fromCursor(cursor);
 
-        textViewOConsumo.setText(bebidas.getBebidas());
+        //textViewOConsumo.setText(bebidas.getBebidas());
         textViewDescricao.setText(bebidas.getDescricaoBebidas());
-        textViewValorCosumo.setText(String.valueOf(bebidas.getBebidas()));
+        textViewValorCosumo.setText(String.valueOf(bebidas.getBebidas()+"cl"));
 
     }
 
