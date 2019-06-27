@@ -129,5 +129,9 @@
     <string name="valor_do_consumo_NavB">"Consumption Value "</string>
     <string name="texto_verrrr">A homemade diet application in a simple and practical, this application will be for personal use, developed under the Advanced Programming course, will fulfill the objectives imposed by the teacher, this application will have 3 database tables. This application has as main objective to help me for a balanced and simple feed, I can add types of consumption, their quantity, as well as change, and delete data added.</string>
     <string name="sobre_o_aplicativo">About the Application</string>
+    <string name="descri_o_da_bebida_Be">Description of the Drinks</string>
+    <string name="descri_o_do_alimento_Ed">"The Foods Description "</string>
+    <string name="_Editar_Bebida">Description of the Drinks</string>
+    <string name="descri_o_do_alimento_Al">"The Foods Description "</string>
 
 </resources>

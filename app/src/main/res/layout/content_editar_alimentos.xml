@@ -27,7 +27,7 @@
             android:id="@+id/DescEdAlim"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Descrição do Alimento"
+            android:hint="@string/descri_o_do_alimento_Ed"
             android:inputType="text" />
     </android.support.design.widget.TextInputLayout>
 

@@ -83,4 +83,8 @@
     <string name="apagar_Nav">Apagar</string>
     <string name="texto_verrrr">Um aplicativo de dieta caseira de forma simples e prática, este aplicativo será de uso pessoal, desenvolvido no âmbito da unidade curricular Programação Avançada, cumprirá os objetivos imposto pelo professor, este aplicativo terá 3 tabelas de base de dados. Este aplicativo tem como objetivo principal me auxiliar para uma alimentação balanceada e simples, poderei adicionar tipos de consumo, sua quantidade, bem como alterar, e eliminar dados adicionados.</string>
     <string name="sobre_o_aplicativo">Sobre o Aplicativo</string>
+    <string name="_Editar_Bebida">Descrição da Bebida</string>
+    <string name="descri_o_da_bebida_Be">Descrição da Bebida</string>
+    <string name="descri_o_do_alimento_Al">Descrição do Alimento</string>
+    <string name="descri_o_do_alimento_Ed">Descrição do Alimento</string>
 </resources>

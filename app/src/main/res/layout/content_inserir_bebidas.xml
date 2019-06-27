@@ -26,7 +26,7 @@
             android:id="@+id/DescBebidasEditBe"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Descrição da Bebida"
+            android:hint="@string/descri_o_da_bebida_Be"
             android:inputType="text" />
     </android.support.design.widget.TextInputLayout>
 
